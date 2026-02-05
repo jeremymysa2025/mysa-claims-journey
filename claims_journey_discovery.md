@@ -1988,3 +1988,642 @@ Water damage (29.4% of claims) is often INVISIBLE:
 19. **When an adjuster needs colleague help, handling time nearly TRIPLES** — Collaboration friction is a hidden productivity killer. Single source of truth + structured handoffs could recover significant time.
 
 20. **The inventory/proof-of-loss problem is brutal and under-automated** — After a fire or burglary, policyholders must remember and prove everything they owned. This is a distinct pain point with potential for pre-loss documentation solutions.
+
+---
+
+## Strategic Wedge Analysis: Where Does Mysa Start?
+
+### The Long-Term Vision
+
+**"Who has the best data wins."** The market will commoditize and whoever has the best data will build the best models and win. This is the north star.
+
+But "data" is not one thing. The strategic question is: **which data, from where, for what purpose?**
+
+### The Two Paths
+
+| | **Path A: More STP** | **Path B: Faster Investigation** |
+|---|---|---|
+| **Problem solved** | Poor data quality prevents claims from auto-processing | When humans ARE involved, they're slow and inefficient |
+| **Target metric** | STP rate (from ~10% to 40%?) | Adjuster productivity, cycle time |
+| **Where value created** | Upstream — better data capture at intake | Downstream — augment investigation workflow |
+| **Product** | Document extraction, EAS digitization, structured intake, convention matching | Investigation workspace, statement analysis, report generation, collaboration tools |
+| **Data accumulated** | EAS/FNOL structured data, intake patterns | Investigation data, adjuster notes, outcome patterns |
+| **Buyer conversation** | "Process 40% of claims without human touch" | "Your adjusters handle 50% more claims" |
+
+### Different Data Types = Different Moats
+
+| Data Type | Where It Lives | What It Enables | Path |
+|-----------|----------------|-----------------|------|
+| **EAS/FNOL structured data** | Intake | Convention matching, STP | A |
+| **Investigation data** | Adjuster notes, statements, photos | Liability determination, pattern recognition | B |
+| **Claims outcome data** | Settlement amounts, cycle times | Predictive models, benchmarking | Both |
+| **Repair/cost data** | Repair networks, Xactimate | Damage valuation | B |
+| **Fraud pattern data** | SIU, cross-claim analysis | Fraud detection | Both |
+
+**Key insight:** The data you accumulate from being an EAS extraction tool is VERY different from the data you accumulate from being an adjuster productivity tool. The wedge shapes the moat.
+
+### The Moat Question
+
+Data without lock-in is just a commodity. If Mysa builds great document extraction and an insurer can switch to another vendor next year, there's no moat. The data sits in the insurer's system, not Mysa's.
+
+**The moat comes from one of two places:**
+
+1. **Workflow lock-in:** Become so embedded in their process that switching is painful (like Salesforce or Workday). This requires being in the critical path, not a point solution.
+
+2. **Network effects:** The more claims flow through Mysa, the better the models get, AND that improvement benefits all customers (like a shared fraud detection model or benchmarking data).
+
+**Strategic question:** Which one is Mysa building toward? Does the current work (document processing) actually lead there?
+
+### EU vs US: Different Wedges?
+
+| Market | Primary Opportunity | Why |
+|--------|---------------------|-----|
+| **EU (Motor)** | Path A — unlock STP | EAS provides structured data at origin. Convention systems exist but are starved of clean data. The 50+ point gap between theoretical (~70%) and actual (~10%) STP is the prize. |
+| **US (Motor)** | Path B — augment adjusters | No agreed document. Every claim requires investigation. 4 recorded statements for a fender bender. Labor-intensive even for simple claims. |
+| **Home (Both)** | Path B — adjuster productivity | No EAS equivalent anywhere. No convention system. Almost 100% of claims need human inspection. The opportunity is 3x adjuster productivity, not STP. |
+
+**Implication:** The wedge may differ by market. EU motor = upstream data quality. US motor and all home = downstream productivity. This affects go-to-market and product priorities.
+
+### The Buyer Difference
+
+| | Path A: More STP | Path B: Faster Investigation |
+|---|---|---|
+| **Primary buyer** | Claims Operations Director | Claims Ops Director or Adjuster Manager |
+| **What they measure** | STP rate, cost per claim, processing time | Adjuster caseload, cycle time, productivity |
+| **Budget source** | Ops efficiency / automation budget | Workforce productivity budget |
+| **Competitor set** | omni:us, Tractable (photos), RPA vendors | Guidewire ecosystem, existing workflow tools |
+| **Sales cycle** | Likely similar | Likely similar |
+
+**Open question:** Is it the SAME buyer who cares equally about both? Or does choosing a path determine who you sell to?
+
+### What the Wedge Decision Shapes
+
+The first wedge isn't just "what to build first." It determines:
+
+1. **First 5 customers** — Who you sell to, what problems you solve for them
+2. **Brand positioning** — Are you "the STP company" or "the adjuster productivity company"?
+3. **Data accumulated** — Which data moat you're building
+4. **Next product** — What naturally follows from the wedge
+5. **Competitive positioning** — Who you're compared against
+
+### Research Still Needed
+
+Before deciding on wedge:
+
+| Question | Why It Matters |
+|----------|----------------|
+| What % of claims actually enter investigation (Phase 7+) in EU vs US? | Sizes the opportunity for each path |
+| What does Phase 7 (Investigation) actually look like? What do adjusters DO? | Validates Path B opportunity |
+| How much time/cost is spent in investigation vs intake? | Where is the bigger $ prize? |
+| Who are the actual buyers at target insurers? Same person or different? | Determines if "both" is viable |
+| What's the switching cost for document extraction tools? | Validates moat potential for Path A |
+
+---
+
+## Phase 7: Investigation (IN PROGRESS)
+
+*This phase covers what happens when a claim CANNOT be straight-through processed and requires human investigation.*
+
+### What Triggers Investigation?
+
+Based on research, claims enter investigation when:
+
+1. **EAS is unclear, incomplete, or disputed** — Missing fields, illegible handwriting, unclear diagram
+2. **No EAS exists** — Hit and run, uncooperative party, parties forgot to fill it
+3. **Bodily injury is involved** — Different workflow, longer lifecycle, lawyers
+4. **Fraud indicators are flagged** — Goes to SIU (Special Investigation Unit)
+5. **Complex scenario** — Multi-vehicle, doesn't fit convention tables
+6. **High-value claim** — Above certain thresholds, requires more scrutiny
+7. **Liability is disputed** — Parties disagree on fault after the fact
+
+**For US:** Almost EVERY claim goes through some investigation because there's no agreed document. The adjuster must reconstruct what happened from competing accounts.
+
+### Investigation Triggers by Market
+
+| Trigger | EU | US |
+|---------|----|----|
+| Incomplete/unclear documentation | ~30-40% of claims | ~90%+ (no agreed doc) |
+| Disputed liability | ~10-15% | ~30-40% |
+| Bodily injury | ~10-15% | ~15-20% |
+| Fraud indicators | ~5% | ~5% |
+| High value / complex | ~5-10% | ~10-15% |
+
+**Note:** These percentages are estimates (⚠️) based on research. They overlap (a claim can have multiple triggers).
+
+### Key Research: Adjuster Time Allocation
+
+From [Five Sigma Labs](https://fivesigmalabs.com/blog/exclusive-data-claims-adjusters-day-to-day-workloads/) research on claims adjuster workloads:
+
+**Time spent by claim stage (US vs UK):**
+
+| Stage | US | UK |
+|-------|----|----|
+| Claim creation | <25% | <25% |
+| Damage assessment | 17.4% | 45.9% |
+| Assessment to payment | 62.3% | 45.0% |
+
+**Key finding:** In US, 62.3% of handling time is AFTER damage assessment — the investigation and settlement phases. In UK, it's more evenly split with damage assessment taking nearly half the time.
+
+**Multiple adjuster involvement:**
+- First-party medical claims: 57% require multiple adjusters
+- Bodily injury claims: 51% require multiple adjusters
+- Physical/accidental damage: 38% require multiple adjusters
+
+**Critical insight:** When a claim requires more than one adjuster, handling time nearly TRIPLES (2.75-2.85x average). Whether it needs 2, 3, or 4 adjusters makes little difference — the collaboration overhead is the killer.
+
+**Implication for Mysa:** Reducing the need for multiple adjusters (through better initial data, clearer documentation, or smarter routing) could dramatically cut handling time.
+
+### What Happens During Investigation? — Deep Dive
+
+Based on research from [Progressive](https://www.progressive.com/answers/what-is-an-insurance-adjuster/), [Nolo](https://www.nolo.com/legal-encyclopedia/how-will-the-insurance-company-investigate-my-car-accident.html), [Morgan Clark](https://www.morganclark.co.uk/about-us/blog/how-do-insurance-companies-investigate-claims/), [Five Sigma](https://fivesigmalabs.com/blog/exclusive-data-claims-adjusters-day-to-day-workloads/), and [Crawford](https://www.crawco.co.uk/services/motor).
+
+---
+
+## Investigation: Motor Claims vs Home/Property Claims
+
+### 🚗 Motor Claims Investigation
+
+**Primary question being answered:** WHO caused the accident and WHAT percentage of fault belongs to each party?
+
+**Investigation Activities:**
+
+| Activity | What Happens | Time Impact |
+|----------|--------------|-------------|
+| **Recorded statement collection** | Adjuster calls each party (15-30 min each), walks through incident step-by-step, records for legal purposes | HIGH — US: 4 statements per claim possible. EU: Only if EAS unclear |
+| **Evidence gathering** | Collect police report, photos, dashcam footage, witness statements | MEDIUM |
+| **Vehicle inspection** | Inspect damage to determine how accident occurred (damage location reveals impact direction) | MEDIUM — Often done by separate appraiser |
+| **Liability analysis** | Cross-reference all evidence, identify contradictions, determine fault % | HIGH — Core adjuster skill |
+| **Documentation** | Write investigation report, update claim file, set reserves | MEDIUM |
+
+**Key Insight — Motor Investigation is About Reconstruction:**
+The adjuster is essentially a detective reconstructing what happened from incomplete/conflicting evidence. In EU with clean EAS, this is largely skipped (convention lookup). In US, this is the CORE of the job.
+
+**Documents Created (Motor):**
+- Recorded statement transcripts
+- Liability determination memo
+- Vehicle damage assessment report
+- Investigation summary/adjuster notes
+- Reserve calculation worksheet
+
+---
+
+### 🏠 Home/Property Claims Investigation
+
+**Primary question being answered:** WHAT happened, WAS it a covered peril, and HOW MUCH damage was caused?
+
+**Investigation Activities:**
+
+| Activity | What Happens | Time Impact |
+|----------|--------------|-------------|
+| **Policyholder interview** | Understand what happened, when discovered, timeline of events | MEDIUM |
+| **Property inspection** | Physical inspection of damage — often on-site | HIGH — Field adjusters spend 25-30% on travel |
+| **Cause & origin determination** | Was this sudden (covered) or gradual (not covered)? Fire origin? Water source? | HIGH — Often needs expert |
+| **Damage documentation** | Photos, measurements, scope of damage | MEDIUM |
+| **Estimate generation** | Calculate repair/replacement cost (usually in Xactimate) | MEDIUM-HIGH |
+| **Coverage analysis** | Does policy cover this peril? Exclusions? Limits? Deductibles? | MEDIUM |
+
+**Key Insight — Home Investigation is About Causation & Coverage:**
+Unlike motor (who's at fault?), home claims ask: Was this a covered event? The adjuster must determine CAUSE (sudden burst vs gradual leak — completely different coverage outcomes) and SCOPE (visible damage + hidden damage).
+
+**Documents Created (Home/Property):**
+- Field inspection report with photos
+- Cause & origin determination report
+- Xactimate repair estimate
+- Scope of loss documentation
+- Coverage analysis memo
+- Expert reports (if engineer/specialist engaged)
+
+---
+
+## Investigation: EU vs US Differences
+
+### 🇪🇺 EU Motor Investigation
+
+**When it happens:** Only ~30-40% of claims (when EAS path fails) — ⚠️ estimate
+
+**Process:**
+```
+Claim doesn't qualify for STP
+     ↓
+Claims handler reviews EAS
+     ↓
+Gaps identified → Contact driver for clarification (phone/email)
+     ↓
+If still unclear → Assign to adjuster/loss adjuster
+     ↓
+Loss adjuster investigates:
+├── Review all documentation
+├── May request additional photos
+├── May conduct phone interview
+├── Rarely: on-site inspection for motor
+     ↓
+Produces loss adjuster report
+     ↓
+Liability determined (may use convention as guide even for unclear cases)
+     ↓
+Back to handler for settlement
+```
+
+**Key EU Differences:**
+- **Loss Adjuster vs Claims Adjuster terminology** — UK uses "Loss Adjuster" (represents insurer) vs "Loss Assessor" (represents policyholder). Continental EU varies.
+- **Convention as fallback** — Even when EAS is unclear, adjusters often try to fit the scenario to a convention case for efficiency
+- **Less adversarial** — Single agreed document (EAS) means less "your word vs their word"
+- **Shorter cycle** — Investigation less intensive because EAS provides foundation
+
+**Typical EU Motor Investigation Timeline:** 2-4 weeks for complex cases (⚠️ estimate)
+
+---
+
+### 🇺🇸 US Motor Investigation
+
+**When it happens:** ~90%+ of claims (no agreed document = investigation is default)
+
+**Process:**
+```
+FNOL received
+     ↓
+Claim assigned to adjuster
+     ↓
+Adjuster calls YOUR driver (15-30 min recorded statement)
+├── Walk me through what happened
+├── What were you doing before?
+├── What did you observe?
+├── Where exactly did impact occur?
+├── Any witnesses?
+├── Any injuries?
+     ↓
+Adjuster calls OTHER driver (15-30 min recorded statement)
+     ↓
+If injuries: Medical records requested
+     ↓
+Vehicle inspection scheduled (separate appraiser usually)
+     ↓
+Police report obtained
+     ↓
+Adjuster reconstructs accident from all sources
+├── Compare statements for contradictions
+├── Match damage patterns to accounts
+├── Review any dashcam/telematics
+     ↓
+Liability determination (fault %)
+├── Could be 100/0, 80/20, 50/50, etc.
+├── Varies by state (comparative vs contributory negligence)
+     ↓
+If insurers disagree → Arbitration Forums, Inc.
+     ↓
+Settlement negotiation
+```
+
+**Key US Differences:**
+- **Every claim gets adjuster time** — No STP path for disputed liability
+- **Recorded statements are standard** — Up to 4 per claim (both parties × both insurers)
+- **Fault is NOT binary** — Comparative negligence means 70/30, 60/40 splits common
+- **More adversarial** — Two competing narratives, no joint document
+- **Longer, more expensive** — More human hours per claim
+
+**Typical US Motor Investigation Timeline:** 30-60 days standard, months for complex/BI (⚠️ based on research)
+
+**State Regulations:** Most states require insurers to acknowledge claims within 15 days and complete investigation within 30-90 days depending on complexity.
+
+---
+
+### 🏠 Home/Property Investigation (EU vs US)
+
+**Key Finding: EU has NO structural advantage for home claims.**
+
+Unlike motor (where EAS gives EU a data quality advantage), home claims are investigated similarly in both markets:
+
+| Factor | EU | US |
+|--------|----|----|
+| Standardized incident document? | NO | NO |
+| Convention system for causation? | NO | NO |
+| Adjuster inspection required? | Yes, usually | Yes, usually |
+| Cause & origin determination? | Same process | Same process |
+| Coverage interpretation? | Varies by policy | Varies by policy |
+
+**Implication:** Home claims automation opportunity is the SAME in EU and US — make adjusters more productive, not eliminate them.
+
+---
+
+## Investigation: TPA vs Internal Teams
+
+### Staff Adjusters (Insurer Employees)
+
+**Profile:**
+- W-2 employees of the insurance company
+- ~70% of US adjusters are staff (⚠️ based on research)
+- Handle claims exclusively for their employer
+- Have authority limits (may need supervisor approval above thresholds)
+
+**Characteristics:**
+| Factor | Staff Adjuster |
+|--------|----------------|
+| **Loyalty** | To employer insurer |
+| **Systems access** | Full access to insurer's claims system |
+| **Training** | Insurer-specific processes and guidelines |
+| **Caseload** | Managed by insurer, typically steady |
+| **Quality control** | Direct supervision |
+| **Cost to insurer** | Fixed (salary + benefits) |
+
+**When Used:**
+- Standard claims volume
+- Core lines of business
+- Geographic areas with sufficient staff
+
+---
+
+### TPA Adjusters (Third Party Administrators)
+
+**Major TPAs:** Crawford, Sedgwick, Engle Martin, Gallagher Bassett
+
+**Profile:**
+- Employed by TPA, not the insurer
+- Handle claims on behalf of MULTIPLE insurers
+- ~23% of US adjusters work for TPAs (⚠️ based on research)
+- TPA bears no financial risk — they process, insurer pays
+
+**Characteristics:**
+| Factor | TPA Adjuster |
+|--------|--------------|
+| **Loyalty** | To TPA employer (serves multiple insurers) |
+| **Systems access** | May use TPA's system OR insurer's system depending on setup |
+| **Training** | TPA processes, must adapt to each insurer's guidelines |
+| **Caseload** | Variable — TPAs handle overflow and spikes |
+| **Quality control** | TPA supervision + insurer oversight |
+| **Cost to insurer** | Variable (per-claim or per-hour) |
+
+**When Used:**
+- **CAT events** — Hurricane, wildfire, flood creates volume spike
+- **Geographic gaps** — Insurer has no staff in that region
+- **Specialty claims** — Marine, aviation, complex property
+- **Run-off books** — Insurer exiting a line but has legacy claims
+- **Cost optimization** — Variable cost vs fixed staff
+
+**TPA Investigation Process (Crawford example):**
+From [Crawford UK Motor](https://www.crawco.co.uk/services/motor):
+- Centralized FNOL intake (24/7/365)
+- Desktop claims handling
+- Field adjusting when needed
+- Healthcare and rehabilitation management (for BI)
+- Litigation gatekeeping
+- External supplier instruction and monitoring
+- All managed through unified IT platform with analytics
+
+**Key TPA Insight:**
+> TPAs often have MORE sophisticated processes than mid-size insurers because claims handling IS their core business. They invest in technology and efficiency because their margins depend on it.
+
+---
+
+### Independent Adjusters (IAs)
+
+**Profile:**
+- Self-employed or small firm contractors
+- ~7% of US adjusters (⚠️ based on research)
+- Hired per-claim by insurers or TPAs
+- Often specialists (marine, aviation, large loss)
+
+**When Used:**
+- One-off complex claims
+- CAT surge (even TPAs hire IAs for overflow)
+- Specialized expertise needed
+- Remote locations
+
+---
+
+### TPA vs Staff: Key Differences for Investigation
+
+| Factor | Staff Adjuster | TPA Adjuster |
+|--------|----------------|--------------|
+| **Investigation depth** | Follows insurer guidelines strictly | May have standardized TPA approach across clients |
+| **Authority** | Clear authority limits within insurer | Authority delegated by insurer, may vary by client |
+| **System integration** | Native to insurer systems | May require data handoffs between systems |
+| **Handoff friction** | Low (same organization) | HIGHER — Data moves between TPA and insurer systems |
+| **Consistency** | Consistent with insurer culture | May vary if TPA handles many insurers |
+| **Scalability** | Limited by headcount | Highly scalable (surge capacity) |
+
+**Mysa Implication:**
+If Mysa sells to insurers, the product must work for BOTH staff adjusters AND TPA adjusters working on their behalf. Data handoffs between TPA systems and insurer systems are a friction point — a data normalization layer could help here too.
+
+---
+
+## Broker Role During Investigation
+
+### The Short Answer: MINIMAL for routine claims, SIGNIFICANT for disputes
+
+**Based on research from [Schwartz Conroy & Hack](https://schlawpc.com/the-role-of-the-insurance-broker-in-disputes-between-insureds-and-insurance-companies/) and [Terra Insurance](https://terra.insure/blog/difference-between-brokers-and-adjusters/).**
+
+### What Brokers DO During Investigation
+
+| Activity | When It Happens | Broker Value |
+|----------|-----------------|--------------|
+| **Status updates** | Throughout | Broker checks on claim progress, relays to client. Redundant communication layer. |
+| **Document relay** | When insurer requests more docs | Broker collects from client, forwards to insurer. Could be direct. |
+| **Clarification support** | When insurer has questions | Broker helps client understand what's being asked. Useful but not essential. |
+| **Coverage interpretation** | When coverage is unclear | Broker reviews policy language, advises client on what SHOULD be covered. **Valuable.** |
+| **Dispute advocacy** | When claim is underpaid/denied | Broker pushes back on insurer, negotiates better outcome. **Most valuable.** |
+
+### When Brokers Add Real Value in Investigation
+
+**Scenario 1: Coverage Dispute**
+> Insurer says "gradual leak — not covered." Broker reviews policy, finds ambiguous language, argues for coverage. This is where brokers EARN their commission.
+
+**Scenario 2: Lowball Settlement**
+> Adjuster estimates €5,000 repair. Broker knows market rates, argues for €7,500. Broker has leverage — places premium with insurer, relationship matters.
+
+**Scenario 3: Complex Claim Navigation**
+> Bodily injury claim, lawyers involved, multi-party. Broker helps client understand process, coordinates between parties, manages expectations.
+
+### When Brokers Add Little Value in Investigation
+
+**Scenario: Routine Motor Claim**
+> Clean EAS, clear liability, straightforward damage. Broker is a relay node — receives update from insurer, forwards to client. Adds delay without adding insight.
+
+### Broker vs Public Adjuster
+
+| | Broker | Public Adjuster |
+|---|---|---|
+| **Works for** | Policyholder (in theory, but also has insurer relationships) | Policyholder exclusively |
+| **When engaged** | From policy purchase through claims | Only during claims, usually disputes |
+| **Fee** | Commission from insurer (built into premium) | 10-15% of settlement (paid by policyholder) |
+| **Investigation role** | Advisory, advocacy | Can actively investigate, document, negotiate |
+| **Common for** | All claims (if broker-sold policy) | Large/disputed property claims |
+| **Motor claims** | Rarely use public adjusters | Public adjusters rare for motor |
+
+### Key Insight: Broker Investigation Role
+
+> **Brokers are NOT investigators.** They don't gather evidence, inspect vehicles, or determine liability. Their role during investigation is **communication, interpretation, and advocacy** — valuable for complex/disputed claims, overhead for simple ones.
+
+**Mysa Implication:**
+If Mysa improves investigation efficiency, brokers benefit indirectly (faster resolution for their clients) but aren't the primary user. The adjuster (staff or TPA) is the user during investigation phase.
+
+---
+
+## Expert Involvement in Investigation
+
+### When Experts Are Brought In
+
+Based on research from [ClaimsMate](https://claimsmate.com/engineers-and-insurance-claims-how-an-engineer-inspection-could-influence-your-claim/) and [McLarens](https://www.mclarens.com/expertise/claims-management/expert-witness/).
+
+| Expert Type | When Used | What They Do |
+|-------------|-----------|--------------|
+| **Independent Motor Engineer** | Vehicle damage unclear, total loss dispute, mechanical failure claim | Inspect vehicle, determine how damage occurred, assess if repairable |
+| **Forensic Engineer** | Fire origin, structural failure, complex causation | Scientific analysis of cause & origin |
+| **Accident Reconstructionist** | Disputed liability, serious injury, litigation likely | Recreate accident from physical evidence |
+| **Medical Expert** | Bodily injury claims, disability disputes | Assess injury severity, causation, prognosis |
+| **Building/Property Expert** | Large property losses, coverage disputes | Assess damage scope, repair methodology |
+| **Fraud Investigator (SIU)** | Red flags detected | Deep investigation, surveillance, background checks |
+
+### Expert Investigation Timeline
+
+- Expert inspection: 1-2 hours on-site
+- Expert report: 4-6 weeks typical (⚠️ can be faster or slower)
+- This ADDS to claim cycle time significantly
+
+### Expert Trigger Thresholds (⚠️ Estimates)
+
+| Claim Type | Expert Likely If... |
+|------------|---------------------|
+| Motor (material) | Damage > €10-15K, total loss disputed, liability unclear |
+| Motor (BI) | Injury claimed, surgery involved, liability disputed |
+| Property | Damage > €20-50K, cause unclear, coverage disputed |
+| Any | Fraud indicators, litigation expected |
+
+---
+
+## SIU (Special Investigation Unit) — Fraud Investigation
+
+### What Triggers SIU Referral
+
+Based on research from [GEICO SIU](https://www.geico.com/claims/claimsprocess/special-investigations-unit/), [Sentry Insurance](https://www.sentry.com/what-we-offer/resources/articles/special-investigation-unit-siu), and [Insurance Training Center](https://insurancetrainingcenter.com/resource/special-investigative-unit-siu/).
+
+| Red Flag | Example |
+|----------|---------|
+| **Timing suspicious** | Claim filed shortly after policy purchase or coverage increase |
+| **Inconsistent statements** | Story changes between calls, contradicts physical evidence |
+| **Prior claims history** | Multiple similar claims across different insurers |
+| **Financial stress indicators** | Recent bankruptcy, job loss, business failure |
+| **Staged accident patterns** | Known fraud ring patterns, professional claimants |
+| **Documentation issues** | Receipts look altered, photos metadata suspicious |
+| **Over-documentation** | TOO perfect documentation (pre-planned) |
+
+### SIU Investigation Process
+
+```
+Adjuster flags claim with red flags
+     ↓
+SIU analyst conducts preliminary review
+├── Claims history search (industry databases)
+├── Social media review
+├── Background check
+     ↓
+Decision: Investigate or return to normal handling
+     ↓
+If investigate:
+├── Detailed recorded statement
+├── Document forensics (photo metadata, receipt analysis)
+├── Surveillance (in serious cases)
+├── Coordination with law enforcement
+├── Expert fraud analysis
+     ↓
+SIU report with recommendation:
+├── Legitimate → Return to adjuster
+├── Fraud confirmed → Deny claim, potentially refer to law enforcement
+├── Inconclusive → Additional investigation or settle with conditions
+```
+
+### SIU Structure
+
+| Model | Description |
+|-------|-------------|
+| **In-house SIU** | Dedicated team within insurer. Required by regulation in many US states. |
+| **Outsourced SIU** | Third-party firm (e.g., investigation agencies). Common for smaller insurers. |
+| **Hybrid** | In-house for triage, outsource complex investigations |
+
+### SIU Key Insight
+
+> SIUs are SEPARATE from claims adjusters. Adjusters handle claims; SIU handles suspected fraud. Claims adjusters identify red flags and refer — they don't investigate fraud themselves.
+
+**AI Fraud Note:** From earlier research, AI-generated fraud (fake photos, fabricated receipts, deepfakes) is a GROWING threat. SIUs increasingly need tools to detect AI-generated evidence.
+
+---
+
+## Investigation Pain Points (Opportunities for Mysa)
+
+### Pain Point 1: Information Gathering is Manual and Slow
+
+| Problem | Current State | Opportunity |
+|---------|---------------|-------------|
+| Recorded statements | Adjuster manually takes notes or transcribes | AI transcription + automatic fact extraction |
+| Document collection | Emails, phone calls, portals — scattered | Unified intake that extracts and structures |
+| Evidence organization | Adjuster manually organizes claim file | Auto-organize by evidence type, flag gaps |
+
+### Pain Point 2: Collaboration Kills Cycle Time
+
+From Five Sigma research: When multiple adjusters touch a claim, handling time nearly TRIPLES.
+
+| Problem | Current State | Opportunity |
+|---------|---------------|-------------|
+| Handoff friction | Adjuster A's notes unclear to Adjuster B | Structured claim summaries, standardized formats |
+| Context loss | New adjuster must re-read entire file | AI-generated claim summary at handoff |
+| Specialist referral | Emailing experts, waiting for reports | Integrated expert network with structured requests |
+
+### Pain Point 3: Liability Determination is Judgement-Heavy
+
+| Problem | Current State | Opportunity |
+|---------|---------------|-------------|
+| Reconstructing accident | Adjuster reads statements, compares, infers | AI-assisted contradiction detection |
+| Matching to precedent | Adjuster relies on experience | Pattern matching to similar resolved claims |
+| Documentation | Adjuster writes narrative report | AI-drafted liability memo from structured data |
+
+### Pain Point 4: Expert Engagement Adds Weeks
+
+| Problem | Current State | Opportunity |
+|---------|---------------|-------------|
+| Deciding if expert needed | Adjuster judgment | Rules/AI to flag when expert likely needed |
+| Finding/assigning expert | Manual process, relationship-based | Expert network marketplace |
+| Waiting for report | 4-6 weeks typical | Faster turnaround through digital workflows |
+
+### Pain Point 5: Fraud Detection is Reactive
+
+| Problem | Current State | Opportunity |
+|---------|---------------|-------------|
+| Red flag identification | Adjuster intuition + basic rules | ML-based fraud scoring at intake |
+| SIU referral | Manual, subjective | Automated flagging with explainable reasons |
+| Evidence verification | Manual review | AI detection of synthetic/altered media |
+
+---
+
+## Investigation: Key Assumptions Logged
+
+| # | Assumption | Status | Notes |
+|---|------------|--------|-------|
+| A47 | ~30-40% of EU motor claims require investigation (EAS path fails) | ⚠️ Estimate | Based on STP gap research |
+| A48 | ~90%+ of US motor claims require some investigation | ⚠️ Estimate | No agreed document = investigation default |
+| A49 | US motor investigation takes 30-60 days standard | ⚠️ Based on research | Complex/BI can take months |
+| A50 | EU motor investigation takes 2-4 weeks for complex cases | ⚠️ Estimate | Less intensive than US |
+| A51 | Expert reports add 4-6 weeks to claim cycle | ⚠️ Based on research | Significant delay factor |
+| A52 | ~70% of US adjusters are staff, ~23% TPA, ~7% independent | ⚠️ Based on research | May vary by line of business |
+| A53 | Brokers have minimal role during investigation (advisory only) | ⚠️ Based on research | Significant for disputes only |
+| A54 | Home claims investigation is similar EU vs US (no structural EU advantage) | ⚠️ Based on research | Unlike motor where EAS helps EU |
+| A55 | SIU is typically separate from claims adjusting team | ✅ Based on research | Required by regulation in many states |
+| A56 | Multi-adjuster claims take ~3x longer than single-adjuster | ✅ Based on Five Sigma data | Collaboration overhead is major inefficiency |
+
+---
+
+## 🔴 OPEN QUESTIONS — Resume Here
+
+**Questions to discuss before continuing to Phase 8:**
+
+1. **The 3x collaboration penalty is massive.** Five Sigma data shows multi-adjuster claims take nearly 3x longer. This feels like a huge opportunity — but is it the kind of problem Mysa wants to solve? It's more workflow/collaboration than data extraction.
+
+2. **Home vs Motor feels like different products.** Motor investigation = reconstruct who's at fault. Home investigation = determine cause and coverage. Different questions, different processes. Does Mysa focus on one?
+
+3. **TPA data handoffs** — If TPAs handle ~25% of claims and data moves between TPA systems and insurer systems, is that a wedge? "Mysa normalizes data regardless of whether it comes from staff or TPA."
+
+4. **Broker irrelevance during investigation** — Brokers add most value at intake and disputes, but NOT during investigation. Does this change your thinking about who to sell to?
+
+---
+
+## Phase 8: Assessment (NOT YET MAPPED)
+
+*Next phase to map: How damage is valued and repair estimates are generated.*
