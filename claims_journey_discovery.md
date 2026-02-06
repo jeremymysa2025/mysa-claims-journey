@@ -1472,6 +1472,7 @@ Source: [Nanonets - Claims Automation](https://nanonets.com/blog/claims-process-
 | F7 | 🇪🇺 EAS Quality | 3 - Reconciliation | Is the EAS complete and does it match a convention scenario? | 3 |
 | F8 | 🇺🇸 Claim Filing Type | 3 - Reconciliation | First-party, third-party, or both? | 3 |
 | F9 | 🇺🇸 Fault System | 3 - Reconciliation | No-fault state or at-fault state? | 2 |
+| F10 | Investigation Type | 7 - Investigation | Single adjuster or multi-adjuster scenario? | 4 |
 
 ### Fork Chain (How Decisions Connect):
 ```
@@ -1935,6 +1936,36 @@ Water damage (29.4% of claims) is often INVISIBLE:
 | A44 | AI-generated fraud (fake photos, receipts) is a growing threat to automated claims | ⚠️ Based on Gen Re 2026 report | Adversarial dynamic matters |
 | A45 | Hidden damage (water behind walls) is common and invisible in photos | ✅ Logical | Limits pure photo-based assessment |
 | A46 | When adjuster needs colleague help, handling time nearly TRIPLES | ⚠️ Based on Five Sigma data | Collaboration is major inefficiency |
+| A67 | 77% of insurers have adopted AI in some form | ⚠️ BCG 2025 | High adoption but low scale |
+| A68 | Only 7% of insurers have successfully scaled AI | ⚠️ BCG 2025 | 93% stuck in pilot purgatory |
+| A69 | Only 4% have scaled GenAI specifically in claims | ⚠️ Bain/Risk & Insurance | Claims is behind other functions |
+| A70 | 52% cite skills/resource constraints as primary barrier to AI scaling | ⚠️ BCG 2025 | Talent shortage is real |
+| A71 | ~66% of insurers are still in AI pilot stage | ⚠️ BCG 2025 | Most haven't moved to production |
+| A72 | Tractable has raised $185M at $1B+ valuation | ✅ Validated | Unicorn since 2021 |
+| A73 | Shift Technology has raised $320M at $1B+ valuation | ✅ Validated | Unicorn since 2021 |
+| A74 | Five Sigma is seed-stage, less funding than competitors | ⚠️ Based on Crunchbase | Earlier stage but attempting full workflow |
+| A75 | Snapsheet has $162M raised, achieved profitability 2023 | ✅ Validated | 170+ customers, 15 of top 20 P&C |
+| A76 | Sprout.ai has raised £5.4M, earlier stage | ⚠️ Based on 2023 data | MetLife partnership validates product |
+| A77 | Davies Kuarterback uses per-claim pricing model | ⚠️ Based on website | Transactional not SaaS |
+| A78 | Kuarterback handles 75-80% of claims automatically | ⚠️ Davies claims | 20-25% still need human input |
+| A79 | Kuarterback saves ~25 min per claim that does need human | ⚠️ Davies claims | Significant efficiency gain |
+| A80 | Davies sells technology externally, not just internal TPA use | ⚠️ Based on research | Dual model - TPA + tech licensing |
+| A81 | Settlement workflow (62% of US time) has fewest dedicated solutions | ⚠️ Based on competitive analysis | Major white space |
+| A82 | Tractable covers ~70% of claims automatically (rest need human) | ⚠️ Based on research | Photo quality dependent |
+| A83 | Lemonade handles ~50% of claims via AI Jim | ⚠️ Based on company claims | 40% with zero human touch |
+| A84 | EAS extraction for EU motor has no dedicated player | ⚠️ Based on competitive analysis | White space for Mysa |
+| A85 | Pace raised $10M Series A from Sequoia (Jan 2026) | ✅ Validated | Prudential as customer |
+| A86 | Pace targets $70B+ insurance BPO market replacement | ⚠️ Company positioning | Agentic AI vs offshore teams |
+| A87 | ClaimSorted raised $13.3M seed (Atomico), $16.3M total | ✅ Validated | AI-native TPA model |
+| A88 | ClaimSorted claims 3x faster cycle times than traditional TPAs | ⚠️ Company claims | Needs validation |
+| A89 | ClaimSorted claims <1.2% leakage, <1% reopen rate | ⚠️ Company claims | Strong if true |
+| A90 | Solva raised $6M (First Round, YC, Paul Graham angel) | ✅ Validated | Sweden-based |
+| A91 | Solva reached $245K ARR 10 weeks after launch | ⚠️ Company claims | Fast early traction |
+| A92 | Solva focuses on leakage prevention vs speed | ⚠️ Positioning | Different angle than most |
+| A93 | Avallon raised $4.6M seed (Frontline, YC) | ✅ Validated | Multi-modal AI agents |
+| A94 | Avallon claims 90% reduction in processing time | ⚠️ Company claims | Needs validation |
+| A95 | Avallon targets 42,000 TPAs across US/Europe | ⚠️ Market sizing | Large addressable market |
+| A96 | Back-office automation (Pace, Avallon) is emerging competitive space | ⚠️ Based on analysis | Multiple well-funded entrants |
 
 ---
 
@@ -1988,6 +2019,24 @@ Water damage (29.4% of claims) is often INVISIBLE:
 19. **When an adjuster needs colleague help, handling time nearly TRIPLES** — Collaboration friction is a hidden productivity killer. Single source of truth + structured handoffs could recover significant time.
 
 20. **The inventory/proof-of-loss problem is brutal and under-automated** — After a fire or burglary, policyholders must remember and prove everything they owned. This is a distinct pain point with potential for pre-loss documentation solutions.
+
+### Competitive Landscape Insights
+
+21. **93-96% of insurers are stuck in "pilot purgatory"** — 77% have adopted AI somewhere, but only 4-7% have scaled it. This is the market: insurers who've been trying for 3+ years and can't execute.
+
+22. **The claims automation market is fragmented** — Tractable does photos, Shift does fraud, Sprout does docs, Hi Marley does comms. No one owns the workflow. Integration is the pain point.
+
+23. **Settlement workflow (62% of US handling time) is the most underserved phase** — Most vendors focus on intake or assessment. The post-decision bureaucracy is wide open.
+
+24. **EU motor is underserved** — Most competitors are US/UK focused. EAS extraction and convention matching have no dedicated player.
+
+25. **Davies proves the dual model works** — TPA operations + technology licensing can coexist. Kuarterback gives Davies competitive advantage AND generates revenue from external insurers.
+
+26. **TPAs without AI (Crawford, Sedgwick) need help** — Davies has Kuarterback. Other major TPAs don't have equivalent tools. Selling to TPAs is a viable path.
+
+27. **Point solutions dominate but integration is the pain** — Insurers use Tractable + Shift + Sprout + Hi Marley + Snapsheet. Making them work together is the problem. Full workflow platforms (Five Sigma) are attempting this but are earlier stage.
+
+28. **Insurers can't build because of skills (52%), data (40%), and regulatory (36%) barriers** — Not lack of will, lack of capability. The window for vendors is open.
 
 ---
 
@@ -2077,6 +2126,1162 @@ Before deciding on wedge:
 | How much time/cost is spent in investigation vs intake? | Where is the bigger $ prize? |
 | Who are the actual buyers at target insurers? Same person or different? | Determines if "both" is viable |
 | What's the switching cost for document extraction tools? | Validates moat potential for Path A |
+
+---
+
+### 🔴 CRITICAL NEW INSIGHT: The 62.3% Finding
+
+**Five Sigma research reveals where US claims handling time actually goes:**
+
+| Stage | US | UK |
+|-------|----|----|
+| Claim creation (FNOL) | <25% | <25% |
+| Damage assessment | 17.4% | 45.9% |
+| **Assessment to payment** | **62.3%** | 45.0% |
+
+**This is surprising.** The bottleneck in US claims is NOT the investigation or assessment itself — it's what happens AFTER assessment: negotiations, documentation, approvals, payment processing.
+
+**What this means for the wedge decision:**
+
+| If we focus on... | We're targeting... | % of time addressed |
+|-------------------|-------------------|---------------------|
+| **EAS extraction / FNOL** | Claim creation | <25% |
+| **Investigation automation** | Some of assessment | ~17% |
+| **Assessment-to-payment workflow** | Post-assessment process | **62%** |
+
+**Strategic Question:** Is the biggest opportunity actually in the back-end (settlement workflow) rather than front-end (data extraction) or middle (investigation)?
+
+### Path C: Settlement Workflow Optimization (New Option)
+
+| | **Path C: Faster Settlement** |
+|---|---|
+| **Problem solved** | After investigation is done, claims still take weeks to settle |
+| **Target metric** | Cycle time, settlement efficiency, payment speed |
+| **Where value created** | Downstream — after liability/damage determined |
+| **Product** | Settlement calculation, approval workflows, payment automation, document generation |
+| **Data accumulated** | Settlement patterns, negotiation outcomes, cycle time benchmarks |
+| **Buyer conversation** | "Cut your settlement cycle time by 50%" |
+
+**This may explain why the EU vs US difference matters less than expected:**
+- EU advantage is in FNOL/triage (EAS enables STP)
+- But if 62% of US time is post-assessment, fixing FNOL doesn't touch the biggest bucket
+- Settlement workflow opportunity may be similar across markets
+
+### Updated Wedge Framework
+
+| Wedge | Target Problem | % of Handling Time | EU Advantage? |
+|-------|---------------|-------------------|---------------|
+| **A: Data Quality (FNOL)** | Poor data prevents STP | <25% | YES (EAS) |
+| **B: Investigation** | Slow liability/damage determination | ~17-45% | YES (EAS) |
+| **C: Settlement** | Post-decision bureaucracy | ~45-62% | NO (similar both markets) |
+
+**The "where to start" question now has three dimensions, not two.**
+
+---
+
+## The Build vs Buy Reality: Why Insurers Can't Execute
+
+### The Strategic Tension
+
+Insurers SHOULD want to build claims automation in-house. The logic is compelling:
+- AI lowers the barrier to insourcing administrative functions
+- Claims data is core to their business — why outsource?
+- TPAs charge $100-1,500 per claim; automation should reduce that
+
+**But they can't execute.** The data is stark:
+
+| Metric | Value | Source |
+|--------|-------|--------|
+| Insurers with ANY AI adoption | 77% | BCG 2025 |
+| Insurers with AI **at scale** | **Only 7%** | BCG 2025 |
+| Insurers with GenAI scaled **in claims** | **Only 4%** | Bain via Risk & Insurance |
+| Still in pilot stage | ~66% | BCG 2025 |
+| Full AI adoption jump YoY | 8% → 34% | BCG 2025 |
+
+**The implementation gap:** 77% have adopted AI in some form, but only 4-7% have scaled it. That's **93-96% of insurers stuck in pilot purgatory.**
+
+### Why Insurers Can't Scale
+
+The barriers are real and structural:
+
+| Barrier | % Citing | Details |
+|---------|----------|---------|
+| **Skills/resource constraints** | 52% | Lack of in-house ML/AI talent |
+| **Data challenges** | 40% | Data quality, accessibility, integration |
+| **Regulatory hurdles** | 36% | Compliance uncertainty, audit requirements |
+| **Security/privacy risks** | High | Claims data is sensitive, AI raises concerns |
+| **Accuracy concerns** | High | Need >95% accuracy for high-stakes decisions |
+| **Legacy systems** | High | 30-year-old claims platforms, hard to integrate |
+| **Change management** | Critical | Cultural resistance, governance gaps |
+
+### The "Pilot Purgatory" Problem
+
+Insurers run 15 AI pilots, none reach production. The pattern:
+
+```
+Year 1: "Let's pilot AI for claims"
+     ↓
+Run 3-5 pilots with different vendors
+     ↓
+Each pilot works in isolation
+     ↓
+No clear path to production
+     ↓
+Year 2: "Let's try new pilots"
+     ↓
+Repeat indefinitely
+```
+
+**Why this happens:**
+- No unified data strategy
+- Different teams running different pilots
+- IT can't support production deployment
+- Success criteria unclear
+- Vendor lock-in fears prevent commitment
+
+### What Scaled Implementation Actually Requires
+
+Those who've succeeded (the 4-7%) did this:
+
+1. **Full workflow redesign** — Not point solutions, entire claims process rebuilt around AI
+2. **Executive sponsorship** — C-level commitment, not mid-manager experiments
+3. **Data foundation** — Structured, accessible, quality data (most don't have this)
+4. **Change management** — Training, incentives, culture shift for claims handlers
+5. **Compliance framework** — Audit trails, explainability, regulatory buy-in
+
+**Result for those who do it:** 35% productivity boost, 50% reduction in cycle time, claims processed in 24-48 hours vs 7-10 days.
+
+### Strategic Implication for Mysa
+
+The window is open but closing. The opportunity:
+
+| Play | Target | Value Prop |
+|------|--------|------------|
+| **Sell to insurers** | The 93% who can't scale | "We do what you've been trying to do for 3 years" |
+| **Sell to TPAs** | Crawford, Sedgwick (who don't have Kuarterback) | "Compete with Davies on unit economics" |
+| **Compete with TPAs** | Insurers wanting to insource | "Like a TPA but you keep control" |
+
+**The question:** Does Mysa want to be:
+- A **vendor** (sell tech to insurers/TPAs)
+- A **TPA** (own the claims, use AI as competitive advantage like Davies)
+- A **tech-enabled wedge** (start with one piece, expand)
+
+### Kuarterback Case Study: Davies' Dual Strategy
+
+Davies runs **two parallel businesses**:
+1. **TPA services** — Uses Kuarterback internally for competitive advantage
+2. **Technology licensing** — Sells Kuarterback to insurers directly
+
+Key details:
+- **Per-claim pricing** — Not SaaS subscription, transactional model
+- **UK motor focus** — Specifically MOJ/non-MOJ claims
+- **Rapid deployment** — "Up and working in a week"
+- **Handles 75-80% automatically** — 20-25% still need human input
+- **25 min saved per claim** — On the claims that DO need humans
+
+**The dual strategy works because:**
+- TPAs use AI → lower cost per claim → competitive pricing → more volume
+- Sell tech to insurers → additional revenue stream → validates the product
+
+**The question for Mysa:** Follow the Davies model? Or pick one lane?
+
+---
+
+## Competitive Landscape
+
+### Overview: The Fragmented Market
+
+The claims automation market is fragmented. No single vendor owns the full workflow. Each player has carved out a piece:
+
+| Phase | Key Players | What They Do |
+|-------|-------------|--------------|
+| **FNOL / Intake** | Sprout.ai, Hi Marley, Snapsheet | Document processing, customer comms |
+| **Damage Assessment** | Tractable, Claim Genius | Photo-based damage estimation |
+| **Fraud Detection** | Shift Technology | Pattern detection, claim scoring |
+| **Claims Management** | Five Sigma, Snapsheet, Guidewire | End-to-end workflow platform |
+| **Settlement** | Limited vendors | Most underserved phase |
+| **TPA + Tech** | Davies (Kuarterback) | Integrated services + technology |
+
+**Key insight:** The "assessment to payment" phase (62% of US handling time) has the FEWEST dedicated solutions. Most vendors focus on intake or investigation.
+
+---
+
+### Competitor Deep Dives
+
+---
+
+### 1. Tractable
+
+**What they do:** AI-powered vehicle damage assessment from photos
+
+**Funding:** $185M total raised, $1B+ valuation (unicorn since 2021)
+
+**Customers:** 20+ of top 100 global insurers including GEICO, Tokio Marine, Admiral, Aviva, Covéa, Ageas
+
+**How it works:**
+```
+Customer uploads damage photos
+     ↓
+Tractable AI analyzes images (pixel-level)
+     ↓
+AI generates damage assessment + repair estimate
+     ↓
+"Certainty score" indicates confidence level
+     ↓
+Low certainty → route to human
+High certainty → auto-process
+```
+
+**Part of the flow:**
+
+```
+[FNOL] → [Triage] → [TRACTABLE: Damage Assessment] → [Decision] → [Settlement]
+                              ↑
+                     Phase 8 — Assessment
+```
+
+**What they do well:**
+- Computer vision accuracy — "pixel-level" damage detection
+- Speed — estimates generated in seconds vs days
+- Scale — processed billions of claims
+- Customer list — major insurers already integrated
+- Auto + Property — expanded beyond just motor
+
+**Gaps / Limitations:**
+- **Photos only** — Can't process documents, statements, or EAS
+- **Assessment only** — Doesn't touch FNOL, investigation, or settlement
+- **Dependent on photo quality** — Poor photos = low certainty = human needed
+- **No liability determination** — Only tells you WHAT damage exists, not WHO caused it
+- **No end-to-end workflow** — Point solution, requires integration
+- **Post-assessment untouched** — The 62% of US time after assessment isn't addressed
+
+**Strategic position:** Best-in-class for visual damage assessment, but just one piece of the puzzle.
+
+---
+
+### 2. Sprout.ai
+
+**What they do:** AI-powered document extraction and claims automation
+
+**Funding:** £5.4M raised (October 2023), earlier-stage than competitors
+
+**Customers:** MetLife (global partnership), AXA, AdvanceCare (Generali), Scottish Widows
+
+**How it works:**
+```
+Claims documents arrive (reports, invoices, notes, photos)
+     ↓
+Sprout.ai extracts + structures unstructured data
+     ↓
+AI validates against policy terms
+     ↓
+Fraud patterns detected in real-time
+     ↓
+Simple claims → auto-decision
+Complex claims → handler with AI context
+```
+
+**Part of the flow:**
+
+```
+[SPROUT: FNOL + Document Processing] → [Triage] → [Investigation] → [Decision]
+              ↑                              ↑
+        Phases 5-6                     Fraud Detection
+```
+
+**What they do well:**
+- **Document extraction** — Handles messy inputs (handwritten, PDFs, photos)
+- **Policy validation** — Automatically checks coverage
+- **Fraud detection** — Real-time pattern recognition
+- **Multi-LOB** — Health, life, motor, home, commercial
+- **MetLife partnership** — Tier 1 validation, global scale
+- **Speed claims** — Claims reduced from days to seconds
+
+**Gaps / Limitations:**
+- **Earlier stage** — Less capital than Tractable/Shift
+- **Less visual assessment** — Not photo-based damage estimation
+- **Limited settlement workflow** — Focuses on intake/triage, not post-decision
+- **Integration complexity** — "Seamless integration" claimed but legacy systems vary
+- **Accuracy rates not published** — Unlike Tractable, no public metrics
+
+**Strategic position:** Strong on document processing and intake automation, potentially overlaps with Mysa's EAS extraction opportunity.
+
+---
+
+### 3. Shift Technology
+
+**What they do:** AI-powered fraud detection and claims decision support
+
+**Funding:** $320M total raised, $1B+ valuation (unicorn since 2021)
+
+**Customers:** 6 of top 10 US P&C insurers, 5 of top 10 global insurers, 115+ total across 25 countries
+
+**How it works:**
+```
+Claim enters system
+     ↓
+Shift analyzes claim against patterns
+├── Cross-claim analysis
+├── Historical fraud patterns
+├── Document forensics
+├── Behavioral indicators
+     ↓
+Risk score assigned
+     ↓
+High risk → SIU queue
+Normal → continue processing
+```
+
+**Part of the flow:**
+
+```
+[FNOL] → [SHIFT: Fraud Detection] → [Triage] → [Investigation] → [Decision]
+              ↑                           ↑               ↑
+         Every claim              Throughout process  Subrogation
+```
+
+**What they do well:**
+- **Fraud detection accuracy** — 3x higher detection rates than manual/rules
+- **Explainability** — 100% explainable decisions (regulatory compliance)
+- **Scale** — Analyzed billions of claims
+- **Breadth** — Underwriting fraud, claims fraud, subrogation, AML/KYC
+- **Deep insurance expertise** — 200+ data scientists, insurance-native
+- **Enterprise customers** — Largest insurers globally
+
+**Gaps / Limitations:**
+- **Fraud-focused** — Doesn't process claims, just scores them
+- **No damage assessment** — Different from Tractable
+- **No document extraction** — Different from Sprout.ai
+- **Requires existing workflow** — Adds to claims systems, doesn't replace them
+- **SIU-heavy positioning** — Primary users are fraud teams, not claims handlers
+
+**Strategic position:** Best-in-class fraud detection, but complementary to claims automation, not a replacement.
+
+---
+
+### 4. Five Sigma (Clive)
+
+**What they do:** AI-native claims management platform with multi-agent AI
+
+**Funding:** Seed stage (founded 2017)
+
+**Customers:** INSHUR, Upland Capital Group, Resorts World Las Vegas, various TPAs/MGAs
+
+**How it works:**
+```
+CLIVE = Suite of AI agents for different tasks
+
+Agent: Intake & Triage
+├── FNOL processing
+├── Severity assessment
+
+Agent: Coverage & Liability
+├── Policy validation
+├── Liability determination
+
+Agent: Document Processing
+├── Email handling
+├── Attachment extraction
+
+Agent: Fraud Detection
+├── Risk scoring
+├── Anomaly detection
+
+Agent: Communications
+├── Email drafting
+├── Response generation
+
+Agent: Compliance
+├── Quality audits
+├── Regulation adherence
+```
+
+**Part of the flow:**
+
+```
+[FIVE SIGMA: Full Claims Workflow]
+FNOL → Triage → Investigation → Assessment → Decision → Settlement → Close
+  ↑        ↑          ↑              ↑           ↑           ↑         ↑
+Clive agents operate across entire journey
+```
+
+**What they do well:**
+- **Full workflow** — Only vendor covering entire claims journey
+- **Modular** — Pick which AI agents to deploy
+- **Works on existing CMS** — Overlays Guidewire, Duck Creek, etc.
+- **Multi-agent architecture** — Modern AI approach
+- **TPA-friendly** — Explicitly targets TPAs and MGAs
+- **35% cost reduction** — Customer-reported results
+
+**Gaps / Limitations:**
+- **Earlier stage** — Less funding, fewer enterprise customers
+- **Less specialized** — Jack of all trades vs best-in-class at one thing
+- **Unclear accuracy** — "Abilities depend on agent mix" — no published metrics
+- **Integration complexity** — "Different integrations required" per module
+- **Competitive with Mysa** — If Mysa goes full-workflow, Five Sigma is direct competitor
+
+**Strategic position:** Most direct competitor to a full-workflow Mysa. Watch closely.
+
+---
+
+### 5. Snapsheet
+
+**What they do:** Digital claims management and virtual appraisal platform
+
+**Funding:** $162M total raised, achieved profitability in 2023
+
+**Customers:** 170+ including 15 of top 20 US P&C carriers
+
+**How it works:**
+```
+FNOL submitted digitally
+     ↓
+Photos/videos uploaded by customer
+     ↓
+Virtual appraisal (desk adjuster reviews)
+     ↓
+OR AI-assisted damage assessment
+     ↓
+Estimate generated
+     ↓
+Repair shop integration (if applicable)
+     ↓
+Payment processed
+```
+
+**Part of the flow:**
+
+```
+[SNAPSHEET: Intake through Settlement]
+FNOL → [Virtual Appraisal] → [Estimation] → [Repair Network] → [Payment]
+                ↑                   ↑
+          Photo-based         AI-assisted
+```
+
+**What they do well:**
+- **Market penetration** — 15 of top 20 US P&C carriers
+- **Profitable** — Rare for insurtech
+- **Volume** — 4.3M claims, $15.3B indemnity processed (2023)
+- **Total loss specialty** — Launched Snapsheet Total (2024)
+- **Virtual claims** — Pioneered desk adjuster / photo-based model
+- **Repair network integration** — Connected to body shops
+
+**Gaps / Limitations:**
+- **US-focused** — Less EU presence
+- **Less AI-native** — Started as virtual appraisal, adding AI later
+- **Motor-heavy** — Property is newer
+- **No fraud specialty** — Unlike Shift
+- **No document extraction** — Unlike Sprout.ai
+
+**Strategic position:** Incumbent with scale and profitability. More workflow platform than AI-native.
+
+---
+
+### 6. Lemonade (AI Jim)
+
+**What they do:** AI-native direct insurer (not vendor — they ARE the insurer)
+
+**Funding:** Public company (NYSE: LMND), $480M+ raised pre-IPO
+
+**Customers:** N/A — they are B2C, direct to consumers
+
+**How it works:**
+```
+Customer records video explaining claim
+     ↓
+AI Jim analyzes video (NLP + ML)
+├── Reads claim nature and severity
+├── Runs fraud detection algorithms
+├── Checks policy conditions
+     ↓
+Simple claim → Auto-approve + pay (2 seconds)
+Complex claim → Route to human
+```
+
+**Part of the flow (internal):**
+
+```
+[LEMONADE: Full stack — they own everything]
+Customer → AI Jim → [Auto-decision or Human] → Payment
+            ↑
+     Handles ~50% of claims
+     40% with ZERO human touch
+```
+
+**What they do well:**
+- **Speed** — World record: 2-second claim settlement
+- **Customer experience** — Video FNOL, instant decisions
+- **Full stack** — Own the entire workflow end-to-end
+- **Data advantage** — All their claims, all their data, continuous learning
+- **Fraud detection** — AI analyzes video for deception indicators
+- **Cost reduction** — 30% reduction in claims processing costs
+
+**Gaps / Limitations:**
+- **They are an insurer, not a vendor** — Can't buy AI Jim
+- **Limited LOBs** — Renters, home, pet, term life — no commercial
+- **Controversial accuracy** — CNN investigation questioned AI claims
+- **B2C only** — No enterprise/broker channels
+- **Not a model for Mysa** — Unless Mysa becomes an insurer
+
+**Strategic position:** Proves what's possible with AI-native claims. Not a competitor, but a benchmark.
+
+---
+
+### 7. Davies / Kuarterback
+
+**What they do:** TPA + Technology — both operate claims AND sell the software
+
+**Funding:** Private equity backed (BC Partners), major acquisitions ongoing
+
+**Customers:** UK insurers (TPA clients), plus technology licensing to external insurers
+
+**How it works:**
+```
+Stage 2 pack received (UK motor MOJ claims)
+     ↓
+Kuarterback reads documents
+├── Medical reports
+├── Physio invoices
+├── All stage 2 docs
+     ↓
+Content converted to structured data fields
+     ↓
+Auto-matched against valuation rules/matrices
+     ↓
+Claim value generated in <1 minute
+     ↓
+75-80% handled automatically
+20-25% → human handler (saves 25 min)
+```
+
+**Part of the flow:**
+
+```
+[KUARTERBACK: Assessment + Valuation]
+FNOL → Triage → Investigation → [KUARTERBACK: Assessment] → Decision → Settlement
+                                          ↑
+                                   UK motor specific
+                                   MOJ/non-MOJ claims
+```
+
+**What they do well:**
+- **Dual model** — Competitive advantage as TPA + revenue from licensing
+- **UK motor deep** — Very specialized, very good at one thing
+- **Speed** — <1 minute valuations
+- **Cost model** — Per-claim pricing, instant ROI
+- **Rapid deployment** — "Up and working in a week"
+- **TPAs can use too** — ClaimPilot acquisition targets TPA market
+
+**Gaps / Limitations:**
+- **UK motor only** — Not property, not US, not EU continental
+- **MOJ-specific** — Very narrow use case
+- **Assessment only** — Doesn't touch FNOL or earlier phases
+- **Not open** — Unclear if available to all or select relationships
+- **Requires structured input** — Stage 2 packs, not messy EAS
+
+**Strategic position:** Proves the TPA + tech dual model works. Direct inspiration for Mysa strategy.
+
+---
+
+### 8. Hi Marley
+
+**What they do:** AI-powered conversational platform for claims communication
+
+**Funding:** $65M+ raised
+
+**Customers:** Major P&C carriers
+
+**How it works:**
+```
+Claim filed
+     ↓
+Customer receives SMS from insurer (via Hi Marley)
+     ↓
+Two-way conversation
+├── Status updates
+├── Document requests
+├── Photo submission
+├── Appointment scheduling
+     ↓
+AI automates follow-ups
+     ↓
+Handler gets unified communication thread
+```
+
+**Part of the flow:**
+
+```
+[HI MARLEY: Communication layer throughout]
+FNOL ←→ [HI MARLEY] ←→ Investigation ←→ [HI MARLEY] ←→ Settlement
+              ↑                                ↑
+      Customer communication          Handler communication
+```
+
+**What they do well:**
+- **Customer experience** — SMS preferred over phone/email
+- **Engagement** — Real-time, conversational
+- **Automation** — Reduces handler communication burden
+- **Integration** — Works alongside existing claims systems
+- **Simple value prop** — Easy to understand, easy to buy
+
+**Gaps / Limitations:**
+- **Communication only** — Doesn't process claims, assess damage, or detect fraud
+- **Thin wedge** — Feature, not platform
+- **Commoditizable** — Any CMS could add SMS capability
+- **No differentiation in claims logic** — Just the messaging layer
+
+**Strategic position:** Nice-to-have, not must-have. Could be feature of broader platform.
+
+---
+
+### 9. Pace (withpace.com)
+
+**What they do:** AI-native BPO replacement — agentic AI for insurance back-office operations
+
+**Funding:** $10M Series A (Sequoia Capital, Jan 2026)
+
+**Customers:** Prudential Financial (ILI business), The Mutual Group, Newfront
+
+**How it works:**
+```
+Insurance documents arrive (emails, PDFs, submissions)
+     ↓
+Pace AI agents read and extract data
+     ↓
+Agents navigate internal apps (web automation)
+     ↓
+Apply business rules specific to insurer
+     ↓
+Take actions via web or APIs
+     ↓
+Human review for exceptions
+     ↓
+Output: Completed tasks (data entry, file prep, QA)
+```
+
+**Part of the flow — What they do at each phase:**
+
+| Phase | Pace Activity |
+|-------|--------------|
+| **FNOL / Intake** | Read incoming emails, extract claim data from documents, populate claims systems |
+| **Submission Processing** | Process broker submissions, intake data, route to appropriate queues |
+| **Data Entry** | Auto-populate fields across multiple systems, eliminate manual rekeying |
+| **Policy Servicing** | Handle endorsements, audits, renewals (Prudential use case) |
+| **Claims File Prep** | Prepare full claims files, attach documents, ensure completeness |
+| **Quality Assurance** | Check adjusting guidelines, flag exceptions, ensure compliance |
+
+```
+[PACE: Back-office automation layer]
+Submission → [PACE: Intake] → FNOL → [PACE: Data Entry] → Triage → Investigation → [PACE: File Prep]
+                   ↑                         ↑                                            ↑
+           Document processing        System population                           QA & compliance
+```
+
+**What they do well:**
+- **BPO replacement** — Directly targets $70B+ insurance BPO market
+- **Agentic AI** — Agents navigate apps, make calls, reason across documents
+- **Hybrid model** — AI + human review for quality control
+- **Fast deployment** — "Thousands of hours of work" live at Prudential
+- **Blue-chip customer** — Prudential validates enterprise readiness
+- **Sequoia backing** — Top-tier VC signals quality
+
+**Gaps / Limitations:**
+- **Back-office focus** — Not claims decision-making, damage assessment, or settlement
+- **Data entry heavy** — Doesn't replace adjusters, just administrative tasks
+- **No fraud detection** — Different from Shift Technology
+- **No damage assessment** — Different from Tractable
+- **New entrant** — Founded 2024, early revenue stage
+
+**Strategic position:** Competing with BPOs (Genpact, WNS, Cognizant) not insurtech. Different angle than claims automation — more "replace the offshore team" than "automate the adjuster."
+
+---
+
+### 10. ClaimSorted
+
+**What they do:** AI-native TPA — full claims handling with embedded AI
+
+**Funding:** $13.3M Seed (Atomico, Eurazeo, Y Combinator), $16.3M total
+
+**Customers:** Insurers and MGAs (names not disclosed), Y Combinator S24
+
+**How it works:**
+```
+Insurer outsources claims to ClaimSorted
+     ↓
+ClaimSorted handles FULL claims lifecycle
+├── White-label FNOL portal (eNOL)
+├── White-label Claims Portal for policyholders
+├── AI triage and routing
+├── Automated fraud detection (pattern matching, document tampering)
+├── Claims handlers for complex cases
+├── Payment processing
+     ↓
+Output: Settled claims, data fed back to underwriting
+```
+
+**Part of the flow — What they do at each phase:**
+
+| Phase | ClaimSorted Activity |
+|-------|---------------------|
+| **FNOL** | White-label eNOL (electronic Notice of Loss), intake via portal/email/phone |
+| **Triage** | AI auto-triage, complexity scoring, route to auto-process or handler |
+| **Investigation** | Handler investigation for complex claims, AI-assisted document review |
+| **Fraud Detection** | Proprietary algorithms flag tampering, unusual patterns, excessive costs |
+| **Assessment** | Damage validation, coverage checks, liability determination |
+| **Decision** | Auto-decision for simple claims, handler decision for complex |
+| **Settlement** | Payment processing, payout in minutes for approved claims |
+| **Recoveries** | Subrogation identification, recovery opportunities flagged |
+
+```
+[CLAIMSORTED: Full TPA — End-to-End]
+FNOL → Triage → Investigation → Assessment → Decision → Settlement → Close
+  ↑        ↑           ↑             ↑           ↑          ↑          ↑
+eNOL   AI triage   Handlers    Fraud check   Auto/human  Payout    Recoveries
+```
+
+**What they do well:**
+- **Full TPA model** — Not a point solution, handles everything
+- **Speed** — 3x faster cycle times than traditional TPAs
+- **Quality** — <1.2% leakage, <1% reopen rate
+- **Multi-LOB** — Property, Auto, Liability, A&H, Travel, Warranty
+- **White-label** — Insurer brand preserved
+- **Data feedback loop** — Insights back to underwriting
+
+**Gaps / Limitations:**
+- **TPA model requires trust** — Insurer gives up control of claims
+- **Early stage** — Seed funding, building customer base
+- **UK/EU focus** — Less US presence currently
+- **Competes with Davies** — Similar TPA + tech model
+- **Generalist** — Not specialized in one LOB like Kuarterback (UK motor)
+
+**Strategic position:** Direct competitor to Davies model. AI-native TPA for insurers who want to outsource but get better tech than legacy TPAs. Watch closely — same strategic territory Mysa might enter.
+
+---
+
+### 11. Solva
+
+**What they do:** AI claims co-pilot — overlays existing CMS to detect leakage, fraud, and automate triage
+
+**Funding:** $6M (First Round, Y Combinator, SV Angel, Paul Graham as angel)
+
+**Customers:** Carriers and MGAs (early stage, names not disclosed), Sweden-based
+
+**How it works:**
+```
+Claim enters insurer's existing CMS
+     ↓
+Solva AI runs on top (no system replacement)
+     ↓
+AI agents analyze claim
+├── Auto-triage FNOL
+├── Extract policy violations
+├── Flag missing information
+├── Detect fraud patterns
+├── Identify coverage breaches
+├── Find recovery opportunities
+     ↓
+Output: Recommendations with full audit trail
+     ↓
+Handler acts on AI recommendations
+```
+
+**Part of the flow — What they do at each phase:**
+
+| Phase | Solva Activity |
+|-------|---------------|
+| **FNOL** | Auto-triage incoming claims, flag incomplete submissions, route appropriately |
+| **Triage** | Severity scoring, complexity assessment, priority queue assignment |
+| **Investigation** | Detect policy violations, identify coverage breaches, flag negligence/misconduct |
+| **Fraud Detection** | Pattern recognition, document validation, recurring loss driver identification |
+| **Assessment** | Validate claim against policy terms, identify leakage risks |
+| **Decision Support** | Source-cited recommendations, full audit trail, explainable AI |
+| **Recoveries** | Subrogation opportunity identification, recovery flags |
+
+```
+[SOLVA: AI overlay on existing CMS]
+         ┌─────────────────────────────────────────────────────────────┐
+         │                    SOLVA AI LAYER                           │
+         │  Triage → Fraud → Leakage → Coverage → Recommendations      │
+         └─────────────────────────────────────────────────────────────┘
+                                    ↓
+[Existing CMS: FNOL → Triage → Investigation → Assessment → Decision → Settlement]
+```
+
+**What they do well:**
+- **No rip-and-replace** — Works on top of existing systems
+- **Leakage focus** — Stops wrongful payouts (different angle than speed)
+- **Audit trail** — Source-cited answers, full explainability (regulatory friendly)
+- **Security certified** — ISO 27001, ISO 42001, SOC 2 Type 2, GDPR
+- **Paul Graham backed** — Strong signal from YC founder personally investing
+- **Fast traction** — $245K ARR just 10 weeks after launch
+
+**Gaps / Limitations:**
+- **Overlay only** — Doesn't process claims, just advises handlers
+- **Decision support, not decision making** — Human still decides
+- **Very early** — Founded 2025, just launched
+- **Swedish base** — May face go-to-market challenges in US
+- **No damage assessment** — Different from Tractable
+- **No communication** — Different from Hi Marley
+
+**Strategic position:** Complementary to claims systems rather than replacement. "AI second opinion" on every claim. Could be acquired by CMS vendors (Guidewire, Duck Creek) or compete with them.
+
+---
+
+### 12. Avallon
+
+**What they do:** AI agents for claims back-office — calls, documents, data entry
+
+**Funding:** $4.6M Seed (Frontline Ventures, Y Combinator)
+
+**Customers:** Athens Administrators (CA-based TPA), nationwide partner with 400+ adjusters
+
+**How it works:**
+```
+Claims operations task arrives
+├── Phone call (intake, status, billing)
+├── Email (inquiry, document request)
+├── Document (PDF, invoice, medical report)
+     ↓
+Avallon AI agent handles task
+├── Voice AI for calls (gathers info, updates parties)
+├── Email AI for written communication
+├── Document AI for extraction and summarization
+     ↓
+Structured data output
+     ↓
+Auto-populates claims management system
+     ↓
+Adjuster gets clean, organized information
+```
+
+**Part of the flow — What they do at each phase:**
+
+| Phase | Avallon Activity |
+|-------|-----------------|
+| **FNOL / Intake** | Answer intake calls, gather claim information, extract from documents |
+| **Communication** | Handle status calls, billing questions, eliminate phone tag, keep parties updated |
+| **Coordination** | Contact employers, providers, repair shops, injured workers |
+| **Document Processing** | Summarize medical reports, extract from PDFs/invoices, validate coverage |
+| **Data Entry** | Convert unstructured data to structured, populate CMS, eliminate manual entry |
+| **Throughout** | Generate operational insights, identify bottlenecks |
+
+```
+[AVALLON: Multi-modal back-office automation]
+     ┌──────────────────────────────────────────────────────────┐
+     │  CALLS ─────► AVALLON ◄───── EMAILS ◄───── DOCUMENTS    │
+     │                  │                                       │
+     │          Structured Data                                 │
+     │                  ↓                                       │
+     │         Claims Management System                         │
+     └──────────────────────────────────────────────────────────┘
+                              ↓
+[Adjuster focuses on: Investigation → Assessment → Decision]
+```
+
+**What they do well:**
+- **Multi-modal** — Same AI handles calls, emails, and documents
+- **Voice AI** — Actually makes and receives phone calls (rare capability)
+- **TPA-focused** — Explicitly targets the 42,000 TPAs in US/Europe
+- **Speed** — 90% reduction in processing time claimed
+- **Integration** — Works with existing CMS, IVR, data warehouses
+- **Workers' comp expertise** — Strong in this complex LOB
+
+**Gaps / Limitations:**
+- **Back-office only** — Doesn't make claims decisions
+- **Early stage** — $4.6M seed, building customer base
+- **No damage assessment** — Different from Tractable
+- **No fraud detection** — Different from Shift
+- **Operational, not strategic** — Efficiency tool, not transformation tool
+
+**Strategic position:** Similar territory to Pace but more TPA-focused. "Replace the back-office team" for adjusters. Could be powerful when combined with decision-making AI.
+
+---
+
+---
+
+### 13. omni:us
+
+**What they do:** EAS extraction + claims automation — the most direct competitor for EU motor STP
+
+**Funding:** $52.7M total (Anthemis, Baloise, Talis Capital, EU Horizon 2020)
+
+**Customers:** EU insurers (names not disclosed), Google Cloud partner
+
+**How it works:**
+```
+Paper/scanned EAS arrives
+     ↓
+omni:us AI processes document
+├── Computer vision (CNNs) aligns to template
+├── Handwriting recognition (in-house model)
+├── NLP extracts text + context
+├── ~100 fields digitized
+     ↓
+Structured data output
+     ↓
+Convention matching
+     ↓
+STP decision or handler routing
+```
+
+**Part of the flow — What they do at each phase:**
+
+| Phase | omni:us Activity |
+|-------|-----------------|
+| **Documentation** | NOT at scene — processes documents AFTER they arrive |
+| **FNOL** | Extract data from EAS, structure for processing |
+| **Triage** | Convention matching, STP routing, complexity scoring |
+| **Investigation** | Minimal — focused on STP path |
+| **Assessment** | Damage data extraction from reports |
+| **Decision** | STP automation for clean claims |
+| **Close** | Subrogation detection (Express Subrogation product) |
+
+```
+[OMNI:US: EAS Extraction + STP Automation]
+[Paper EAS] → [OMNI:US: Extraction] → [Convention Match] → [STP Decision]
+                      ↑                        ↑                 ↑
+              Handwriting OCR          Fault tables       Auto-process
+```
+
+**What they do well:**
+- **EAS-specific** — Built specifically for European Accident Statement
+- **Handwriting recognition** — In-house model for messy crisis handwriting
+- **Convention matching** — Connects extraction to fault tables
+- **Well-funded** — $52.7M, EU grants, established since 2018
+- **Subrogation** — Also detects recovery opportunities
+- **Multi-LOB** — Motor, property, liability
+
+**Gaps / Limitations:**
+- **EU-focused** — Less relevant for US market
+- **STP still at ~10%** — Despite omni:us existing, adoption/integration barriers remain
+- **Not full workflow** — Focuses on intake/STP, less on investigation or settlement
+- **Integration complexity** — Still needs to connect to each insurer's legacy CMS
+- **Doesn't fix capture** — Extracts from messy EAS, doesn't prevent messy EAS
+
+**Strategic position:** The most direct competitor for EU motor STP opportunity. If Mysa goes after EAS extraction, omni:us is the incumbent with 7+ years head start and $52M. Mysa would need differentiation (better integration? settlement workflow? different wedge?).
+
+---
+
+### Why Is STP Still Only ~10% If omni:us Exists?
+
+This is a critical strategic question. omni:us has been working on EAS extraction since 2018 with $52.7M in funding. Yet STP remains at ~10% vs 60-70% theoretical. Why?
+
+| Barrier | Explanation |
+|---------|-------------|
+| **Enterprise adoption lag** | 12-24 month sales cycles. Insurers are slow to adopt new tech. |
+| **Integration complexity** | Each insurer has different CMS (Guidewire, Duck Creek, legacy). Integration takes months per customer. |
+| **Not just extraction** | Clean data is step 1. But STP requires: convention matching → reserve setting → payment triggers → exception handling → audit trail. Full pipeline needed. |
+| **Change management** | Claims handlers resist automation. Culture and job security concerns. |
+| **Edge case volume** | 30-40% of claims can't be STP (disputed, BI, unclear). These dominate handler time and attention. |
+| **omni:us isn't everywhere** | One vendor, primarily EU, not universal adoption. |
+
+**Implication for Mysa:** The opportunity may NOT be "do what omni:us does" — they have 7-year head start. The opportunity may be:
+1. **Full STP pipeline** — Not just extraction, but the complete automation stack
+2. **Better integration** — Universal connector to any CMS
+3. **Settlement workflow** — The 62% of time AFTER extraction that omni:us doesn't touch
+4. **Different geography** — US market has different problems entirely
+
+---
+
+### Competitive Landscape Summary
+
+| Vendor | Primary Strength | Flow Phase | Funding | Key Gap |
+|--------|-----------------|------------|---------|---------|
+| **Tractable** | Photo damage assessment | Assessment | $185M | No documents, no workflow |
+| **Sprout.ai** | Document extraction | FNOL/Triage | £5.4M | Less visual, earlier stage |
+| **Shift Technology** | Fraud detection | Throughout | $320M | Detection only, no processing |
+| **Five Sigma** | Full workflow AI | End-to-end | Seed | Earlier stage, less specialized |
+| **Snapsheet** | Virtual appraisal + platform | FNOL-Settlement | $162M | Less AI-native |
+| **Davies/Kuarterback** | UK motor assessment + TPA | Assessment | PE-backed | UK only, narrow use case |
+| **Hi Marley** | Communication | Throughout | $65M | Communication only |
+| **Lemonade** | Full stack insurer | End-to-end | Public | Not a vendor, B2C only |
+| **Pace** | BPO replacement (agentic AI) | Intake/Data Entry/QA | $10M | Back-office only, no decisions |
+| **ClaimSorted** | AI-native TPA | End-to-end | $16.3M | Early stage, competes with Davies |
+| **Solva** | Leakage/fraud overlay | Triage-Decision | $6M | Overlay only, no processing |
+| **Avallon** | Multi-modal back-office | Intake/Comms/Docs | $4.6M | Back-office only, early stage |
+| **omni:us** | EAS extraction + STP | FNOL/Triage/Decision | $52.7M | EU only, STP still low, integration hard |
+
+### White Space Analysis: Where Are the Gaps?
+
+| Gap | Description | Current Players | Opportunity |
+|-----|-------------|-----------------|-------------|
+| **EAS extraction (EU)** | Digitize paper EAS, structure for convention matching | Sprout.ai (generic), nobody specific | **HIGH** — Direct path to STP unlock |
+| **Settlement workflow** | Post-assessment bureaucracy (62% of US time) | Almost nobody (ClaimSorted touches it as TPA) | **VERY HIGH** — Underserved, high time % |
+| **Cross-phase orchestration** | Connect FNOL → Assessment → Settlement | Five Sigma, ClaimSorted attempting | **MEDIUM** — Harder to sell, bigger build |
+| **TPA productivity** | AI for Crawford/Sedgwick (non-Davies TPAs) | Davies has Kuarterback, Avallon targeting TPAs | **HIGH** — Large market, proven need |
+| **EU continental motor** | CIMPAS/IRSA integration, convention matching | Nobody focused | **HIGH** — Structural advantage (EAS) |
+| **Multi-adjuster handoffs** | Reduce 3x time penalty for collaboration | Nobody focused | **MEDIUM** — Workflow improvement |
+| **Back-office automation** | Replace BPO for data entry, comms, file prep | Pace, Avallon emerging | **MEDIUM** — Competitive, lower value per task |
+| **Leakage prevention** | Detect wrongful payouts before they happen | Solva (new), Shift (fraud-focused) | **MEDIUM** — Requires claims data access |
+
+### Implications for Mysa
+
+1. **The market is fragmented** — No one owns the workflow. This is opportunity.
+
+2. **Point solutions dominate** — Tractable does photos, Shift does fraud, Sprout does docs. Integration is the pain.
+
+3. **Settlement is underserved** — 62% of US time, almost no dedicated solutions.
+
+4. **EU is underserved** — Most competitors are US/UK focused. EU motor (EAS, conventions) is open.
+
+5. **Full workflow is hard** — Five Sigma is trying, but earlier stage. Snapsheet has scale but less AI-native.
+
+6. **Davies proves dual model** — TPA + tech licensing can coexist.
+
+7. **TPAs need help** — Crawford, Sedgwick don't have Kuarterback. Selling to TPAs is viable path.
+
+---
+
+## STP Pipeline Analysis: Who Does Intake → Docs → Images → Decision Well?
+
+### The Full STP Pipeline
+
+To achieve true straight-through processing, you need the complete chain:
+
+```
+INTAKE → FNOL → DOC PROCESSING → IMAGE PROCESSING → DECISION → SETTLEMENT
+   ↑        ↑          ↑               ↑               ↑           ↑
+ Receive   Log      Extract        Assess          Approve      Pay
+ claim    claim    from docs     from photos     coverage     claim
+```
+
+**The question:** Who covers this full pipeline for Motor AND Property?
+
+---
+
+### Competitor Capability Matrix: STP Pipeline
+
+| Vendor | Intake | FNOL | Doc Processing | Image/Damage | Decision | Settlement | Motor | Property |
+|--------|--------|------|----------------|--------------|----------|------------|-------|----------|
+| **Sprout.ai** | ✅ | ✅ | ✅ Best | ⚠️ Fraud only | ✅ | ⚠️ | ✅ | ✅ |
+| **omni:us** | ✅ | ✅ | ✅ EAS best | ❌ | ✅ | ⚠️ | ✅ Best | ✅ |
+| **Tractable** | ❌ | ❌ | ❌ | ✅ Best | ⚠️ | ❌ | ✅ | ✅ |
+| **ClaimSorted** | ✅ | ✅ | ✅ | ⚠️ | ✅ | ✅ | ✅ | ✅ |
+| **Five Sigma** | ✅ | ✅ | ✅ | ⚠️ | ✅ | ✅ | ✅ | ✅ |
+| **Snapsheet** | ✅ | ✅ | ⚠️ | ✅ Virtual | ⚠️ | ✅ | ✅ | ✅ |
+| **Shift** | ❌ | ❌ | ⚠️ | ❌ | ⚠️ Fraud | ❌ | ✅ | ✅ |
+| **Davies** | ⚠️ | ⚠️ | ✅ | ❌ | ✅ | ✅ | ✅ UK | ❌ |
+
+**Legend:** ✅ Strong | ⚠️ Partial/Limited | ❌ Not covered
+
+---
+
+### Deep Dive: Best at Each Stage
+
+#### 1. Sprout.ai — Best for Document Processing (Multi-LOB)
+
+**STP Claim:** 67%+ instant settlement
+
+| Stage | What They Do |
+|-------|--------------|
+| **Intake** | Ingest from any channel (email, portal, app, API) |
+| **FNOL** | Auto-classify claim type, extract policy details |
+| **Doc Processing** | AI-OCR any language, handwritten, 100% field extraction |
+| **Image Processing** | Fraud detection (tampering, AI-generated) — NOT damage assessment |
+| **Decision** | Policy validation, coverage checking, auto-approve simple |
+| **Settlement** | ⚠️ Less focus here |
+
+**Sectors:** Motor ✅ Property ✅ Health ✅ Life ✅ Commercial ✅
+
+**Gap:** No photo-based damage assessment — detects fraud in images, doesn't estimate repair costs
+
+---
+
+#### 2. omni:us — Best for EU Motor EAS Extraction
+
+**STP Claim:** 70% no-touch claims
+
+| Stage | What They Do |
+|-------|--------------|
+| **Intake** | Receive scanned/photographed EAS, emails, docs |
+| **FNOL** | Extract from EAS (~100 fields), handwriting recognition |
+| **Doc Processing** | Best-in-class for EAS specifically, CNN-based alignment |
+| **Image Processing** | Document images only — NOT damage photos |
+| **Decision** | Convention matching, auto-process clean claims |
+| **Settlement** | ⚠️ Less focus, more on intake/triage |
+
+**Sectors:** Motor ✅ (EU focus) Property ✅ Liability ✅
+
+**Gap:** EU-focused, no photo damage assessment, integration complexity
+
+---
+
+#### 3. Tractable — Best for Photo Damage Assessment
+
+**STP Claim:** ~70% auto-processed (for photo-assessable claims)
+
+| Stage | What They Do |
+|-------|--------------|
+| **Intake** | ❌ Not their focus |
+| **FNOL** | ❌ Not their focus |
+| **Doc Processing** | ❌ Not their focus |
+| **Image Processing** | ✅ BEST — pixel-level damage detection, repair estimates, total loss |
+| **Decision** | Certainty scores for routing |
+| **Settlement** | ❌ Not their focus |
+
+**Sectors:** Motor ✅ Property ✅ (expanded 2022, Verisk/Xactimate integration)
+
+**Gap:** Downstream only — needs to be combined with intake/doc processing solutions
+
+---
+
+#### 4. ClaimSorted — Closest to Full Pipeline (TPA Model)
+
+**STP Claim:** 3x faster than traditional TPAs
+
+| Stage | What They Do |
+|-------|--------------|
+| **Intake** | ✅ White-label eNOL portal, API/SFTP integration |
+| **FNOL** | ✅ Full intake, customizable workflows |
+| **Doc Processing** | ✅ AI reads uploaded photos and scanned documents |
+| **Image Processing** | ⚠️ Fraud detection — unclear on damage estimation depth |
+| **Decision** | ✅ AI triage, auto-decision for simple, handlers for complex |
+| **Settlement** | ✅ Payment processing, payout in minutes |
+
+**Sectors:** Motor ✅ Property ✅ Liability ✅ A&H ✅ Travel ✅ Warranty ✅
+
+**The Catch:** ClaimSorted is a **TPA, not a tech vendor**. They HANDLE your claims — you give up control. This is different from Sprout/Tractable which are point solutions you integrate.
+
+| Model | You Control Claims? | Integration Effort | Trust Required |
+|-------|--------------------|--------------------|----------------|
+| **Point Solution** (Sprout, Tractable) | YES | Medium | Low |
+| **TPA** (ClaimSorted, Davies) | NO | Low | High |
+
+---
+
+### The Integration Problem
+
+Nobody does the full pipeline as a **single integrated vendor**:
+
+```
+Best Stack Today (requires integration):
+
+INTAKE/FNOL     DOC PROCESSING     IMAGE ASSESSMENT     DECISION     SETTLEMENT
+     ↓                ↓                   ↓                 ↓             ↓
+ Sprout.ai  →    Sprout.ai    →     Tractable      →   Shift    →    ???
+    or              or                                (fraud)
+ omni:us        omni:us
+```
+
+**The pain:** Insurers must integrate 3-4 vendors, each with different APIs, data formats, and contracts.
+
+**ClaimSorted's advantage:** They bundle it all — but you give up control.
+
+---
+
+### Strategic Insight: The Real White Space
+
+| White Space | Why It's Open |
+|-------------|---------------|
+| **Integrated STP stack** | Point solutions don't talk to each other. Orchestration layer needed. |
+| **Photo damage + doc processing** | Sprout does docs, Tractable does photos. No one does both. |
+| **Settlement automation** | Everyone focuses on intake/assessment. 62% of US time is post-decision. |
+| **TPA tech licensing** | Davies does it. ClaimSorted could. Others (Crawford, Sedgwick) don't have it. |
+
+**For Mysa:**
+- If you want to be a **tech vendor**: Build the integration layer that connects Sprout + Tractable + Shift into one pipeline
+- If you want to be a **TPA**: Compete with ClaimSorted/Davies with better tech
+- If you want a **wedge**: Pick one underserved piece (settlement? EU convention matching?) and own it
 
 ---
 
@@ -2406,6 +3611,234 @@ If Mysa sells to insurers, the product must work for BOTH staff adjusters AND TP
 
 ---
 
+## TPA Deep Dive: Operating Model, Pricing, and Journey
+
+### TPA vs Public Adjuster/Loss Assessor — Critical Distinction
+
+| | **TPA** | **Public Adjuster (US) / Loss Assessor (UK)** |
+|---|---|---|
+| **Works for** | The INSURER | The POLICYHOLDER |
+| **Goal** | Process claims efficiently for insurer | Maximize settlement for policyholder |
+| **Who pays them** | Insurer (contract fee) | Policyholder (10-15% of settlement) |
+| **Authority** | Delegated from insurer | None — advocates/negotiates |
+| **Relationship** | Extension of insurer's operations | Adversarial to insurer |
+| **When engaged** | Insurer outsources claims handling | Policyholder feels underpaid/denied |
+| **Claims they touch** | Whatever insurer assigns | Typically large/disputed only |
+
+**Key point:** A TPA adjuster IS working for the insurer, just employed by a different company. A public adjuster/loss assessor is working AGAINST the insurer on behalf of the claimant.
+
+---
+
+### TPA Pricing Models
+
+Based on research from [Crawford](https://www.crawco.com/blog/what-does-this-fee-cover-unpacking-what-goes-into-tpa-administrative-costs-and-fees), [IRMI](https://www.irmi.com/articles/expert-commentary/third-party-administrators-quality-versus-price):
+
+| Model | How It Works | Typical Range | Used For |
+|-------|-------------|---------------|----------|
+| **Per-claim fee** | Fixed fee per claim handled | $100-$1,500 per claim | Most common for P&C |
+| **Tiered per-claim** | Fee varies by claim complexity | Lower for simple, higher for complex | Sophisticated contracts |
+| **% of paid claims** | Percentage of indemnity paid | 1-7% of claim value | Some specialty lines |
+| **Monthly retainer** | Fixed monthly fee for capacity | Varies by volume | Large accounts |
+| **Hybrid** | Base retainer + per-claim above threshold | Negotiated | Large insurers |
+
+**What's Included in TPA Fees:**
+- FNOL intake (24/7)
+- Adjuster assignment and management
+- Investigation activities
+- Coverage analysis (within authority)
+- Settlement processing (within limits)
+- Reporting and compliance
+- Vendor management (repair networks, experts)
+
+**What's Usually Extra:**
+- Expert fees (engineers, forensics)
+- Legal costs
+- Actual indemnity payments (insurer pays these)
+- SIU investigations (sometimes)
+
+**Key Insight:** TPA fees have remained relatively flat for a decade despite inflation — competitive pressure keeps pricing tight. This means TPAs are under margin pressure, which makes productivity tools attractive to them.
+
+---
+
+### Do Insurers Have Incentive to Reduce TPA Usage?
+
+**Yes — the math is clear:**
+
+| Processing Method | Cost per Claim | Notes |
+|------------------|----------------|-------|
+| **STP (automated)** | ~$15 | Minimal human oversight |
+| **Staff adjuster** | ~$75 | Salary, benefits, overhead |
+| **TPA** | ~$100-1,500+ | Per-claim fee + loss adjustment expense |
+
+**Every claim moved from TPA → STP saves $85-1,485 per claim.**
+
+**But there's a nuance:** Insurers can only STP claims with clean data. The ~90% that can't STP still need humans. So the real strategy is:
+1. **Maximize STP** (automate the simple)
+2. **Use staff for strategic/high-value claims** (control, relationships)
+3. **Use TPA for surge, specialty, and cost optimization** (variable cost)
+
+**Mysa Opportunity:** If you help insurers move claims from TPA/staff → STP, you're directly reducing their biggest variable cost. The ROI is measurable and immediate.
+
+---
+
+### Does the TPA Handle FNOL Intake?
+
+**Yes — FNOL intake is often a core TPA service.**
+
+| TPA | FNOL Capability |
+|-----|-----------------|
+| **Crawford** | "Centralised FNOL hub with omnichannel access available 24/7/365" |
+| **Sedgwick** | "24/7/365 intake" with centralized hubs |
+| **Davies** | "90% of customers contacted within 5 minutes following FNOL" |
+| **McLarens** | "Technical handling starts from the moment a claim happens" |
+
+**How it works:**
+
+```
+Policyholder has incident
+        ↓
+Calls insurer's claims line (branded as insurer)
+        ↓
+Actually answered by TPA's call center
+├── Insurer routes calls to TPA
+├── White-label experience (policyholder doesn't know it's TPA)
+├── TPA agent uses insurer's scripts/systems
+        ↓
+TPA logs FNOL into insurer's claims system (or TPA system with data sync)
+        ↓
+TPA handles claim through settlement (or escalates to insurer)
+```
+
+**Important nuance:** Not all TPA arrangements include FNOL. Scope is defined in the **delegated authority agreement**.
+
+---
+
+### TPA Journey by Phase — What They Do When
+
+| Phase | TPA Role | Activities | Authority |
+|-------|----------|------------|-----------|
+| **0-2: Incident/Scene/Docs** | ❌ None | Policyholder documents incident | — |
+| **3: Reconciliation** | ❌ None | Parties/police reconcile facts | — |
+| **4: First Contact** | ⚠️ Sometimes | If TPA handles FNOL, they receive first call | Defined in contract |
+| **5: FNOL** | ✅ Often | 24/7 intake, policy verification, claim opened | Delegated |
+| **6: Triage** | ✅ Yes | Complexity assessment, adjuster assignment | Within guidelines |
+| **7: Investigation** | ✅ Yes | Full investigation (statements, evidence, liability) | Delegated |
+| **8: Assessment** | ✅ Yes | Damage valuation, repair estimates | Within limits |
+| **9: Decision** | ⚠️ Limited | Coverage determination, settlement calculation | Up to authority limit |
+| **10: Settlement** | ⚠️ Limited | Payment processing, negotiation | Up to authority limit |
+| **11: Close** | ✅ Yes | File closure, reporting, subrogation handoff | Per guidelines |
+
+**Escalation to Insurer:**
+- Claims above authority limit (e.g., >$50K)
+- Complex coverage interpretation
+- Litigation decisions
+- Fraud investigation conclusions
+- High-profile/reputational claims
+
+---
+
+### Major TPAs and Their Specializations
+
+| TPA | Headquarters | Specialization | Notable Stats |
+|-----|--------------|----------------|---------------|
+| **Sedgwick** | US/UK | Full-service, property, casualty | 200K+ TPA claims/year (UK) |
+| **Crawford** | US | Motor, property, global reach | 70+ countries |
+| **Davies** | UK | Largest UK TPA, motor specialty | 500K+ claims/year |
+| **McLarens** | UK | Global TPA, specialty lines | Single global platform |
+| **Gallagher Bassett** | US | Workers comp, liability | Large employer programs |
+| **Engle Martin** | US | Complex claims, specialty | High-value focus |
+
+---
+
+### EU vs US TPA Differences
+
+| Factor | 🇺🇸 US | 🇪🇺 EU/UK |
+|--------|--------|----------|
+| **Market size** | 34% of global TPA market | Smaller but growing |
+| **TPA penetration** | Very high (91% outsource some) | Growing, UK leads |
+| **Motor TPA usage** | High for fleet/commercial | UK: high. Continental: growing |
+| **Property TPA usage** | Very high, especially CAT | High in UK, growing elsewhere |
+| **Regulation** | State-by-state | GDPR, national regulators |
+| **Cross-border** | Mostly domestic | Passported licenses, multilingual |
+
+**Key EU difference:** Continental Europe (Germany, France) historically kept claims in-house. UK adopted TPA model earlier. Trend is toward more outsourcing everywhere due to cost pressure and talent shortages.
+
+---
+
+### Case Study: Kuarterback AI (Davies)
+
+**What it is:** Automated claims processing system for UK motor claims
+
+**What it does:**
+
+| Function | How It Works |
+|----------|--------------|
+| **Document processing** | Reads Stage 2 packs from RTA portal (medical reports, physio invoices) |
+| **Data extraction** | Converts unstructured documents into structured data fields |
+| **Valuation** | Applies rules and valuation matrices to generate claim value |
+| **Speed** | Reviews pack and generates valuation in **<1 minute** |
+| **Scope** | Handles 75-80% of claims that are "routine, standardised, formulaic" |
+
+**Results:**
+
+| Metric | Result |
+|--------|--------|
+| **Time saved per claim** | ~25 minutes |
+| **Claims auto-processed** | 75-80% |
+| **Human review needed** | 20-25% of claims |
+| **Error reduction** | Eliminates inputting errors in valuations |
+
+**Before/After Workflow:**
+
+```
+BEFORE KUARTERBACK:
+├── Handler manually reads medical reports (10-15 min)
+├── Handler manually reads invoices (5-10 min)
+├── Handler manually inputs data (5-10 min)
+├── Handler calculates valuation (5 min)
+└── Total: ~25-40 minutes per claim
+
+AFTER KUARTERBACK:
+├── Kuarterback AI reads all documents (<1 min)
+├── Kuarterback extracts data fields (<1 min)
+├── Kuarterback applies valuation rules (<1 min)
+├── 75-80%: Auto-processed, handler reviews output only
+├── 20-25%: Flagged for handler attention
+└── Handler saves ~25 minutes on EVERY claim
+```
+
+**Strategic Parallel for Mysa:** Kuarterback is doing for UK motor PI claims what Mysa could do for EAS processing:
+- Both take unstructured documents (Stage 2 pack / EAS)
+- Both extract structured data
+- Both apply rules (valuation matrix / convention fault table)
+- Both auto-process routine cases, flag exceptions
+- Both save ~25 minutes per claim
+
+---
+
+### TPA as Potential Mysa Buyer
+
+| TPA Characteristic | Why Mysa Matters to Them |
+|-------------------|--------------------------|
+| **Margin pressure** | Productivity tools = better unit economics |
+| **Volume-based model** | Handle more claims with same headcount |
+| **Multi-client** | One tool works across all insurer clients |
+| **Tech investment** | Already investing in AI/automation |
+| **CAT surge** | Need tools that scale instantly |
+| **Competitive positioning** | Differentiate with better/faster processing |
+
+**Selling to TPA vs Insurer:**
+
+| Factor | Selling to Insurer | Selling to TPA |
+|--------|-------------------|----------------|
+| **Decision maker** | Claims ops director | TPA operations/tech leadership |
+| **Sales cycle** | Longer | May be faster (operational buyer) |
+| **Deployment scope** | One insurer, staff + TPA | Many insurer clients at once |
+| **Data access** | Single insurer's data | Cross-client data (richer patterns) |
+| **Integration** | Insurer's claims system | TPA platform |
+
+---
+
 ## Broker Role During Investigation
 
 ### The Short Answer: MINIMAL for routine claims, SIGNIFICANT for disputes
@@ -2607,6 +4040,16 @@ From Five Sigma research: When multiple adjusters touch a claim, handling time n
 | A54 | Home claims investigation is similar EU vs US (no structural EU advantage) | ⚠️ Based on research | Unlike motor where EAS helps EU |
 | A55 | SIU is typically separate from claims adjusting team | ✅ Based on research | Required by regulation in many states |
 | A56 | Multi-adjuster claims take ~3x longer than single-adjuster | ✅ Based on Five Sigma data | Collaboration overhead is major inefficiency |
+| A57 | US "assessment to payment" consumes 62.3% of handling time | ✅ Based on Five Sigma data | Bigger than FNOL + investigation combined |
+| A58 | UK "assessment to payment" consumes 45% of handling time | ✅ Based on Five Sigma data | More balanced than US |
+| A59 | EAS captures ~100 fields, 17 structured circumstance checkboxes | ✅ Based on research | Checkboxes are convention input |
+| A60 | ACORD 2 uses free-text narrative for accident description | ✅ Based on research | No structured circumstances like EAS |
+| A61 | ACORD 2 has no diagram field | ✅ Based on research | Unlike EAS which includes joint sketch |
+| A62 | US recorded statements are 15-30 min each, up to 4 per claim | ⚠️ Based on research | Both parties × both insurers for disputed claims |
+| A63 | Xactimate used by 75-80% of property adjusters | ✅ Based on research | Industry standard for estimates |
+| A64 | Home claims data capture process similar EU vs US | ⚠️ Based on research | No EAS equivalent for property anywhere |
+| A65 | BI + PD claims commonly require two separate specialists | ⚠️ Based on research | Different training, different timelines |
+| A66 | SIU referral creates handoff that may not integrate well | ⚠️ Based on research | SIU often uses different systems |
 
 ---
 
@@ -2627,3 +4070,707 @@ From Five Sigma research: When multiple adjusters touch a claim, handling time n
 ## Phase 8: Assessment (NOT YET MAPPED)
 
 *Next phase to map: How damage is valued and repair estimates are generated.*
+
+---
+
+# DATA SCHEMAS — EU vs US
+
+> **Purpose:** Track what data is captured, when, by whom, and whether it's manual or automated. This informs where data quality issues originate and where automation opportunities exist.
+
+---
+
+## Motor Claims Data Schemas
+
+### 🇪🇺 EU Motor: European Accident Statement (EAS)
+
+**When captured:** At scene, immediately after accident (typically 15-30 min post-incident)
+**Captured by:** Both drivers collaboratively
+**Format:** Standardized carbon-copy form (same across all 27 EU countries)
+**Key characteristic:** SINGLE AGREED DOCUMENT signed by both parties
+
+```
+EAS DATA SCHEMA (~100 fields)
+
+SECTION A: ACCIDENT DETAILS
+├── Date of accident                    [Manual - Handwritten]
+├── Time of accident                    [Manual - Handwritten]
+├── Location (address, city, country)  [Manual - Handwritten]
+├── Injuries? (Yes/No checkbox)        [Manual - Checkbox]
+├── Damage to other vehicles? (Y/N)    [Manual - Checkbox]
+├── Damage to objects? (Y/N)           [Manual - Checkbox]
+├── Police called? (Y/N)               [Manual - Checkbox]
+├── Police report number               [Manual - Handwritten]
+├── Witnesses (name, address, phone)   [Manual - Handwritten]
+
+SECTION B: VEHICLE A DETAILS
+├── Policyholder name                  [Manual - Handwritten]
+├── Policyholder address               [Manual - Handwritten]
+├── Policyholder phone                 [Manual - Handwritten]
+├── Vehicle make                       [Manual - Handwritten]
+├── Vehicle model                      [Manual - Handwritten]
+├── Vehicle registration               [Manual - Handwritten]
+├── Vehicle country                    [Manual - Handwritten]
+├── Insurance company name             [Manual - Handwritten]
+├── Insurance policy number            [Manual - Handwritten]
+├── Green card number                  [Manual - Handwritten]
+├── Green card validity dates          [Manual - Handwritten]
+├── Driver name (if different)         [Manual - Handwritten]
+├── Driver address                     [Manual - Handwritten]
+├── Driver license number              [Manual - Handwritten]
+├── Driver license validity date       [Manual - Handwritten]
+├── Damage description (free text)     [Manual - Handwritten]
+├── Damage diagram on vehicle outline  [Manual - Sketch]
+
+SECTION C: VEHICLE B DETAILS
+├── [Same structure as Vehicle A]
+
+SECTION D: CIRCUMSTANCES (17 CHECKBOXES) — CONVENTION INPUT
+├── □ 1. Parked/stopped               [Manual - Checkbox]
+├── □ 2. Leaving parking space        [Manual - Checkbox]
+├── □ 3. Entering parking space       [Manual - Checkbox]
+├── □ 4. Emerging from car park       [Manual - Checkbox]
+├── □ 5. Entering car park            [Manual - Checkbox]
+├── □ 6. Entering roundabout          [Manual - Checkbox]
+├── □ 7. Circulating in roundabout    [Manual - Checkbox]
+├── □ 8. Rear collision (same dir)    [Manual - Checkbox]
+├── □ 9. Same direction, diff lane    [Manual - Checkbox]
+├── □ 10. Changing lanes              [Manual - Checkbox]
+├── □ 11. Overtaking                  [Manual - Checkbox]
+├── □ 12. Turning right               [Manual - Checkbox]
+├── □ 13. Turning left                [Manual - Checkbox]
+├── □ 14. Reversing                   [Manual - Checkbox]
+├── □ 15. Encroaching opposite lane   [Manual - Checkbox]
+├── □ 16. Coming from right (junction)[Manual - Checkbox]
+├── □ 17. Not observing right of way  [Manual - Checkbox]
+├── Number of boxes checked (total)    [Manual - Count]
+
+SECTION E: ACCIDENT DIAGRAM
+├── Sketch of accident scene          [Manual - Drawing]
+├── Vehicle positions                 [Manual - Drawing]
+├── Direction of travel arrows        [Manual - Drawing]
+├── Road layout                       [Manual - Drawing]
+
+SECTION F: OBSERVATIONS
+├── Additional details (free text)    [Manual - Handwritten]
+
+SECTION G: SIGNATURES
+├── Driver A signature                [Manual - Signature]
+├── Driver A signature date           [Manual - Date]
+├── Driver B signature                [Manual - Signature]
+├── Driver B signature date           [Manual - Date]
+```
+
+**Data Quality Issues:**
+- ~50% still paper (scanned/photographed later)
+- Handwriting often illegible
+- Diagrams often unclear/messy
+- Checkboxes sometimes ambiguous (partially checked, crossed out)
+- Language barriers (tourists, cross-border)
+- Form designed for 2 vehicles only (multi-vehicle requires workarounds)
+
+**Convention Matching:** The 17 circumstance checkboxes are the INPUT to IRSA/IDA/CIMPAS fault tables. Given checkbox combination X → Fault split = Y%. This lookup is TRIVIAL once data is clean.
+
+---
+
+### 🇺🇸 US Motor: ACORD 2 Automobile Loss Notice
+
+**When captured:** AFTER FNOL, during investigation
+**Captured by:** Adjuster (from interviews and evidence)
+**Format:** Standardized industry form (but not agreed by both parties)
+**Key characteristic:** ONE PARTY'S ACCOUNT — no joint agreement
+
+```
+ACORD 2 — AUTOMOBILE LOSS NOTICE DATA SCHEMA
+
+SECTION: ADMINISTRATIVE/POLICY
+├── Report date (MM/DD/YY)            [System - Auto]
+├── Producer code                      [System - Lookup]
+├── Producer subcode                   [System - Lookup]
+├── Agency name                        [System - Lookup]
+├── Agency phone                       [System - Lookup]
+├── Customer ID                        [System - Lookup]
+├── Company name                       [System - Lookup]
+├── Policy number                      [Manual - Entry]
+├── Policy effective date              [System - Lookup]
+├── Policy expiration date             [System - Lookup]
+├── Reference number                   [System - Auto]
+├── CAT number (if applicable)         [Manual - Entry]
+
+SECTION: INSURED/OWNER
+├── Owner name                         [Manual - Entry]
+├── Owner address                      [Manual - Entry]
+├── Residence phone                    [Manual - Entry]
+├── Business phone                     [Manual - Entry]
+├── Primary email                      [Manual - Entry]
+├── Secondary email                    [Manual - Entry]
+
+SECTION: VEHICLE INFORMATION
+├── Vehicle number (if fleet)          [Manual - Entry]
+├── Year                               [Manual - Entry]
+├── Make                               [Manual - Entry]
+├── Model                              [Manual - Entry]
+├── Body type                          [Manual - Entry]
+├── VIN                                [Manual - Entry]
+├── Plate number                       [Manual - Entry]
+├── State                              [Manual - Entry]
+├── Other insurance on vehicle (Y/N)   [Manual - Checkbox]
+
+SECTION: DRIVER INFORMATION
+├── Driver name                        [Manual - Entry]
+├── Driver address                     [Manual - Entry]
+├── Relation to insured                [Manual - Dropdown]
+│   ├── Employee
+│   ├── Family member
+│   ├── Other
+├── Date of birth                      [Manual - Entry]
+├── Driver license number              [Manual - Entry]
+├── Driver license state               [Manual - Entry]
+├── Purpose of use                     [Manual - Entry]
+├── Used with permission (Y/N)         [Manual - Checkbox]
+
+SECTION: LOSS DETAILS
+├── Date of accident                   [Manual - Entry]
+├── Time of accident                   [Manual - Entry]
+├── Location of loss                   [Manual - Entry]
+├── Description of accident            [Manual - FREE TEXT NARRATIVE] ⚠️
+├── Describe damage to vehicle         [Manual - FREE TEXT]
+├── Estimate amount                    [Manual - Entry]
+├── When vehicle can be seen           [Manual - Entry]
+├── Where vehicle can be seen          [Manual - Entry]
+
+SECTION: OTHER PARTY (if applicable)
+├── Other vehicle owner name           [Manual - Entry]
+├── Other vehicle owner address        [Manual - Entry]
+├── Other vehicle year/make/model      [Manual - Entry]
+├── Other vehicle VIN                  [Manual - Entry]
+├── Other driver name                  [Manual - Entry]
+├── Other driver license               [Manual - Entry]
+├── Other insurance company            [Manual - Entry]
+├── Other policy number                [Manual - Entry]
+
+SECTION: WITNESSES
+├── Witness 1 name                     [Manual - Entry]
+├── Witness 1 address                  [Manual - Entry]
+├── Witness 1 phone                    [Manual - Entry]
+├── [Additional witnesses as needed]
+
+SECTION: INJURIES
+├── Any injuries (Y/N)                 [Manual - Checkbox]
+├── Injured party names                [Manual - Entry]
+├── Nature of injuries                 [Manual - FREE TEXT]
+
+SECTION: POLICE
+├── Police report filed (Y/N)          [Manual - Checkbox]
+├── Police department                  [Manual - Entry]
+├── Report number                      [Manual - Entry]
+
+SECTION: CHILD RESTRAINT
+├── Child restraint used (Y/N)         [Manual - Checkbox]
+```
+
+**Critical Difference from EAS:**
+| Aspect | EAS | ACORD 2 |
+|--------|-----|---------|
+| **Circumstances** | 17 structured checkboxes → convention lookup | FREE TEXT narrative requiring interpretation |
+| **Diagram** | ✅ Joint sketch included | ❌ No diagram field |
+| **Agreement** | ✅ Both parties sign | ❌ One party's account |
+| **When captured** | At scene | After FNOL (days later) |
+| **Counterparty data** | ✅ On same form | ❌ Separate forms per insurer |
+
+**Data Quality Issues:**
+- "Description of accident" is unstructured narrative
+- Adjuster interpretation required
+- Two ACORD forms (one per insurer) may conflict
+- No joint agreement on facts
+- Data collected AFTER the fact (memory fades)
+
+---
+
+### 🇺🇸 US Motor: Recorded Statement (Investigation Phase)
+
+**When captured:** 1-3 days after FNOL
+**Captured by:** Claims adjuster via phone interview
+**Format:** Audio recording + transcript/notes
+**Duration:** 15-30 minutes per party
+
+```
+RECORDED STATEMENT DATA SCHEMA
+
+ADMINISTRATIVE
+├── Date and time of statement         [System - Auto]
+├── Claim number                       [System - Lookup]
+├── Adjuster name                      [Manual - Entry]
+├── Statement giver name               [Manual - Entry]
+├── Statement giver role               [Manual - Entry]
+│   ├── Insured driver
+│   ├── Claimant driver
+│   ├── Passenger
+│   ├── Witness
+
+NARRATIVE CAPTURED (UNSTRUCTURED)
+├── What were you doing before the accident?
+├── Where were you going?
+├── Describe the road conditions
+├── Describe the weather conditions
+├── What lane were you in?
+├── What speed were you traveling?
+├── Did you see the other vehicle before impact?
+├── Where was the other vehicle?
+├── What was the other vehicle doing?
+├── Where exactly did the impact occur on your vehicle?
+├── Where exactly did the impact occur on the other vehicle?
+├── What did you do after the accident?
+├── Did you exchange information?
+├── Were there any witnesses?
+├── Did you speak to the other driver?
+├── What did they say?
+├── Any injuries?
+├── Did you take photos?
+├── Anything else to add?
+
+OUTPUT
+├── Audio file (.mp3/.wav)             [Automated recording]
+├── Transcript                         [Manual or AI transcription]
+├── Adjuster notes                     [Manual - Summary]
+├── Key facts extracted                [Manual - Adjuster judgment]
+├── Contradictions flagged             [Manual - Adjuster judgment]
+```
+
+**Data Quality Issues:**
+- Unstructured audio requires interpretation
+- Transcription varies in quality
+- Facts must be manually extracted
+- Contradictions between parties require judgment
+- Memory degrades over time since accident
+
+---
+
+## Home/Property Claims Data Schemas
+
+### Home Claims: FNOL Data (EU and US — Similar)
+
+**No equivalent to EAS for property claims.** Both EU and US use similar FNOL structures.
+
+```
+HOME FNOL DATA SCHEMA
+
+POLICY INFORMATION
+├── Policy number                      [Manual - Entry or Lookup]
+├── Policyholder name                  [System - Lookup]
+├── Property address                   [System - Lookup]
+├── Coverage type                      [System - Lookup]
+├── Deductible                         [System - Lookup]
+
+INCIDENT DETAILS
+├── Date of loss                       [Manual - Entry]
+├── Time of loss (if known)            [Manual - Entry]
+├── Date discovered                    [Manual - Entry]
+├── Type of loss                       [Manual - Dropdown]
+│   ├── Water damage
+│   ├── Fire
+│   ├── Wind/hail
+│   ├── Theft/burglary
+│   ├── Vandalism
+│   ├── Other
+├── Description of what happened       [Manual - FREE TEXT]
+├── Cause (if known)                   [Manual - FREE TEXT]
+
+DAMAGE INFORMATION
+├── Areas of property affected         [Manual - FREE TEXT]
+├── Damage description                 [Manual - FREE TEXT]
+├── Emergency services called (Y/N)    [Manual - Checkbox]
+├── Mitigation taken                   [Manual - FREE TEXT]
+│   ├── Water shut off?
+│   ├── Property secured?
+│   ├── Temporary repairs?
+
+DOCUMENTATION
+├── Photos taken (Y/N)                 [Manual - Checkbox]
+├── Police report (if theft)           [Manual - Entry]
+├── Fire department report (if fire)   [Manual - Entry]
+
+CONTACT PREFERENCES
+├── Preferred contact method           [Manual - Dropdown]
+├── Best time to reach                 [Manual - Entry]
+├── Property access instructions       [Manual - FREE TEXT]
+```
+
+---
+
+### Home Claims: Field Inspection Report (Adjuster-Generated)
+
+**When captured:** During on-site inspection (1-2 hours)
+**Captured by:** Field adjuster
+**Format:** Structured report + photos + Xactimate estimate
+
+```
+FIELD INSPECTION REPORT DATA SCHEMA
+
+ADMINISTRATIVE
+├── Claim number                       [System - Lookup]
+├── Inspection date                    [Manual - Entry]
+├── Adjuster name                      [System - Lookup]
+├── Weather conditions at inspection   [Manual - Entry]
+
+PROPERTY DETAILS
+├── Property type                      [Manual - Dropdown]
+│   ├── Single family
+│   ├── Condo/apartment
+│   ├── Townhouse
+│   ├── Commercial
+├── Year built                         [Manual - Entry]
+├── Square footage                     [Manual - Entry or Measure]
+├── Construction type                  [Manual - Dropdown]
+├── Roof type                          [Manual - Dropdown]
+├── Number of stories                  [Manual - Entry]
+
+DAMAGE DOCUMENTATION
+├── Damage location(s)                 [Manual - Entry]
+├── Damage description per location    [Manual - FREE TEXT]
+├── Measurements                       [Manual or Tool-Assisted]
+├── Photos                             [Digital - Camera/Phone]
+│   ├── Overview photos
+│   ├── Detail photos of damage
+│   ├── Pre-existing condition photos
+│   ├── Serial number photos (contents)
+
+CAUSE & ORIGIN DETERMINATION
+├── Cause of loss                      [Manual - Adjuster Judgment]
+├── Sudden or gradual?                 [Manual - Adjuster Judgment] ⚠️ Critical for coverage
+├── Point of origin                    [Manual - Entry]
+├── Contributing factors               [Manual - FREE TEXT]
+├── Expert needed (Y/N)                [Manual - Checkbox]
+
+COVERAGE ANALYSIS
+├── Peril covered (Y/N)                [Manual - Judgment]
+├── Exclusions that may apply          [Manual - Entry]
+├── Sublimits that apply               [System - Lookup]
+├── Deductible                         [System - Lookup]
+
+ESTIMATE (XACTIMATE)
+├── Scope of repairs                   [Manual + Software]
+├── Line items                         [Software - Xactimate]
+├── Material costs                     [Software - Xactimate]
+├── Labor costs                        [Software - Xactimate]
+├── Overhead & profit                  [Software - Xactimate]
+├── Total estimate                     [Software - Calculated]
+├── ACV (Actual Cash Value)            [Software - Calculated]
+├── Depreciation                       [Software - Calculated]
+├── RCV (Replacement Cost Value)       [Software - Calculated]
+
+ADJUSTER NOTES
+├── Policyholder statements            [Manual - FREE TEXT]
+├── Observations                       [Manual - FREE TEXT]
+├── Red flags (if any)                 [Manual - FREE TEXT]
+├── Recommendations                    [Manual - FREE TEXT]
+```
+
+**Data Quality Notes:**
+- Xactimate provides structured estimates (75-80% industry adoption)
+- Cause & origin determination is JUDGMENT-HEAVY
+- "Sudden vs gradual" distinction is critical for coverage and often disputed
+- Hidden damage (behind walls) cannot be captured without destructive inspection
+
+---
+
+## Data Capture Summary: Manual vs Automated
+
+### Motor Claims
+
+| Data Element | EU (EAS) | US (ACORD + Statement) |
+|-------------|----------|------------------------|
+| Date/time/location | Manual (handwritten) | Manual (adjuster entry) |
+| Party identification | Manual (handwritten) | Manual (adjuster entry) |
+| Vehicle details | Manual (handwritten) | Manual (adjuster entry) |
+| Circumstances/narrative | **Structured checkboxes** | **Unstructured narrative** |
+| Diagram | Manual (sketch) | **Not captured** |
+| Agreement | **Both parties sign** | **No agreement** |
+| Fault determination | **Convention lookup** (trivial) | **Adjuster judgment** (complex) |
+
+### Home/Property Claims
+
+| Data Element | EU | US |
+|-------------|----|----|
+| Incident details | Manual (FNOL) | Manual (FNOL) |
+| Damage documentation | Manual (photos) | Manual (photos) |
+| Measurements | Manual or tool-assisted | Manual or tool-assisted |
+| Cause determination | **Adjuster judgment** | **Adjuster judgment** |
+| Repair estimates | **Xactimate** (75-80%) | **Xactimate** (75-80%) |
+| Coverage analysis | Adjuster + policy | Adjuster + policy |
+
+**Key Insight:** Home claims data capture is nearly identical EU vs US. Motor claims have fundamental structural difference (EAS checkboxes vs unstructured narrative).
+
+---
+
+# MULTIPLE ADJUSTER SCENARIOS
+
+> **Why this matters:** Five Sigma research shows claims requiring multiple adjusters take **~3x longer** (2.75-2.85x average). Understanding when and why multiple adjusters get involved reveals collaboration friction and handoff opportunities.
+
+---
+
+## When Claims Require Multiple Adjusters
+
+### Scenario 1: Property Damage + Bodily Injury (Most Common)
+
+**Trigger:** Accident involves both vehicle damage AND injury claims
+
+**What happens:**
+```
+Single accident
+     ↓
+FNOL opened
+     ↓
+Triage identifies both PD and BI
+     ↓
+PROPERTY DAMAGE ADJUSTER assigned
+├── Handles vehicle damage
+├── Arranges inspection/appraisal
+├── Calculates PD settlement
+     ↓
+BODILY INJURY ADJUSTER assigned (different specialist)
+├── Collects medical records
+├── Evaluates injury severity
+├── Calculates BI settlement
+├── May involve legal review
+     ↓
+Both adjusters work same claim file
+├── Different specializations
+├── Different timelines (BI takes longer)
+├── Coordination required
+```
+
+**Data tracked:** Both adjusters assigned in claims system, each with own notes/activities
+**Handoff friction:** BI adjuster needs context from PD investigation
+
+---
+
+### Scenario 2: SIU Transfer (Fraud Suspected)
+
+**Trigger:** Red flags detected during investigation
+
+**What happens:**
+```
+Adjuster handling claim
+     ↓
+Red flags identified:
+├── Inconsistent statements
+├── Suspicious timing
+├── Prior claims history
+├── Documentation issues
+     ↓
+Claim flagged for SIU review
+     ↓
+SIU INVESTIGATOR takes over investigation portion
+├── Deep background check
+├── Detailed recorded statement
+├── Document forensics
+├── Potentially surveillance
+     ↓
+SIU returns findings to ORIGINAL ADJUSTER
+├── Legitimate → Adjuster continues
+├── Fraud confirmed → Denial
+├── Inconclusive → Additional investigation
+     ↓
+Adjuster completes claim
+```
+
+**Data tracked:** SIU referral logged, SIU notes in separate system often
+**Handoff friction:** SIU and claims systems may not integrate well
+
+---
+
+### Scenario 3: Complex/Catastrophic Claims
+
+**Trigger:** Claim exceeds complexity or value thresholds
+
+**What happens:**
+```
+Large or complex claim
+├── High value (>$50K-$100K)
+├── Multiple vehicles
+├── Serious injuries
+├── Coverage disputes
+├── Litigation expected
+     ↓
+Standard adjuster begins
+     ↓
+Complexity identified → SENIOR/SPECIALIST ADJUSTER assigned
+├── Takes over primary handling
+├── Original adjuster may support
+├── Supervisory oversight
+     ↓
+May also involve:
+├── Legal team
+├── Coverage counsel
+├── Expert engineers
+├── Medical specialists
+```
+
+**Data tracked:** Claim escalation logged, multiple assignees in system
+**Handoff friction:** Context must be transferred, all prior work reviewed
+
+---
+
+### Scenario 4: Attorney Representation
+
+**Trigger:** Claimant hires attorney
+
+**What happens:**
+```
+Claimant represented by attorney
+     ↓
+Claim flagged as "represented"
+     ↓
+May transfer to LITIGATION ADJUSTER
+├── Trained in legal procedures
+├── Coordinates with insurer's counsel
+├── Different settlement authority
+├── Longer timeline expected
+     ↓
+Original adjuster's work becomes input
+├── Investigation notes
+├── Recorded statements
+├── Liability determination
+     ↓
+Litigation adjuster manages through resolution
+```
+
+**Data tracked:** Representation status, attorney contact info, litigation adjuster assignment
+**Handoff friction:** Full file review required, legal sensitivity
+
+---
+
+### Scenario 5: Multi-Insurer Claims
+
+**Trigger:** Multiple insurance policies involved
+
+**What happens:**
+```
+Accident involves:
+├── Driver A (Insurer A)
+├── Driver B (Insurer B)
+├── Driver C (Insurer C) [if multi-vehicle]
+     ↓
+EACH insurer assigns own adjuster
+     ↓
+Insurer A Adjuster investigates Driver A
+Insurer B Adjuster investigates Driver B
+Insurer C Adjuster investigates Driver C
+     ↓
+Cross-insurer communication needed:
+├── Share liability findings
+├── Coordinate subrogation
+├── Arbitration if disputed
+     ↓
+If insurers disagree → Arbitration Forums, Inc. (US)
+```
+
+**Data tracked:** Each insurer's system separately, subrogation tracking
+**Handoff friction:** No shared system, data exchange via emails/portals
+
+---
+
+### Scenario 6: Geographic Coverage Gap
+
+**Trigger:** Accident location far from staff adjusters
+
+**What happens:**
+```
+Accident in remote location
+     ↓
+Staff adjuster assigned (desk handling)
+     ↓
+Field inspection needed
+     ↓
+INDEPENDENT ADJUSTER (IA) contracted
+├── Local IA inspects vehicle
+├── Takes photos, measurements
+├── Writes inspection report
+     ↓
+IA report sent to staff adjuster
+     ↓
+Staff adjuster continues claim with IA input
+```
+
+**Data tracked:** IA assignment, IA report attached to file
+**Handoff friction:** IA uses different tools/formats, report integration
+
+---
+
+### Scenario 7: CAT Events (Catastrophe Surge)
+
+**Trigger:** Hurricane, wildfire, major storm creates volume spike
+
+**What happens:**
+```
+CAT event declared
+     ↓
+Claims volume spikes 10-50x normal
+     ↓
+Staff adjusters overwhelmed
+     ↓
+TPA/IA SURGE deployed
+├── Crawford, Sedgwick, etc.
+├── Hundreds of additional adjusters
+├── Often from other regions
+     ↓
+Claims assigned across:
+├── Staff adjusters (capacity)
+├── TPA adjusters (overflow)
+├── Independent adjusters (overflow)
+     ↓
+All report into insurer's system
+├── Or TPA system with data sync
+```
+
+**Data tracked:** CAT code on claims, adjuster source (staff/TPA/IA)
+**Handoff friction:** Different adjusters, different training, data integration challenges
+
+---
+
+## Where Multiple Adjuster Data Is Tracked
+
+### Primary Claims Management Systems
+
+| System | Who Uses It | How Adjusters Tracked |
+|--------|-------------|----------------------|
+| **Guidewire ClaimCenter** | Large insurers (40%+ market) | Adjuster assignment field, activity log, handoff history |
+| **Duck Creek Claims** | Mid-large insurers | Similar assignment tracking |
+| **Majesco** | Various insurers | Assignee fields, workflow tracking |
+| **Legacy/custom systems** | Many insurers | Varies widely |
+
+### What Gets Logged
+
+```
+CLAIM FILE — ADJUSTER TRACKING
+
+Assignment History:
+├── Adjuster 1 assigned: [Date/Time]
+├── Adjuster 1 activities: [List of actions]
+├── Adjuster 2 assigned: [Date/Time] — Reason: [BI/SIU/Escalation]
+├── Adjuster 2 activities: [List of actions]
+├── Transfer notes: [Handoff context]
+
+Current Assignees:
+├── Primary adjuster: [Name]
+├── Secondary adjuster: [Name] (if applicable)
+├── Supervisor: [Name]
+├── SIU investigator: [Name] (if flagged)
+
+Activity Log:
+├── Every call, note, document logged with adjuster ID
+├── System actions timestamped
+├── Handoff events flagged
+```
+
+### The 3x Time Penalty Source
+
+The ~3x time penalty for multi-adjuster claims comes from:
+
+1. **Context transfer** — New adjuster must read/understand entire file
+2. **Duplicate work** — Some investigation repeated to verify
+3. **Coordination overhead** — Adjusters must sync on findings
+4. **Wait time** — Claim sits while waiting for handoff/availability
+5. **System friction** — Data may not flow cleanly between assignees
+
+**Mysa Opportunity:** If handoffs included AI-generated summaries, structured data packages, and clear "what's done / what's needed" flags, the 3x penalty could potentially be reduced significantly.
