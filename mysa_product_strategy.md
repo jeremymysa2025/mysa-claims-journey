@@ -1,0 +1,1064 @@
+# Mysa — Product Strategy Working Document
+
+### Fundraising Preparation | Product Roadmap | Demo Specification
+
+*Last updated: February 7, 2026*
+
+**Sourcing convention:**
+- `[TRANSCRIPT]` = verbatim quote from co-founder strategy call (Feb 2026)
+- `[RESEARCH: filename]` = finding from discovery/competitive research documents
+- `[AGENT RESEARCH]` = finding from competitive deep-dive research agents
+- `[CLAUDE ANALYSIS]` = synthesis, inference, or strategic suggestion — clearly labeled
+- `[WEB SOURCE]` = data from web search with URL
+
+---
+
+## Part 1: What Mysa Is
+
+### One-Liner
+
+**AI decision engine for insurance claims adjusters — the expert judgment layer between FNOL intake and estimation that nobody has built.**
+
+### The Positioning Problem: CRM vs Decision Engine
+
+The co-founder call surfaced this tension directly. Jeremy asked: *"So it's a CRM for adjusters?"*
+
+The co-founder's response reframed it:
+
+> [TRANSCRIPT — Co-founder]: "everyone is trying something... everyone is trying to build a platform... And everyone is avoiding the judgment, the decision stage."
+
+> [TRANSCRIPT — Co-founder]: "I'm here to support the adjuster. To spend less amount of time on everything that doesn't require work. And when they get to the decision, I will help them with all the data that we have been collecting, and I will learn with him."
+
+**Why "decision engine" wins over "CRM for adjusters":**
+
+| Framing | What it implies | Who does this already | Problem |
+|---------|----------------|----------------------|---------|
+| CRM for adjusters | Data entry, case tracking, workflow | Five Sigma, Guidewire, VCA Software, ClaimPilot | Crowded, commoditized |
+| Claims copilot | Surface-level AI suggestions on any task | Majesco Copilot, Microsoft Copilot for Insurance, Sedgwick Sidekick | Broad but shallow |
+| **Decision engine** | The 6 expert judgment steps that consume 60-70% of adjuster time | **Nobody** | **Mysa's gap** |
+
+[CLAUDE ANALYSIS]: The positioning should be "decision engine" — but the fundraising pitch needs to explain WHY this is different from a copilot. The distinction: a copilot helps you DO tasks faster. A decision engine helps you THINK through the judgment. It's the difference between autocomplete and a reasoning partner. Copilots speed up the keyboard. Decision engines speed up the brain.
+
+---
+
+### The 6 Decision Sub-Steps
+
+This is the core product scope. The co-founder defined the framework:
+
+> [TRANSCRIPT — Co-founder]: "the decision is breaking basically breaking down in six different categories. You have coverage. You have checking the policy reports. You need to check the repairs. You need to check how much it costs. You need to check... how much money you are reserving... does it have fraud? There are, like, six steps. That's the judgment."
+
+| # | Decision Step | What the adjuster does today | What Mysa does | Time saved |
+|---|--------------|------------------------------|----------------|------------|
+| 1 | **Coverage verification** | Manually reads policy document, cross-references claim facts against coverage clauses and exclusions | AI reads policy, matches claim facts, highlights applicable coverage and exclusions with confidence score | 15-30 min → 2 min review |
+| 2 | **Policy report checking** | Checks if documentation is complete, facts are consistent, nothing is missing or contradictory | AI validates completeness, flags gaps, identifies contradictions, drafts follow-up requests | 10-20 min → 1 min review |
+| 3 | **Repair assessment** | Reviews proposed repair scope, checks if it's reasonable, looks for missing or over-scoped items | AI compares scope against comparable claims, flags anomalies, checks against carrier guidelines | 15-25 min → 3 min review |
+| 4 | **Cost analysis** | Compares repair cost estimate against market rates, historical claims, and carrier pricing databases | AI pulls comparable data, identifies outliers, calculates expected range | 10-20 min → 2 min review |
+| 5 | **Reserve calculation** | Estimates total claim cost for financial reporting — this hits P&L immediately | AI calculates reserve with confidence interval based on historical data, comparable claims, and claim trajectory | 10-15 min → 1 min review |
+| 6 | **Fraud detection** | Looks for red flags — inconsistencies, patterns, known fraud indicators | AI pattern-matches against fraud signals, scores risk, recommends SIU referral if flagged | 5-10 min → automated flagging |
+
+**Total adjuster time on decisions today:** 65-120 min per claim
+**With Mysa:** 10-15 min review per claim
+**Productivity gain:** 4-8x on the decision step alone
+
+[CLAUDE ANALYSIS]: These time estimates are my inference based on the transcript discussion ("60-70% of time on decisions") and the per-adjuster economics from our research (300-480 claims closed/year, ~125 open). They need validation with actual adjusters at Caravela.
+
+---
+
+### SOP-Driven Workflow Generation
+
+This is the core differentiator vs. Five Sigma and every other claims AI tool.
+
+> [TRANSCRIPT — Co-founder]: "everything that we build, needs to be really around SOP, like, what is the SOP that your insurance company or your TPA follows for that."
+
+> [TRANSCRIPT — Co-founder]: "when we onboard an insurance company, we upload the SOPs, and we also translate those SOPs into workflows. And you can also go there and manually create more workflows."
+
+> [TRANSCRIPT — Co-founder]: "Ideally, you upload the SOPs, or you tell to AI what's the SOP, and their workflow is automatically built."
+
+**How it works:**
+
+```
+ONBOARDING:
+Carrier uploads SOPs (PDF, Word, scanned docs)
+  → Mysa OCR extracts rules, thresholds, escalation paths
+  → AI generates structured decision workflows
+  → Carrier reviews and adjusts
+  → Workflows go live
+
+PER CLAIM:
+Claim data arrives
+  → Mysa matches claim type to relevant SOP workflows
+  → AI walks adjuster through each decision step per carrier's own rules
+  → Documents generated per carrier's templates and requirements
+  → Decisions checked against SOP compliance
+```
+
+[CLAUDE ANALYSIS]: This is a genuine differentiator. Five Sigma's Clive uses general insurance knowledge — their "playbooks" are pre-defined templates per claim type. Mysa would use the SPECIFIC carrier's SOPs to generate decision workflows. This means:
+1. Recommendations are tailored per-carrier, not generic
+2. New hires can follow carrier-specific processes from Day 1 (addresses workforce crisis)
+3. Creates switching costs — once SOPs are encoded, the carrier is locked in
+4. Compliance is built-in — every decision is checked against the carrier's own rules
+
+**Playbooks** — the co-founder acknowledged Five Sigma got this right:
+
+> [TRANSCRIPT — Co-founder]: "the adjuster should be something similar to they call it, playbooks. That's a smart one. Damn it. That's very smart. Let's replicate that."
+
+[AGENT RESEARCH — Five Sigma]: Five Sigma's playbooks are pre-defined investigation workflows per claim type. Mysa's version must go deeper: SOP-driven playbooks that adapt per carrier, per claim type, per complexity score — not generic templates.
+
+---
+
+### What Mysa Does vs. What Mysa Does NOT Do
+
+| Layer | Mysa's role | Who already does this | Our relationship |
+|-------|-------------|----------------------|-----------------|
+| FNOL / Intake | Does NOT replace — works on top of existing intake | Assured ($1B), Avallon ($4.6M), FurtherAI ($30M) | Integrate with, not compete |
+| Document parsing | **YES** — parses emails, claims docs, policies, EAS forms | Caravela OCR engine (existing asset, ~80% accuracy) | Core capability |
+| Triage | **YES** — complexity scoring, desk vs field, priority, SOP-driven routing | Some overlap with ClaimSorted, Five Sigma | Better because SOP-driven |
+| Investigation support | **YES** — scopes investigation, guides calls, records, generates docs | **Nobody does this well** | Core product |
+| Assessment/Estimation | Does NOT estimate — integrates with estimation tools | Verisk/Xactimate (US), Solera/Audatex (EU) | Must integrate |
+| Decision support | **YES — PRIMARY VALUE** — the 6 sub-steps | **NOBODY** | **Our gap** |
+| Document generation | **YES** — generates all decision documents per SOP | Core product | Core capability |
+| Payment processing | No | Carrier's own systems | Not our layer |
+
+> [TRANSCRIPT — Co-founder]: "I don't care about [intake]. Just do intake very well, and I don't change how they are doing intake. I just help them doing the intake that they are already doing."
+
+> [TRANSCRIPT — Co-founder]: "I am basically using an extractor... I'm basically if missing data, I'll go back to the user."
+
+---
+
+### The Historical Data Engine (Long-Term Moat)
+
+> [TRANSCRIPT — Co-founder]: "If you have the historical data, then you can start... give you already an overview of everything that happened so far. And what we think will happen based on historical data, the SOPs, and the documents uploaded so far. So you don't need to review again everything. We already start from a clean point."
+
+> [TRANSCRIPT — Jeremy]: "the real product is... based on historical data."
+
+> [TRANSCRIPT — Co-founder]: "When we come in and we use the historical data, and the out-of-the-box thing, we get 60%. As soon as we start getting better data and training the models, we go to 70 or 80%."
+
+**The flywheel:**
+
+```
+Day 1: SOP workflows + document parsing → basic recommendations
+  ↓
+Month 3: Historical claims data ingested → better comparable matching
+  ↓
+Month 6: Decision ground truth captured (adjuster accepts/modifies/rejects) → model learns
+  ↓
+Month 12: Enough data to predict outcomes → proactive recommendations
+  ↓
+Month 18+: Models can handle routine decisions with minimal review → near-STP
+```
+
+[CLAUDE ANALYSIS]: The moat is decision ground truth data. Every competitor has claim OUTCOMES (what was paid). Nobody has decision REASONING (why the adjuster decided what they decided). As the co-founder articulated: "you see the end result... but you don't know exactly how they got to that end result." Mysa captures the HOW — and that's the training data nobody else has.
+
+> [TRANSCRIPT — Co-founder]: "Claude gave me this example. When you go to a restaurant, you see the end result. You see what you order and the end result. That's a claim. That's what they get. They don't know exactly how they got to that end result."
+
+---
+
+## Part 2: The Problem — Why This Exists
+
+### 2a. The Workforce Crisis
+
+The insurance claims adjuster profession is dying. This isn't hyperbole — it's the primary market driver.
+
+> [TRANSCRIPT — Jeremy]: "They're all boomers... their work output is super bad. Because they work like boomers. They are not digital native. So they cannot interact with very old tech properly, and they can surely not interact with new tech."
+
+> [TRANSCRIPT — Jeremy]: "the turnover of those people is so high... the newcomers, they are fighting to get them in The US. Meaning it's like the champions league. They're trying to get the Cristiano Ronaldo."
+
+> [TRANSCRIPT — Co-founder]: "25% of all claims adjusters predicted to retire within five years."
+
+**Hard data:**
+
+| Metric | Data | Source |
+|--------|------|--------|
+| Profession ranking | 12th fastest-declining by 2030 | [RESEARCH: competitive_landscape_reality_check.md] — BLS data |
+| Retirement wave | 50% of insurance workforce retiring in 15 years | [RESEARCH: Section 6] |
+| Near-term retirement | 25% of adjusters within 5 years | [RESEARCH: Section 6] + [TRANSCRIPT] |
+| Annual attrition | 20% at carriers, 33% at TPAs | [RESEARCH: Section 6] |
+| Knowledge loss per departure | ~6 years institutional knowledge | [RESEARCH: Section 6] |
+| Impact of high turnover | 12% higher operational costs, 20% higher indemnity payouts | [RESEARCH: Section 6] |
+| Fully loaded cost per adjuster | ~$110K/year | [RESEARCH: Section 6] + [TRANSCRIPT: "$110k for the ones that spend six years"] |
+| Caseload | ~125 open claims, 300-480 closed/year | [RESEARCH: Section 6] |
+| Cost per closed claim | $230-$370 | [RESEARCH: Section 6] |
+
+> [TRANSCRIPT — Jeremy]: "the worst part is... they're all going for retirement. This is a job that is requiring people. They have high turnover, high attrition. They are not able to lock new generations into this job."
+
+**Why this matters for Mysa:** Carriers can't hire enough adjusters. They can't train new ones fast enough (6 years to develop expertise). They need technology that makes existing adjusters handle more claims AND makes new adjusters effective faster. That's exactly what SOP-driven decision support does.
+
+---
+
+### 2b. The STP Reality Gap (EU Motor)
+
+[RESEARCH: claims_journey_discovery.md, Phase 3]: EU convention systems promise 60-70% STP for motor claims. Actual STP is ~10%. The gap is 50+ percentage points.
+
+> [TRANSCRIPT — Co-founder]: "Our north star is improving the STP... basically the amount of [claims] automatically [processed]... it takes seconds. It's like someone just reviewing it."
+
+> [TRANSCRIPT — Jeremy]: "But that's impossible in Europe. You're not allowed to automatically approve a claim."
+
+> [TRANSCRIPT — Co-founder]: "No. It is. They just get automatically approved in the sense it's not automated, but it takes seconds."
+
+**Why the gap exists:**
+[RESEARCH: claims_journey_discovery.md]: The convention lookup itself is trivial — it's a database query matching checkboxes to fault percentages. The bottleneck is DATA QUALITY:
+- ~50% of EAS forms are still paper
+- Filled out by stressed people with shaking hands at accident scenes
+- Messy diagrams, unclear checkboxes, missing fields
+- Manual data entry introduces errors
+
+**The opportunity:** Whoever fixes data quality upstream unlocks the 50+ point STP gap. Mysa's EAS digitization (OCR + document understanding) is the key that unlocks the convention system.
+
+---
+
+### 2c. Adjuster Productivity Drain
+
+> [TRANSCRIPT — Co-founder]: "the work of an adjuster, 30 to 40%, is data entry and admin. Manual reads papers. Types into the CMS, more than 20 phone calls, context switching between five to seven systems."
+
+[RESEARCH: Section 7]: Today, an adjuster uses 5-6 separate systems per claim:
+```
+Xactimate (estimation) + Hover/EagleView (measurements) +
+CMS (VCA/Guidewire/JURIS) + n2uitive (recorded statements) +
+Encircle/BuildArray (field docs) + carrier portal (reporting)
+```
+
+**The productivity math:**
+
+| Activity | % of adjuster time | Automate? |
+|----------|-------------------|-----------|
+| Data entry & admin | 30-40% | YES — document parsing, auto-population |
+| Travel (field inspections) | 25-30% | Partial — desk vs field triage |
+| Documentation | 20-25% | YES — document generation per SOP |
+| Actual decision-making | 10-20% | Augmented — the 6 sub-steps |
+| Phone calls / context switching | 10-15% | YES — call recording, guided scripts |
+
+[RESEARCH: Section 6] — The 3x productivity math:
+- Current: ~300-480 claims closed/year per adjuster
+- At 3x: 900-1,440 claims closed/year
+- Cost per claim drops from $230-$370 to $75-$125
+- **Savings: $45-120K/year per adjuster**
+
+For a mid-tier TPA with 200 property adjusters: saves **$9-24M/year**.
+
+---
+
+### 2d. Reserve Accuracy = Direct P&L Impact
+
+This is the selling point that should be front-and-center with CFOs.
+
+> [TRANSCRIPT — Co-founder]: "Do you know this concept? It's not what they are paying that matters. It's how much money they are reserving. Because reserves are already recognized in the P&L right away."
+
+> [TRANSCRIPT — Jeremy]: "So they're losses right away."
+
+> [TRANSCRIPT — Co-founder]: "And there is no rules... but they will hold you accountable if the reserve is too different from the value that you end up paying."
+
+**Why this matters:**
+- Over-reserve → looks less profitable → lower stock price / investor confidence
+- Under-reserve → regulatory action → potential solvency issues
+- Accurate reserves → financial predictability → better reinsurance rates
+
+> [TRANSCRIPT — Co-founder]: "Caravela... they lost 18 million last year or two years ago. Do you know why? Because it rained a lot in December. And they were very bad at selling their own policies."
+
+[CLAUDE ANALYSIS]: This is a CRITICAL selling point. Most claims AI companies pitch "adjuster productivity" (saves the VP Claims budget). Mysa should ALSO pitch "reserve accuracy" (saves the CFO's P&L). This opens a second buyer within the same organization and creates a stronger business case. Nobody else is framing their product this way.
+
+---
+
+### 2e. The "Garbage In, Garbage Out" Problem
+
+> [TRANSCRIPT — Jeremy]: "Can you do the next steps without the step before being properly done? Garbage in, garbage out."
+
+> [TRANSCRIPT — Co-founder]: "No. You can't because you need to have a claim open and you need to have a reserve already."
+
+> [TRANSCRIPT — Co-founder]: "I think what is wrong with companies, and I think our value is here, but you cannot start here. Because it's garbage in garbage out. So if you already have a lot of garbage in, you need to start by fixing that."
+
+[CLAUDE ANALYSIS]: This is why Mysa needs to handle BOTH document parsing/structuring AND the decision layer. You can't build a decision engine on garbage data. The product does intake cleanup NOT as the value proposition but as the DATA PIPELINE that feeds the real value (decisions). This is architecturally important: Mysa's intake work is a means, not an end.
+
+---
+
+### 2f. Why Nobody Has Built the Decision Layer
+
+> [TRANSCRIPT — Co-founder]: "Because everyone is not focusing on solving problems. They are focusing on fundraising."
+
+> [TRANSCRIPT — Co-founder]: "I think this is just easier." (About why everyone builds intake instead of decisions)
+
+[RESEARCH: competitive_landscape_reality_check.md]:
+1. **Legacy system integration is brutal** — 74% of insurers still run some legacy tech. Each integration is 6-12 months.
+2. **Regulatory fragmentation** — 50 US states with different rules. EU is country-by-country.
+3. **Incumbents defend turf** — CCC sued Tractable for 5 years over anti-competitive behavior.
+4. **Adjusters resist change** — "enterprise-wide adoption is not plug-and-play."
+5. **TAM is fragmented** — buyers scattered across carriers, TPAs, MGAs of all sizes.
+
+[CLAUDE ANALYSIS]: The real reason: building the decision layer requires BOTH deep insurance domain expertise (understanding what adjusters actually decide and why) AND technical AI capability (models that can reason about policies, evidence, and causation). Most startups have engineering talent or insurance talent, rarely both. Mysa's advantage: co-founder's insurance domain knowledge + existing Caravela OCR engine for document processing.
+
+---
+
+## Part 3: The Market — Sized for Mid-to-Small
+
+### 3a. Why Mid-to-Small, Not Enterprise
+
+> [TRANSCRIPT — Co-founder]: "I always think about insurance companies as companies that have a data science team. But I think you are right." (After Jeremy pointed out mid-to-small don't have dev teams)
+
+> [TRANSCRIPT — Jeremy]: "for the mid-market ones like Caravela, they want us."
+
+> [TRANSCRIPT — Jeremy]: "for big carriers, it will be 'don't touch this. It's my turf. It's my logic. Build our own.'"
+
+[RESEARCH: competitive_landscape_reality_check.md]: "Allianz launched 'Insurance Copilot' in Austria in 2024... Key insight: Allianz built it in-house for themselves, not as a product for other insurers. That's the pattern with the big carriers."
+
+**The segmentation:**
+
+| Segment | Size (GWP) | Count | Tech approach | Mysa addressable? |
+|---------|-----------|-------|---------------|-------------------|
+| Enterprise | >€1B | Top 20-30 globally | Build in-house | NO — Allianz, AXA, Zurich, State Farm all building own |
+| Large mid-market | €500M-€1B | ~100-200 | Buy best-of-breed or outsource to TPA | YES — but longer sales cycles |
+| **Mid-market** | €100M-€500M | ~500-700 | **Need it, can't build it** | **PRIMARY TARGET** |
+| Small | €50M-€100M | ~1,000-2,000 | Desperate for any tech help, low budget | YES — entry-level pricing |
+| Micro | <€50M | ~3,000+ | Manual processes, no tech | LONG-TAIL — self-serve product |
+
+> [TRANSCRIPT — Co-founder]: "My girlfriend [at BCP] also has a Copilot in-house... I also know how the Copilot for the BCP works. It's very bad."
+
+[CLAUDE ANALYSIS]: Even the large carriers that build in-house are building BAD copilots. The co-founder's direct observation: internal tools are document retrieval, not decision support. Mysa could eventually sell to large carriers as "better than what you built internally" — but that's Phase 3, not Phase 1.
+
+---
+
+### 3b. Total Market Sizing
+
+[RESEARCH: home_property_competitive_deep_dive.md, Section 18]:
+
+**US Market:**
+| Segment | Count | Revenue/Premium |
+|---------|-------|----------------|
+| P&C Carriers | ~4,100 entities | $1.06T DWP |
+| TPAs | ~300-500 significant | $115B market |
+| MGAs | ~850-1,000+ | $114B managed premium (16% YoY growth) |
+| Independent adjusting firms | ~53,000 businesses | $11.7B market |
+| **Total claims/year** | **~45-50M** | **$632B losses + LAE** |
+
+**EU Market:**
+| Segment | Count | Revenue/Premium |
+|---------|-------|----------------|
+| Insurers | ~2,141 undertakings | ~€400-450B GWP |
+| Brokers | ~€261B intermediated GWP | ~€59B revenue |
+| TPAs | Growing (Davies, Sedgwick, Crawford) | $91B market |
+| MGAs | 650+ | €18B GWP (23% CAGR) |
+| **Total claims/year** | **~55-70M** | **~€300-350B claims paid** |
+
+**Combined addressable:**
+- ~2,270 potential buyer companies
+- ~100-120M claims/year across both markets
+- $200-650M TAM (initial sale), $400M-1.3B with land-and-expand
+
+---
+
+### 3c. First Attack: EU Motor Mid-Market
+
+[RESEARCH: Section 11 — Convention systems by country]:
+
+| Country | Convention | Motor Market (GWP) | Insured Vehicles | Companies | Mid-Market Est. | STP Gap |
+|---------|-----------|-------------------|-----------------|-----------|----------------|---------|
+| **Portugal** | IDS/CIMPAS | ~$1.42B (2024) | ~5.8M light vehicles (7.3M total fleet) | Top 3 hold 59.2% (Fidelidade 29.6%, Ageas 15.2%, Tranquilidade 11.5%) | ~15-25 carriers | High — 1.94 day avg but only ~10% STP |
+| **Spain** | CIDE/ASCIDE/CICOS | **€13.2B** (2024, +8.9% YoY) | **34M insured vehicles** (2024) | **187 companies** (down from 194 in 2023) | ~40-60 carriers | Medium — 81.6% loss ratio, CICOS digitized |
+| **France** | IRSA | **€26.2B** premiums (2023) | **44.8M insured vehicles** (2023) | **246 in FFA** (99% of market) | ~60-80 carriers (mutuals heavy) | High — largest market, paper EAS still common |
+| **Italy** | CARD | ~€12-16.6B (2023, methodology varies) | **~40M registered vehicles** | UnipolSai (largest), Generali (€3B), Allianz (€2.67B). ANIA covers 85% | ~50-70 carriers | High — 2M claims paid, €10B total (2023) |
+
+[WEB SOURCE: Portugal — Grand View Research, ECO Sapo ranking 2023; Spain — MAPFRE/Statista 2024; France — France Assureurs (FFA) 2023; Italy — Statista/IVASS/ANIA 2023]
+
+**Total EU motor mid-market (4 countries):**
+- ~165-235 mid-market carriers across Portugal, Spain, France, Italy
+- **~124.6M+ insured vehicles** across these 4 countries alone
+- At €2-5 per claim processed: €20-60M revenue opportunity from STP pipeline alone
+- At €50K-200K/year per carrier: €8-47M in platform licensing
+- Spain + France alone = ~€39.4B in motor premiums — massive markets
+
+> [TRANSCRIPT — Jeremy]: "It's like 700 mid-market players in Europe. That makes less than 500 million of... insurance, like Caravela style."
+
+**Why Portugal first:**
+1. Co-founder network — Caravela is the design partner
+2. IDS/CIMPAS system has 91% agreement rate — best-performing convention system
+3. Smallest market = fastest to prove (fewer edge cases, tighter feedback loop)
+4. Portuguese EAS forms are standardized and well-documented
+
+> [TRANSCRIPT — Jeremy]: "I want an LOI [from Caravela], and we say we're doing it in free beta tester. For six months. This is the cost."
+
+---
+
+### 3d. Expansion Markets
+
+**US mid-market property** (Phase 4, months 10-12):
+- ~500-600 mid-market carriers + 50-100 TPAs + 200+ MGAs with claims authority
+- [RESEARCH: Section 6]: "Mid-tier TPAs buy rather than build. They have budget pressure (adjuster shortage, leakage, turnover)."
+
+**EU property** (Phase 3-4):
+- ~250-400 mid-market carriers
+- No convention system advantage — same problem as US
+- Sell to carriers directly (EU has minimal TPA market for property)
+
+---
+
+### 3e. Pricing Model
+
+> [TRANSCRIPT — Jeremy]: "100% we can get from the tiniest 50k a year for this. And for the biggest 1,000,000."
+
+[RESEARCH: Section 6]: Per-claim pricing ($50-200/claim) preferred by TPAs. Typical ACV $500K-$2M for mid-tier.
+
+**Proposed pricing tiers:**
+
+| Tier | Target | Annual Contract | Per-Claim Alternative |
+|------|--------|----------------|----------------------|
+| Starter | Small carriers (<€100M GWP) | €50K-€150K/year | €3-5/claim |
+| Professional | Mid-market (€100M-€500M GWP) | €150K-€500K/year | €2-4/claim |
+| Enterprise | Large mid-market (€500M-€1B GWP) | €500K-€2M/year | Custom |
+| Design Partner | Caravela (beta) | Free for 6 months → €50K-€100K/year | N/A |
+
+[CLAUDE ANALYSIS]: Per-claim pricing is better for landing new customers (low barrier, pay-as-you-go). Platform pricing is better for revenue predictability. Offer both and let the carrier choose. Most will start per-claim and migrate to platform as they scale.
+
+---
+
+## Part 4: Competitor Deep Dive — Head-to-Head
+
+### 4a. Five Sigma / Clive — The Closest Competitor
+
+> [TRANSCRIPT — Co-founder]: "I also care a lot about them [Five Sigma]. For me, they are still my main competitor, and I'm trying to find ways to win."
+
+> [TRANSCRIPT — Jeremy]: "But I think they're everywhere and nowhere at the same time."
+
+[AGENT RESEARCH — Five Sigma deep dive, 10-dimension analysis]:
+
+**What they are:**
+- **Revenue**: $10.1M (180% YoY growth) — growing fast but still small
+- **Tech**: Gemini-based multi-agent system (same LLM backbone Mysa would use)
+- **Integration**: REST API on any CMS — proven this approach works
+- **Product**: Clive is 6 specialized AI agents:
+  1. Communication agent — drafts emails, correspondence
+  2. Investigation agent — guides investigation steps
+  3. Evaluation agent — coverage matching, liability assessment
+  4. Compliance agent — regulatory checks
+  5. Knowledge agent — searches claim history, policy database
+  6. Management agent — workflow orchestration
+
+- **Traction**: Starr Insurance partnership (Jan 2026), "70% US, 30% EU"
+- **Playbooks**: Pre-defined investigation workflows per claim type
+
+**Five Sigma's confirmed GAPS:**
+
+| Gap | Detail | Mysa's advantage |
+|-----|--------|-----------------|
+| No property-specific features | No Xactimate integration, no scope-of-loss, no contractor coordination | Mysa will integrate with Xactimate (US) |
+| No EU convention systems | Cannot match EAS data against IRSA/CARD/CIDE/IDS | Mysa builds this as core wedge product |
+| Generic playbooks | Pre-defined templates, not carrier-specific | Mysa uses carrier SOPs → tailored workflows |
+| LLM coverage matching is fragile | Uses LLM to read policies — breaks on complex exclusions, nested clauses | Mysa supplements LLM with structured rules + SOP compliance |
+| No causation analysis | Cannot determine "sudden vs gradual" for property | Mysa builds this for Thesis 3 |
+| Limited EU presence | 30% of business, US-first | Mysa is EU-first |
+| No P&L-aware reserve setting | Basic reserve suggestions | Mysa frames reserves as P&L impact — CFO-level selling point |
+| No decision ground truth capture | Doesn't systematically capture WHY adjusters decide | Mysa's core moat is decision reasoning data |
+
+---
+
+### 4b. Verisk / XactAI — The Existential Long-Term Risk
+
+> [TRANSCRIPT — Co-founder]: "How can we integrate with them? I want this integrated with them." (About Xactimate)
+
+[AGENT RESEARCH — Verisk deep dive]:
+
+**What they have:**
+- 75-80% US property estimation market share via Xactimate
+- Every Xactimate estimate ever written — massive data moat
+- XactAnalysis (workflow), XactContents (contents valuation), Hover integration
+- Revenue: Verisk is a $35B+ market cap public company
+
+**XactAI (launched Sept 2025):**
+- Photo labels and transcription — admin features ONLY
+- Bundled FREE with Xactimate subscription — genius distribution
+- NO decision support built yet: no coverage analysis, no reserve recommendation, no investigation scoping
+
+**Why Mysa has time (for now):**
+
+| Factor | Assessment |
+|--------|-----------|
+| Strategic DNA | Verisk is an estimation + data analytics company, NOT a decision support company |
+| Buyer mismatch | XactAI buyer = CTO/IT (platform). Decision engine buyer = VP Claims. Different budgets, different champions. |
+| Current XactAI scope | Admin automation (faster data entry), not expert judgment |
+| Domain expertise gap | Building real decision AI requires insurance adjusting expertise they don't have |
+| Timeline | 2-3 years before meaningful decision support — Mysa needs to establish by then |
+
+**The risk — why this is existential:**
+If Verisk decides to build coverage analysis on top of their estimation data, they have:
+- Every property claim estimate ever written
+- Regional pricing databases
+- Carrier relationships (75-80% market share means every carrier already pays them)
+- Free distribution (bundle with Xactimate like they did with XactAI)
+
+[CLAUDE ANALYSIS]: Verisk is the biggest LONG-TERM risk but NOT an immediate competitor. The EU-first strategy buys time — Verisk has minimal EU presence. By the time Verisk builds decision AI (if they do), Mysa needs to have the decision ground truth data moat established. The co-founder's instinct to INTEGRATE with Xactimate is correct — in the US, you want to be the decision layer that feeds INTO Xactimate, not competes with it.
+
+---
+
+### 4c. Shift Technology — The EU Danger
+
+[AGENT RESEARCH — Shift Technology deep dive]:
+
+**What they have:**
+- $320M raised — by far the best-funded EU claims AI company
+- 25+ countries, 100+ customers
+- Core DNA: Fraud detection (original product, 7+ years of data)
+- Shift Claims (launched Sept 2025): Agentic AI for full claims workflow
+- AXA Switzerland: 60% automation rate — impressive headline but details thin
+
+**Shift Technology GAPS:**
+
+| Gap | Detail |
+|-----|--------|
+| Starts downstream | Automates workflow AROUND decisions, not the decisions themselves |
+| Fraud-first architecture | AI optimized for pattern matching, not judgment reasoning |
+| No convention matching | Doesn't process EAS → convention system → fault determination |
+| No SOP-driven workflows | Limited workflow customization |
+| "60% automation" is misleading | Likely means 60% of TASKS automated, not 60% of DECISIONS |
+
+[CLAUDE ANALYSIS]: The key distinction: **Shift automates the workflow. Mysa automates the judgment.** These are different layers. Shift makes the process flow faster. Mysa makes the decisions better. But Shift has the EU relationships and capital to build into the decision space. Speed matters — Mysa needs to establish the convention system / SOP workflow moat before Shift expands there.
+
+---
+
+### 4d. Secondary Competitors
+
+| Company | Funding | What they do | Why not a direct threat | Transcript quote |
+|---------|---------|-------------|------------------------|-----------------|
+| **Assured** | $1B valuation | FNOL + messaging AI agent "Emma" | Intake-focused, US only, auto-focused | "they are focusing a lot on the initial stage" |
+| **Avallon** | $4.6M | AI agents for calls, emails, doc triage | Intake automation only | "they are just calling the repair guy" |
+| **ClaimSorted** | €11.4M | AI-first TPA | TPA model, not pure software | "their positioning is the worst" |
+| **FurtherAI** | $30M (a16z) | AI workforce for insurance, 30x faster intake | All-lines horizontal tool | "they are trying to do everything" |
+| **omni:us** | ~€45M | Berlin. End-to-end claims AI, 70% auto-settlement | Document-processing focused | — |
+| **MarvelX** | €5.4M | Amsterdam. "ClaimOS MaX" EU-first agentic AI | Founded 2025, pre-traction | — |
+| **Crawford/Turvi CoverAI** | Corporate | AI coverage review | Proprietary to Crawford TPA stack | — |
+| **CCC/EvolutionIQ** | $730M acquisition | AI claims guidance for auto casualty | US only, auto casualty only, enterprise | — |
+
+---
+
+### 4e. Master Comparison Matrix
+
+| Dimension | **Mysa** | **Five Sigma** | **Verisk XactAI** | **Shift Claims** | **Assured** |
+|-----------|----------|---------------|-------------------|-------------------|-------------|
+| **Core focus** | Decision engine (6 steps) | CMS + copilot | Estimation + admin AI | Fraud + workflow | FNOL + messaging |
+| **Coverage analysis** | **Primary feature** | LLM matching (basic) | None | None | None |
+| **Convention systems** | **EU-native** | None | None | None | None |
+| **SOP-driven workflows** | **Yes — per carrier** | No (generic playbooks) | No | Limited | No (Flow Builder) |
+| **Reserve setting** | **AI + P&L framing** | Basic | None | None | None |
+| **Causation analysis** | Planned (property) | None | None | None | None |
+| **Historical data engine** | **Core moat** | Limited | Data moat (estimates) | Fraud patterns | Interaction data |
+| **Document generation** | **Per SOP, per decision** | Some | None | Limited | Standard |
+| **EU presence** | **Primary market** | 30% | Minimal | 25+ countries | None |
+| **US presence** | Expansion (Year 2) | 70% | Dominant (property) | Growing | Primary |
+| **Integration** | Any CMS via API | Any CMS via API | Xactimate ecosystem | Own platform | On any CMS |
+| **Funding** | Pre-seed | ~$20M | Public ($35B+) | $320M | $1B valuation |
+| **Target buyer** | Mid-to-small carriers | Mid-market | All Xactimate users | Large carriers | Large carriers |
+
+---
+
+## Part 5: How It Works — Product Architecture & Technology
+
+### 5a. The Product Flow
+
+> [TRANSCRIPT — Co-founder]: "So think the product is quite similar to Avalon in the way that it is built. Like, you have the process. You can generate emails. You can parse emails that we are getting. We can draft the email... we parse that. We understand if something is missing. Then you can send automated emails. You can have AI calling."
+
+```
+CLAIM ARRIVES (email, portal, API, broker submission)
+  │
+  ▼
+STEP 1: INTAKE PARSING
+  │ Parse incoming documents, emails, photos, scanned forms
+  │ "I am getting data from all those intake sources" [TRANSCRIPT]
+  │ "If I'm missing data, I'll go back to the user" [TRANSCRIPT]
+  │
+  ▼
+STEP 2: DATA STRUCTURING
+  │ Extract fields, validate completeness, structure for processing
+  │ Uses Caravela OCR engine for document extraction (~80% accuracy → targeting 90%+)
+  │ "we need to structure the data" [TRANSCRIPT]
+  │
+  ▼
+STEP 3: TRIAGE
+  │ Complexity scoring, assignment, prioritization
+  │ Apply SOP-driven workflows for routing
+  │ "when we onboard, we upload SOPs, translate SOPs into workflows" [TRANSCRIPT]
+  │ "auto triage: I have 20-30%. So you still have value here if you can create more" [TRANSCRIPT]
+  │
+  ▼
+STEP 4: INVESTIGATION SUPPORT
+  │ Guide adjuster through investigation per SOP
+  │ Record calls, guide through questions, generate investigation docs
+  │ "We are recording the calls that you need to make.
+  │  We are guiding you through those calls." [TRANSCRIPT]
+  │
+  ▼
+STEP 5: DECISION ENGINE — The 6 Judgment Sub-Steps
+  │ For each: AI recommends with confidence score + explanation
+  │ Human reviews, accepts/modifies/rejects
+  │ "within decisions, there are six subsections, and for each
+  │  one of them, we already help you" [TRANSCRIPT]
+  │
+  │  ┌──────────────────────────────────────────────────────────┐
+  │  │ 1. Coverage verification    ← Policy parsing + SOP       │
+  │  │ 2. Policy report checking   ← Document completeness      │
+  │  │ 3. Repair assessment        ← Comparable analysis         │
+  │  │ 4. Cost analysis            ← Market rates + historicals  │
+  │  │ 5. Reserve calculation      ← Statistical model + P&L    │
+  │  │ 6. Fraud detection          ← Pattern matching + signals  │
+  │  └──────────────────────────────────────────────────────────┘
+  │
+  ▼
+STEP 6: DOCUMENT GENERATION
+  │ Generate all required documents per SOP template
+  │ Coverage determination letters, reserve memos, investigation summaries
+  │ "we are generating all the documents for you" [TRANSCRIPT]
+  │
+  ▼
+STEP 7: FEEDBACK LOOP — Decision Ground Truth Capture
+  │ Adjuster's actual decisions vs AI recommendations → training data
+  │ "we are training our models to eventually start taking these steps" [TRANSCRIPT]
+  │ Models improve with every claim processed
+  └──────→ Flywheel: better data → better recommendations → more trust → more data
+```
+
+---
+
+### 5b. Agent-Based Architecture
+
+[CLAUDE ANALYSIS]: Based on the product flow and Five Sigma's multi-agent approach (proven viable with 6 agents on Gemini), Mysa should have 8 specialized agents:
+
+| Agent | Function | Inputs | Outputs |
+|-------|----------|--------|---------|
+| **Intake Agent** | Parse emails, docs, photos. Identify missing info. Draft follow-up requests automatically. | Raw email, attachments, portal submissions, scanned docs | Structured claim data, missing data alerts, auto-drafted outreach |
+| **Triage Agent** | Score complexity. Apply SOP workflows. Route to right desk/adjuster/priority. | Structured claim data, carrier SOPs, historical patterns | Assignment recommendation, priority score, SOP workflow activated |
+| **Coverage Agent** | Read policy document. Match claim facts against coverage clauses and exclusions. Flag ambiguities. | Policy document, claim facts, carrier SOPs, coverage rules | Coverage determination recommendation + confidence score + cited clauses |
+| **Investigation Agent** | Scope what needs to be investigated. Guide calls per SOP. Record and transcribe. Generate investigation docs. | Claim data, comparable claims, SOPs, call recordings | Investigation checklist, transcripts, investigation summary document |
+| **Reserve Agent** | Calculate suggested reserve with confidence intervals. Compare to historical claims. Flag P&L impact. | Historical claims data, claim facts, market rates, carrier reserve rules | Reserve recommendation + variance analysis + P&L impact memo |
+| **Fraud Signal Agent** | Pattern matching against known fraud indicators. Score risk. Recommend SIU referral. | Claim data, fraud pattern database, red flag rules | Fraud risk score + flagged indicators + SIU referral recommendation |
+| **Document Agent** | Generate all required documents per SOP and per decision step. Apply carrier templates. | All decision outputs, SOPs, carrier templates | Coverage letters, reserve memos, denial letters, investigation summaries |
+| **SOP Compliance Agent** | Check every decision against carrier-specific SOPs. Flag deviations. Ensure audit trail. | All decisions, SOP database, approval thresholds | Compliance status + deviation flags + audit trail |
+
+---
+
+### 5c. Technology Stack
+
+> [TRANSCRIPT — Jeremy]: "right now, I went for Gemini because it's us. But if we wanted to build a really robust thing, we could go somewhere else."
+
+> [TRANSCRIPT — Co-founder]: "And that's also why we are selling this to investors in the sense that we started with documentation because our product, a core part of the product is reading documents."
+
+| Component | Technology | Rationale |
+|-----------|-----------|-----------|
+| **LLM backbone** | Gemini | Proven for insurance by Five Sigma. Existing Caravela expertise. Cost-effective for high-volume document processing. |
+| **Document processing** | Caravela OCR engine | Existing asset, Gemini-based, ~80% accuracy (targeting 90%+). [TRANSCRIPT: "I was looking at OCR results... the top companies advertise 98-99% on historical data"] |
+| **EAS processing** | OCR → structured data → convention matching | Deterministic rules engine for CIMPAS/IDS/IRSA/CARD/CIDE |
+| **Policy parsing** | LLM + structured extraction | Read coverage clauses, exclusions, conditions — output structured coverage map |
+| **Cloud hosting** | EU-region (AWS eu-west / GCP europe-west) | NOT on-prem. [AGENT RESEARCH]: 85% cloud adoption in P&C. GDPR doesn't require on-prem. Mid-market lacks IT resources. |
+| **Integration** | REST API + webhooks | Same approach as Five Sigma — proven viable. Works on any CMS. |
+| **Estimation integration** | Xactimate API (US), Audatex/Solera API (EU) | Must-have for assessment step. [TRANSCRIPT: "How can we integrate with them?"] |
+| **Call recording** | Recording + transcription | For investigation support. Similar to Harvey.ai for legal. |
+| **Data storage** | Encrypted, EU-resident, GDPR Article 22 compliant | Claims data is sensitive. AI Act high-risk conformity required. |
+
+---
+
+### 5d. The Human-in-the-Loop Requirement
+
+> [TRANSCRIPT — Jeremy]: "it's mandatory to always have a human step."
+> [TRANSCRIPT — Co-founder]: "Really? Even in The US?"
+> [TRANSCRIPT — Jeremy]: "You cannot be 100%... there needs to be a human."
+
+[RESEARCH: Section 9]: GDPR Article 22 prohibits fully automated decisions with legal effect. EU AI Act classifies claims AI as high-risk — requires human oversight, conformity assessment, transparency.
+
+[CLAUDE ANALYSIS]: Human-in-the-loop is a FEATURE, not a limitation:
+1. **Regulatory compliance** baked into the architecture
+2. **Adoption** — adjusters feel augmented, not replaced (critical for sales)
+3. **Training data** — every human decision creates ground truth for model improvement
+4. **Error catching** — prevents wrongful denials (lawsuits) or overpayment (leakage)
+5. **Trust building** — carriers need to trust AI before letting it decide autonomously
+
+---
+
+## Part 6: EU Motor — First Attack Area
+
+### 6a. Why EU Motor First
+
+> [TRANSCRIPT — Co-founder]: "cars in Europe, you don't need it [an adjuster]... But it's very, very small. If you build the product for that, you don't have a company."
+
+[CLAUDE ANALYSIS]: The co-founder is RIGHT that EU motor alone isn't enough for a company. EU motor is the WEDGE:
+1. **Proves the technology** — EAS digitization + convention matching is a clean, measurable problem
+2. **Lands design partner** — Caravela is in Portugal, co-founder has the network
+3. **Builds capabilities** — OCR, document AI, structured decision logic all transfer to property
+4. **Creates defensible moat** — Convention system expertise takes years to build, nobody else has it
+5. **Lower risk first product** — Simpler decisions (deterministic conventions), smaller blast radius
+
+The COMPANY is built on property + US expansion. EU motor is the proof point.
+
+---
+
+### 6b. Convention Systems by Country
+
+[RESEARCH: Section 11 — STP Reality Gap Deep Dive]:
+
+| Country | Convention | How it works | Coverage | Speed | Key data | Market size |
+|---------|-----------|-------------|----------|-------|----------|------------|
+| **Portugal** | IDS/CIMPAS | Direct compensation protocol. Both insurers settle with their own policyholder. | ~100% market participation | **1.94 days** avg decision time | 91% inter-insurer agreement rate | ~$1.42B GWP, 5.8M light vehicles, top 3 hold 59.2% |
+| **Spain** | CIDE/ASCIDE/CICOS | Tabla de Culpabilidad (fault table) + CICOS digital platform | 70-83% of all motor claims | Varies | 2.5M claims/year processed via CICOS | **€13.2B GWP** (2024), 34M vehicles, 187 companies |
+| **France** | IRSA | 13 standardized cases. Outputs only 0%, 50%, or 100% fault. | ~80% of material motor claims | Deterministic (instant lookup) | Simplest fault model in EU | **€26.2B premiums** (2023), 44.8M vehicles, 246 in FFA |
+| **Italy** | CARD | Mandatory for 2-vehicle claims, <9% permanent disability. Civil code + CAI form. | All qualifying 2-vehicle claims | Days | Most complex form structure | ~€12-16.6B GWP, ~40M vehicles, 2M claims paid (€10B) |
+
+**Convention lookup is trivial** — it's a database query. The bottleneck is getting clean, structured data FROM the EAS form INTO the convention system. That's where Mysa's OCR fits.
+
+---
+
+### 6c. The EAS → STP Pipeline
+
+**Current process (manual):**
+```
+Paper EAS → Manual data entry (error-prone, 20-30 min) →
+Convention lookup (trivial) → Settlement decision →
+Human review → Payment
+```
+STP rate: ~10%
+
+**Mysa process:**
+```
+Paper EAS → OCR extraction (2 min) → Structured data →
+Convention matching (instant) → Fault determination →
+Settlement recommendation + documents → Adjuster review (2-3 min) → Payment
+```
+Target STP rate: 40-50%
+
+**Delta = 30-40 percentage point improvement.** For a carrier processing 50,000 motor claims/year, this means:
+- 15,000-20,000 additional claims processed with minimal human intervention
+- At ~45 min saved per claim = 11,250-15,000 hours saved/year
+- At €50/hour loaded cost = €562K-€750K saved/year
+- Mysa charges €100K-200K/year = 3-7x ROI
+
+---
+
+### 6d. Country-by-Country Rollout
+
+**Phase 1: Portugal** (Months 1-3)
+- Design partner: Caravela
+- Convention: CIMPAS/IDS
+- Why first: Co-founder network, smallest market (fastest to prove), best convention performance (91% agreement)
+- Target: 5-10 Portuguese mid-market carriers
+
+**Phase 2: Spain** (Months 4-6)
+- Convention: CIDE/ASCIDE/CICOS
+- Why second: Largest convention volume (2.5M/year), existing CICOS digital platform to integrate with. 187 companies operating (2024), €13.2B motor GWP, 34M insured vehicles.
+- Competition risk: Bdeo has 7/10 top Spanish auto insurers (but for visual AI, not decisions)
+- Target: 10-20 Spanish mid-market carriers
+
+**Phase 3: France and/or Italy** (Months 7-9)
+- France (IRSA): Largest EU motor market (€26.2B premiums, 44.8M vehicles, 246 companies in FFA), simplest fault model (13 cases). Market leader Covéa (MAAF/MMA/GMF) ahead of AXA.
+- Italy (CARD): Complex but mandatory — high pain = high willingness to pay. ~40M vehicles, 2M claims paid for €10B annually. UnipolSai largest, then Generali (€3B), Allianz (€2.67B).
+- Target: 15-30 carriers across both markets
+
+**Phase 4: Northern EU** (Months 10-12+)
+- Germany, Netherlands, Belgium — different convention systems
+- Higher technical complexity but larger markets
+- By this point, Mysa has convention matching expertise from 3+ countries
+
+---
+
+## Part 7: Product Roadmap — 18 Months
+
+### Phase 1 (Months 1-3): MVP — Portuguese Motor
+
+**Build:**
+- EAS OCR pipeline (Portuguese forms) — leverage Caravela OCR engine
+- CIMPAS/IDS convention matching engine (deterministic rules)
+- Basic adjuster dashboard: claim data, convention match result, recommended fault
+- Email/document parsing for incoming claims (email → structured claim)
+- Missing data detection + auto-drafted follow-up requests
+
+**Ship to:** Caravela (free beta, weekly syncs)
+
+**Success metric:** Process 100 Portuguese motor claims. Measure STP rate improvement vs baseline.
+
+> [TRANSCRIPT — Co-founder]: "I hope that we build this, and then I test this with caravela."
+> [TRANSCRIPT — Jeremy]: "we need to meet weekly with Caravela."
+
+---
+
+### Phase 2 (Months 4-6): EU Motor V1 — Multi-Country
+
+**Build:**
+- Spain (CIDE) and France (IRSA) convention support
+- SOP upload → workflow generation engine
+- Triage automation (complexity scoring, desk vs field routing)
+- Reserve recommendation engine (basic — historical comparables)
+- STP rate tracking dashboard
+- Broker-facing view (claim status, documents, timeline)
+
+**Ship to:** 3-5 paying EU carriers (Portugal + Spain)
+
+**Success metric:** Measurable STP improvement at 3+ carriers. First paying customer.
+
+> [TRANSCRIPT — Co-founder]: "when we onboard an insurance company, we upload the SOPs, and we also translate those SOPs into workflows."
+
+---
+
+### Phase 3 (Months 7-9): Decision Engine Core
+
+**Build:**
+- Coverage verification engine (policy document parsing + coverage determination)
+- Investigation support (call recording, guided investigation, document generation)
+- The 6 decision sub-steps as distinct AI modules
+- Fraud signal detection
+- REST API for CMS integration (any CMS)
+- Playbooks per claim type (SOP-driven, not generic)
+
+**Ship to:** Existing EU motor customers (expanded capabilities) + first property pilots
+
+**Success metric:** First property claim processed through full decision pipeline.
+
+---
+
+### Phase 4 (Months 10-12): US Market Entry
+
+**Build:**
+- Xactimate integration (non-negotiable for US property)
+- US-specific coverage rules engine (50-state variation handling)
+- Adjuster decision copilot packaged for US property mid-market
+- Contents valuation support
+
+**Ship to:** 3-5 US pilot customers (mid-market carriers or TPAs)
+
+**Success metric:** First US revenue.
+
+---
+
+### Phase 5 (Months 13-18): Platform Expansion
+
+**Build:**
+- Coverage + causation AI for property (the "sudden vs gradual" problem)
+- Historical claims analytics engine (the data flywheel kicks in)
+- Multi-line support (commercial property, specialty lines)
+- Enterprise features (SSO, audit trails, compliance reporting, multi-level approval workflows)
+- Advanced reserve modeling with P&L impact dashboard
+
+**Target:** $1M+ ARR, 10+ paying customers across EU and US
+
+---
+
+## Part 8: Demo Plan — What to Build
+
+### Context
+
+> [TRANSCRIPT — Co-founder]: "Let me see if my guy built the demo. Most likely it's shit."
+> [TRANSCRIPT — Co-founder]: "I tried to build two demos today, and they basically... I think we need to build block by block."
+> [TRANSCRIPT — Jeremy]: "Yeah. It has to be. Otherwise, it goes everywhere and nowhere at the same time."
+> [TRANSCRIPT — Co-founder]: "Let's build the demo tomorrow. We have something to show."
+
+**Principle: Block by block.** Don't try to show the full product. Show specific, impressive steps.
+
+---
+
+### Demo 1: EU Motor — EAS to Settlement (The "Easy Case")
+
+> [TRANSCRIPT — Co-founder]: "On the demo, we already see that, oh, let me call the repair shop. But that's a demo like this. It's the most easy case possible."
+
+**Scenario:** Portuguese motor claim. Two-car fender bender. No injuries. Paper EAS form filled out at scene.
+
+**Step-by-step demo flow:**
+
+| Step | What happens on screen | What to highlight | Technical requirement |
+|------|----------------------|-------------------|---------------------|
+| 1. Claim arrives | Email with attached scanned EAS form appears in inbox | "This is what arrives today — a messy paper form" | Email parsing, attachment extraction |
+| 2. OCR extraction | Split screen: raw EAS image on left, extracted structured data on right | "In 30 seconds, Mysa extracts every field" — show accuracy on messy handwriting | Caravela OCR engine on EAS forms |
+| 3. Missing data | Mysa flags: "Counterparty policy number is missing. Checkbox 7 is ambiguous." | "Mysa catches what humans miss" | Field validation, completeness checking |
+| 4. Auto-outreach | Draft SMS/email to policyholder requesting missing info | "Automated follow-up — no adjuster time spent" | Template generation, SMS/email integration |
+| 5. Convention match | With complete data: "CIMPAS Case 7 matched. 95% confidence." | "The convention system is a solved problem — the data quality was the bottleneck" | Convention matching engine (deterministic) |
+| 6. Fault determination | "Based on checkboxes 2, 4, 7 and diagram analysis: 100% liability to Party A" | Show the reasoning chain, not just the answer | Explainable AI output |
+| 7. Reserve recommendation | "Estimated repair: €2,400-€3,100. Recommended reserve: €3,100. Based on 847 similar claims." | "P&L impact: this reserve is immediately recognized as a loss" | Historical data matching |
+| 8. Settlement recommendation | Full recommendation + auto-generated settlement documents | "Before: 3-5 days, 45 min adjuster time. After: 4 min review." | Document generation per SOP |
+| 9. Adjuster review | Adjuster clicks approve/modify. Decision logged. | "Human always decides. AI recommends. Every decision trains the model." | Human-in-the-loop UI |
+
+**What makes this demo impressive:**
+- The SPEED: 30 seconds from paper EAS to structured data
+- The ACCURACY: on messy handwriting
+- The AUTOMATION: convention matching is instant once data is clean
+- The DOCUMENTS: everything generated automatically
+- The COMPARISON: before/after (3-5 days → 4 minutes)
+
+---
+
+### Demo 2: US Property — Water Damage (The "Hard Case")
+
+> [TRANSCRIPT — Co-founder]: "imagine that you get the claim. It's a water leakage. You have, oh, let me look at the images on my desk. Let me check. Okay. Actually, this seems a bit — I'm not sure. So I need to send someone there."
+
+**Scenario:** Homeowner reports water damage in basement. Standard HO-3 policy. The key question: is this covered? (sudden burst = covered, gradual seepage = excluded)
+
+**Step-by-step demo flow:**
+
+| Step | What happens | What to highlight |
+|------|-------------|-------------------|
+| 1. Claim arrives | Homeowner email: photos of wet basement, brief description | "This is what lands on a desk adjuster's screen" |
+| 2. Photo analysis | Mysa categorizes: water damage, basement, ~200 sq ft affected | "AI reads photos, doesn't just store them" |
+| 3. Policy parsing | HO-3 policy loaded. Coverage clauses highlighted in green. Exclusions in red. | "Mysa reads the WHOLE policy, not just the header" |
+| 4. Coverage question identified | "Coverage determination requires: was this sudden or gradual?" | "This is the judgment call nobody automates" |
+| 5. SOP-driven investigation | "Investigation checklist generated from YOUR company's SOP" — Request plumber's report, check maintenance records, assess damage pattern, schedule field if needed | "Every carrier has different SOPs. Mysa follows YOURS." |
+| 6. Decision support (covered) | After plumber confirms sudden burst: "Coverage APPLIES under Section I, Coverage A. Deductible: $1,000." + Reserve: "Median similar claims: $8,400. Recommended: $9,200." | "The 6 sub-steps, with reasoning, not just an answer" |
+| 7. Document generation | Coverage determination letter, reserve memo, investigation summary — all per SOP | "Every document your SOP requires, auto-generated" |
+| 8. **The "what if"** | Switch scenario: evidence shows gradual seepage instead. Coverage Agent flips: "Exclusion 2.c applies. Recommend DENIAL." Denial letter auto-generated with policy citations. | "Same product, opposite outcome. The AI adapts to evidence." |
+
+**What makes this demo impressive:**
+- The COVERAGE DETERMINATION: nobody else automates "sudden vs gradual"
+- The SOP COMPLIANCE: workflows from the carrier's own procedures
+- The WHAT-IF: showing the AI can reason in both directions
+- The DOCUMENTS: denial letter with correct policy language citations
+- The HUMAN-IN-THE-LOOP: adjuster always decides
+
+---
+
+### Demo 3: The Historical Data Flywheel (If Time)
+
+> [TRANSCRIPT — Co-founder]: "the second time that you have a second case, for that claim type, it will be always [faster] and it might already be slightly automated because our AI [learned from the first one]."
+
+Show: After processing 100+ water damage claims, Mysa displays:
+- "87% of similar claims in your region with this plumber's report pattern were covered"
+- "Average settlement: $9,100"
+- "Recommend expedited processing — confidence: HIGH"
+- Time-series showing recommendation accuracy improving over time
+
+---
+
+### Demo Requirements Summary
+
+**Must show (non-negotiable):**
+1. OCR accuracy on real documents (EAS forms, policies, emails)
+2. SOP → workflow generation (upload SOP, see structured workflow)
+3. The 6 decision sub-steps with AI recommendations + confidence scores
+4. Human-in-the-loop (adjuster reviews, adjusts, approves)
+5. Document generation per decision
+6. Before/after time comparison (manual vs Mysa)
+
+**Should NOT try to show:**
+- Full CMS replacement (we're not a CMS)
+- Real-time call recording (complex, save for v2)
+- Xactimate integration (US-only, complex — save for Phase 4)
+- Multi-user workflow (single-adjuster view is enough for demo)
+- Historical data flywheel (only if time permits)
+
+**Technical build requirements for demo:**
+1. EAS OCR pipeline (can use Caravela engine)
+2. Convention matching rules engine (CIMPAS for Portugal, at minimum)
+3. Policy document parser (can use Gemini for initial demo)
+4. SOP upload → workflow UI
+5. Adjuster dashboard with 6 decision sub-step cards
+6. Document generation templates (coverage letter, denial letter, reserve memo)
+7. Before/after comparison screen
+
+[CLAUDE ANALYSIS]: The demo should be a real working product, not a mockup. Using Caravela's OCR engine + Gemini for policy parsing + a simple convention matching rules engine, a functional demo for Demo 1 (EU motor) could be built in 2-3 weeks. Demo 2 (US property) requires policy parsing which is harder — this could be a guided demo with pre-loaded data initially.
+
+---
+
+## Part 9: Fundraising Narrative
+
+### 9a. The Pitch
+
+**Slide 1: The Problem**
+100-120M insurance claims per year across the US and EU. The workforce that processes them is disappearing — 30% retiring in 5 years, 12th fastest-declining profession. And the decisions they make hit the company's P&L immediately through reserves.
+
+**Slide 2: The Gap Everyone Missed**
+$1B+ has been invested in automating claims INTAKE (Assured, Avallon, FurtherAI). Nobody has automated the DECISION — the 6 judgment steps that consume 60-70% of an adjuster's time: coverage, investigation, repair assessment, cost analysis, reserves, fraud.
+
+> [TRANSCRIPT — Co-founder]: "everyone is avoiding the judgment, the decision stage."
+
+**Slide 3: Mysa — AI Decision Engine for Claims**
+SOP-driven workflows. 8 specialized AI agents. Human-in-the-loop always. Works on any CMS via API. Integrates with existing estimation tools (Xactimate US, Audatex EU).
+
+**Slide 4: Why Now**
+- LLMs finally accurate enough for recommendation (not automation)
+- Workforce crisis creating urgent buyer need — carriers can't wait
+- Document AI (OCR) reaching 90%+ accuracy on handwritten forms
+- EU AI Act creates regulatory moat for compliance-first products
+
+**Slide 5: Product**
+Show the product flow: Intake → Structure → Triage → Investigate → Decide → Document → Learn
+
+**Slide 6: Market**
+- $200-650M TAM, growing at 28.4% CAGR
+- ~2,270 addressable buyers (mid-to-small carriers, TPAs, MGAs)
+- 100-120M claims/year
+- $50K-$2M ACV per customer
+
+**Slide 7: Traction**
+- Design partner: Caravela (Portuguese insurer)
+- Existing OCR engine: Caravela, Gemini-based, ~80% accuracy
+- EU convention system expertise: CIMPAS/IDS built
+- Co-founder insurance domain knowledge
+
+**Slide 8: Moat**
+Three layers:
+1. Convention system intelligence — country-by-country, takes years
+2. Decision ground truth data — captures WHY adjusters decide, not just outcomes
+3. SOP-to-workflow generation — each carrier's rules encoded, creates switching costs
+
+**Slide 9: Competition**
+Everyone builds AROUND the decision, not the decision itself. [Show comparison matrix from Part 4e]
+
+**Slide 10: Business Model**
+- Per-claim SaaS: €2-10 per claim processed
+- Platform license: €50K-€2M/year based on carrier size
+- Land: EU motor (STP improvement). Expand: property + US
+
+**Slide 11: Roadmap**
+Phase 1-5 over 18 months (from Part 7)
+
+**Slide 12: Ask**
+[TBD — depends on fundraising target]
+
+> [TRANSCRIPT — Co-founder]: "I think we need to raise as much money as ClaimSorted [€11.4M]"
+> [TRANSCRIPT — Jeremy]: "Further AI series A level [$30M]... on seed."
+
+---
+
+### 9b. Key Investor Objections + Honest Answers
+
+| Objection | Answer | Evidence |
+|-----------|--------|----------|
+| "Isn't this what Five Sigma does?" | They're a CMS + copilot. We're a decision engine. They have generic playbooks, we have carrier-specific SOP workflows. They don't do convention systems, causation analysis, or P&L-aware reserves. | [AGENT RESEARCH]: Five Sigma = $10.1M revenue, 6 generic agents, no SOP workflows, no EU conventions |
+| "Won't Verisk just build this?" | They're an estimation company. XactAI is admin automation (photo labels, transcription), not expert judgment. Different product, different buyer. But they're the long-term risk — that's why we start in EU. | [AGENT RESEARCH]: XactAI = admin features only, no decision support, 2-3 year timeline at best |
+| "Won't Shift eat this in EU?" | Shift automates workflow around decisions. We automate the decision itself. Fraud-first vs decision-first. Their 60% is task automation, not decision automation. | [AGENT RESEARCH]: Shift = no convention matching, no SOP workflows, fraud architecture |
+| "Why EU first when US is bigger?" | Convention systems are a unique wedge nobody else has. STP gap is measurable (10% → 40-50%). Design partner in Portugal. Land in EU, technology transfers to US property. | [RESEARCH: Section 11]: Convention system expertise = years to build |
+| "Can AI make coverage decisions?" | Human-in-the-loop always. AI recommends, adjuster decides. 3x productivity, not replacement. Legally required (GDPR, AI Act). Every decision = training data. | [RESEARCH: Section 9]: GDPR Art 22, EU AI Act high-risk classification |
+| "EU market is too small" | EU is the wedge, not the company. US + EU property is the company. $400M-1.3B combined TAM. | [RESEARCH: Section 18]: Combined market sizing |
+| "18-30 month sales cycles?" | Mid-to-small market buys faster (3-6 months). Design partner, not cold outreach. Per-claim pricing lowers barrier. | [RESEARCH: Section 6]: TPAs prefer per-claim pricing |
+
+---
+
+### 9c. The Narrative Arc
+
+> [TRANSCRIPT — Co-founder]: "We need to build models. We need to train data. And now I agree with you, and I think I found a way to train those models. Without hiring people."
+
+**The story:**
+We start with a simple, provable product — EAS digitization for EU motor. This builds our OCR + document AI + decision logic capabilities. We expand to property coverage AI — the same technology applied to a bigger problem. We capture decision ground truth data from every adjuster interaction. Over time, our models get smarter, and the gap between Mysa (carrier-specific, SOP-driven, decision-focused) and generic copilots (broad, template-based, task-focused) widens.
+
+The endgame: **the AI that knows how YOUR company makes claims decisions.** Not generic insurance AI — YOUR insurance AI.
+
+---
+
+## Part 10: Transcript Analysis — Saved
+
+*Full transcript analysis with key decisions, features, market sizing, competitive positioning, blind spots, action items, and contradictions vs research has been saved as Section 23 of `home_property_competitive_deep_dive.md`.*
+
+Key action items from the call:
+1. Build demo block by block — start with EU motor EAS → settlement
+2. Get Caravela LOI — free beta, 6 months, weekly syncs
+3. Pitch to Sapphire next week for introductions
+4. Share research documents between co-founders
+5. Size EU market at country level (Portugal, Spain, France, Italy)
+6. Define demo scenarios and build MVP
+
+---
+
+## Appendix: Sources
+
+### Research Documents (This Repository)
+- `claims_journey_discovery.md` — Motor claims journey mapping (Phases 0-6)
+- `home_property_competitive_deep_dive.md` — Full competitive analysis, market sizing, strategic theses (22+ sections)
+- `competitive_landscape_reality_check.md` — High-level competitive overview
+- `SUMMARY.md` — Co-founder summary
+
+### Key External Sources
+- [Verisk XactAI Launch — Sept 2025](https://www.verisk.com/company/newsroom/verisk-introduces-new-ai-tools-to-streamline-the-property-claims-experience/)
+- [Five Sigma / Starr Partnership — Jan 2026](https://www.prnewswire.com/news-releases/starr-modernizes-pc-and-specialty-claims-with-five-sigmas-ai-claims-platform-and-clive-302669986.html)
+- [Shift Technology Launches Shift Claims — Sept 2025](https://www.shift-technology.com/resources/news/shift-technology-launches-shift-claims-to-power-claims-transformation-with-agentic-ai)
+- [CCC/EvolutionIQ Acquisition — $730M](https://www.businesswire.com/news/home/20241220225656/en/)
+- [Allianz Insurance Copilot](https://www.allianz.com/en/mediacenter/news/articles/250205-smarter-claims-management-smoother-settlements.html)
+- [BLS — Claims Adjusters Fastest Declining](https://www.bls.gov/ooh/business-and-financial/claims-adjusters-appraisers-examiners-and-investigators.htm)
+- [Fortune Business Insights — Claims Management Market](https://www.fortunebusinessinsights.com/claims-management-market-110629)
+- [EIOPA Insurance Statistics](https://www.eiopa.europa.eu/tools-and-data/insurance-statistics_en)
+- [NAIC 2024 Market Share Data](https://content.naic.org/article/naic-releases-2024-market-share-data)

@@ -69,7 +69,8 @@ We use a **service blueprint** model because claims aren't linear — they invol
 | File | Description |
 |------|-------------|
 | `claims_journey_discovery.md` | Main discovery document (~2000+ lines) — the full motor + home journey mapping with research, assumptions, and insights |
-| `home_property_competitive_deep_dive.md` | Deep competitive analysis (~2100+ lines) — TPA teardowns, startup landscape, market sizing, strategic theses |
+| `home_property_competitive_deep_dive.md` | Deep competitive analysis (~2400+ lines) — TPA teardowns, startup landscape, market sizing, strategic theses, transcript analysis |
+| `mysa_product_strategy.md` | **Comprehensive product strategy (~1500+ lines)** — product definition, market sizing, competitor deep dives, architecture, EU motor first attack, 18-month roadmap, demo specs, fundraising narrative. Sources everything from transcript, research, and agent analysis. |
 | `competitive_landscape_reality_check.md` | High-level competitive reality check — who's building what, why it hasn't been "solved" |
 | `SUMMARY.md` | Co-founder summary — key discoveries, theses, and market sizing |
 | `claims_service_blueprint.jsx` | React component for interactive visualization |
@@ -341,3 +342,24 @@ grep -rn "keyword" *.md
 
 **Where we left off:**
 Motor phases 0-6 mapped. Home/property analyzed. Full competitive landscape documented. Market sized. Three strategic theses refined with honest risk assessment. Next: customer validation, motor phases 7-11, or deeper competitive monitoring.
+
+### Session 4 (February 7, 2026)
+**Product strategy document + transcript analysis**
+- Analyzed full co-founder strategy call transcript (~100K chars)
+- Saved transcript analysis as Section 23 in `home_property_competitive_deep_dive.md` (key decisions, blind spots, contradictions)
+- Created comprehensive `mysa_product_strategy.md` (~1500+ lines, 10 parts):
+  - **Part 1**: Product definition — CRM vs decision engine positioning, 6 decision sub-steps, SOP-driven workflows
+  - **Part 2**: The problem — workforce crisis, STP gap, adjuster productivity drain, reserve P&L impact, garbage-in-garbage-out
+  - **Part 3**: Market sizing for mid-to-small — validated EU country-level data (Portugal $1.42B, Spain €13.2B, France €26.2B, Italy €12-16.6B)
+  - **Part 4**: Head-to-head competitor deep dives (Five Sigma/Clive, Verisk/XactAI, Shift Technology) with master comparison matrix
+  - **Part 5**: Product architecture — agent-based system (8 agents), technology stack, human-in-the-loop requirement
+  - **Part 6**: EU motor first attack area — convention system detail, EAS→STP pipeline, country rollout plan
+  - **Part 7**: 18-month product roadmap (5 phases: Portuguese MVP → Multi-country → Decision engine → US entry → Platform)
+  - **Part 8**: Demo plan — 3 detailed demo scenarios (EU motor EAS, US property water damage, historical data flywheel)
+  - **Part 9**: Fundraising narrative — pitch structure, investor objections with honest answers, narrative arc
+  - **Part 10**: Transcript analysis reference
+- All claims sourced with convention: `[TRANSCRIPT]`, `[RESEARCH]`, `[AGENT RESEARCH]`, `[CLAUDE ANALYSIS]`, `[WEB SOURCE]`
+- 30+ verbatim co-founder transcript quotes throughout
+
+**Where we left off:**
+Comprehensive product strategy document complete. All research consolidated into operational working doc. Ready for: demo build, Caravela LOI, customer validation, or investor deck creation.

@@ -2273,3 +2273,127 @@ The sequencing answer probably depends on which co-founders you have and which m
 - [IA Path — Insurance Adjuster License Requirements by State](https://iapath.com/what-adjuster-license-should-i-get/)
 - [Caravela Seguros — 2023 Annual Report (EN)](https://caravelaseguros.pt/wp-content/uploads/2025/01/20240412-RC-2023_vfinal_EN.pdf)
 - [Yahoo Finance — Toscafund Weighs Sale of Caravela](https://finance.yahoo.com/news/toscafund-weighs-sale-portuguese-insurer-142112946.html)
+
+---
+
+## 23. Co-Founder Strategy Call — Transcript Analysis
+
+*Analysis of strategy call between Jeremy and co-founder, February 2026. Full transcript available via Granola.*
+
+### Key Decisions Made
+
+1. **Health insurance is OUT** — Co-founder: "I will never do health. I think it's too complex." Both agreed health is too structured (ICD-10 codes, pre-authorization workflows) and already has automation from the provider side.
+
+2. **US-first build, EU if it works** — Co-founder: "I think we should focus on US. Building a product for The US. And if it works for Europe, perfect. But if it doesn't work, let's ignore it." Jeremy pushed back with EU motor STP gap research. Resolution: EU motor is the WEDGE (design partner Caravela, convention system moat), US property is the COMPANY.
+
+3. **Not a TPA, not making decisions** — Co-founder: "We are not a TPA. We are not a TPA. So if I'm pitching... we are not a TPA because we are not making the decisions." Human-in-the-loop is mandatory.
+
+4. **Cars alone in Europe won't build a company** — Co-founder: "Cars in Europe, you don't need it... But it's very, very small. If you build the product for that, you don't have a company." Motor is the wedge, not the destination.
+
+5. **Focus on P&C (property and casualty)** — Co-founder: "property and casualty, it makes a lot of sense. I would say that I would go with that one."
+
+6. **Caravela as design partner** — Jeremy: "I want an LOI, and we say we're doing it in free beta tester. For six months." Co-founder agreed but wants to close the existing OCR contract first. Weekly syncs needed.
+
+7. **Demo needs to be built block by block** — Co-founder: "I tried to build two demos today, and they basically... I think we need to build block by block." Both agreed: don't try to show everything at once.
+
+### Product Positioning — What Was Confirmed
+
+**The product is a decision engine for claims adjusters.** Not a CRM, not intake automation, not estimation.
+
+Co-founder's clearest articulation: "I'm here to support the adjuster. To spend less amount of time on everything that doesn't require work. And when they get to the decision, I will help them with all the data that we have been collecting, and I will learn with him."
+
+**The 6 decision sub-steps** (co-founder's framework):
+1. Coverage verification
+2. Policy report checking
+3. Repair assessment
+4. Cost analysis
+5. Reserve calculation
+6. Fraud detection
+
+**SOP-driven workflows** are the core differentiator: "everything that we build needs to be really around SOP, like, what is the SOP that your insurance company or your TPA follows."
+
+**Historical data engine** is the long-term moat: "When we come in and we use the historical data, the out-of-the-box thing, we get 60%. As soon as we start getting better data and training the models, we go to 70 or 80%."
+
+### Features Discussed in Detail
+
+| Feature | Source | Priority |
+|---------|--------|----------|
+| SOP upload → workflow generation | Co-founder | Core (Day 1) |
+| Playbooks per claim type | Co-founder (citing Five Sigma: "That's very smart. Let's replicate that.") | Core |
+| Email/document parsing | Co-founder | Core (prerequisite) |
+| Convention matching (EU motor) | Research + co-founder | Wedge product |
+| Call recording + guidance | Co-founder: "We are recording the calls... guiding you through those calls" | Phase 2 |
+| Document generation per SOP | Co-founder: "we are generating all the documents for you" | Core |
+| Reserve recommendation | Co-founder: "How much money you are reserving" — P&L impact framing | Core |
+| Fraud signal detection | Co-founder: listed as 6th decision sub-step | Phase 2 |
+| Historical data engine | Both: "the real product is based on historical data" | Long-term moat |
+| Triage/complexity scoring | Co-founder: "auto triage: I have 20-30%" | Core |
+
+### Market Sizing Discussed
+
+Jeremy shared research numbers during the call:
+- US: ~4,000 carrier entities, 2,000 in Europe
+- Mid-to-small market: 600-500 in each market
+- Pricing: €50K/year (smallest) to €1M+ (largest)
+- ~1,000 addressable players, average €200K/year = €200M TAM
+
+Co-founder's insight on mid-market: "I always think about insurance companies as companies that have a data science team. But I think you are right." — The mid-to-small carriers don't have tech teams and desperately need this.
+
+### Competitive Positioning from the Call
+
+**Five Sigma** — Co-founder: "I also care a lot about them. For me, they are still my main competitor." Jeremy: "But I think they're everywhere and nowhere at the same time."
+
+**Assured** — Co-founder analyzed them directly: "they are focusing a lot on the initial stage." Acknowledged they're a $1B company but "that's already too big for me to think about."
+
+**FurtherAI** — Co-founder: "they are trying to do everything... they don't focus on improving [decisions]."
+
+**ClaimSorted** — Co-founder: "claims sorted doesn't know how to do marketing. I think their positioning is the worst."
+
+**Avallon** — Co-founder: "they are just calling the repair guy. But that's the same for everyone."
+
+### Critical Insight — Reserve Impact on P&L
+
+The co-founder surfaced a selling point not prominent in our research: reserves hit the P&L immediately.
+
+"Do you know this concept? It's not what they are paying that matters. It's how much money they are reserving. Because reserves are already recognized in the P&L right away."
+
+This means Mysa's reserve recommendation engine has a CFO-level selling point, not just a claims VP selling point. Inaccurate reserves directly impact reported profitability.
+
+Real example cited: Caravela lost €18M in a year because of heavy December rains and poor policy pricing — demonstrating how claims/reserve accuracy directly impacts small carrier survival.
+
+### Blind Spots Identified
+
+**What was NOT discussed in the call that our research flagged as important:**
+
+1. **Verisk/XactAI** — Not mentioned by name. The co-founder said "How can we integrate with them?" about Xactimate but didn't discuss XactAI's free bundling strategy or data moat risk.
+
+2. **Shift Technology** — Not mentioned despite being the most dangerous EU competitor. $320M raised, Shift Claims launched Sept 2025, AXA Switzerland 60% automation rate.
+
+3. **GDPR/AI Act compliance** — Co-founder mentioned GDPR for call recording but didn't discuss AI Act high-risk classification, conformity assessments, or human oversight requirements for automated decisions.
+
+4. **CCC/EvolutionIQ** — Mentioned briefly ("CCC is very very small" in reference to property) but the $730M EvolutionIQ acquisition and its implications for auto casualty were not discussed.
+
+5. **Solera/Audatex** — Not discussed despite being the EU motor estimation monopoly with 4.5B+ images and Qapter AI photo-to-estimate capability.
+
+6. **On-prem vs cloud** — Jeremy asked "Are we on-prem model for decision makers?" — this was left unresolved in the call. Agent research confirms: NOT a differentiator, 85% cloud adoption in P&C.
+
+### Action Items from the Call
+
+1. **Build demo block by block** — Co-founder: "Let's build the demo tomorrow. We have something to show."
+2. **Get Caravela LOI** — Jeremy: "I want an LOI, free beta tester for six months."
+3. **Weekly syncs with Caravela** — Jeremy: "We need to meet weekly."
+4. **Pitch to Sapphire** — Co-founder: "I think we should sell this to Sapphire next week."
+5. **Share research docs** — Jeremy to share README and research documents
+6. **Size the EU market properly** — Both agreed more granular country-level sizing needed
+7. **Define the demo scenarios** — What to show, in what order, block by block
+
+### Contradictions vs Research
+
+| Topic | Transcript Assumption | Research Finding | Resolution |
+|-------|----------------------|-----------------|------------|
+| EU motor market size | "Too small for a company" | €400-450B GWP, 55-70M claims/year | EU motor is the WEDGE, not the company. Property + US is the company. |
+| TPAs in Europe | "There is only one TPA that is important" (25% market) | TPAs are minimal in EU — carriers handle claims internally | Correct — EU sell to carriers directly, not TPAs |
+| CCC market share | "CCC is very very small" (about property) | CCC is 60%+ in US auto, acquired EvolutionIQ for $730M | Co-founder was right about CCC being small in property. CCC is huge in auto but not property. |
+| Intake competition | "I don't care about intake" | Assured ($1B), FurtherAI ($30M), Avallon ($4.6M) all doing intake | Correct positioning — don't compete on intake, compete on decisions |
+| Historical data availability | "No one ever tracked how the decisions were being made" | Adjusters generate documents, emails, call records for every decision | Data exists but is unstructured — exactly what Mysa's document AI can parse |
+| Five Sigma as competitor | "They are still my main competitor" | Five Sigma is CMS + copilot, not a decision engine. $10.1M revenue. | Correct to watch but different layer — Five Sigma is broader, Mysa is deeper |
