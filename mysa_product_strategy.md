@@ -299,15 +299,26 @@ This is the selling point that should be front-and-center with CFOs.
 
 [RESEARCH: competitive_landscape_reality_check.md]: "Allianz launched 'Insurance Copilot' in Austria in 2024... Key insight: Allianz built it in-house for themselves, not as a product for other insurers. That's the pattern with the big carriers."
 
-**The segmentation:**
+**The segmentation — anchored to Caravela (€188M GWP, 149 employees, 57K claims/year, 7th in Portuguese non-life):**
 
-| Segment | Size (GWP) | Count | Tech approach | Mysa addressable? |
-|---------|-----------|-------|---------------|-------------------|
-| Enterprise | >€1B | Top 20-30 globally | Build in-house | NO — Allianz, AXA, Zurich, State Farm all building own |
-| Large mid-market | €500M-€1B | ~100-200 | Buy best-of-breed or outsource to TPA | YES — but longer sales cycles |
-| **Mid-market** | €100M-€500M | ~500-700 | **Need it, can't build it** | **PRIMARY TARGET** |
-| Small | €50M-€100M | ~1,000-2,000 | Desperate for any tech help, low budget | YES — entry-level pricing |
-| Micro | <€50M | ~3,000+ | Manual processes, no tech | LONG-TAIL — self-serve product |
+[WEB SOURCE: Caravela 2024 Annual Report, ECO rankings, ASF data]
+
+| Segment | Size (GWP) | EU Count (4 countries) | Tech approach | Mysa addressable? | Reference carriers |
+|---------|-----------|----------------------|---------------|-------------------|-------------------|
+| Enterprise | >€1B | ~16-18 groups | Build in-house | NO — Allianz, AXA, Generali, UnipolSai, Covéa all building own | Fidelidade (PT), Mapfre (ES), Covéa (FR), UnipolSai (IT) |
+| Large | €200M-€1B | ~24-40 carriers | Buy best-of-breed or outsource to TPA | YES — but longer sales cycles | Zurich PT, Linea Directa (ES), Matmut (FR), Vittoria (IT) |
+| **Caravela tier** | **€100M-€200M** | **~30-50 carriers** | **Need it, can't build it, ~100-200 employees** | **PRIMARY TARGET — sweet spot** | **Caravela (PT), Pelayo (ES), Thélem (FR), HDI Italy** |
+| Small | €50M-€100M | ~40-60 carriers | Want tech help, tight budget, <100 employees | YES — entry-level pricing | UNA (PT), Patria Hispana (ES), small mutuelles (FR) |
+| Micro | <€50M | ~170-255+ entities | Manual processes, minimal tech, <50 employees | LONG-TAIL — self-serve/per-claim | Regional mutuals, niche writers, many French mutuelles |
+
+**Why "Caravela tier" (€100-200M) is the sweet spot:**
+- Big enough to have real claims volume (~30K-60K/year) that justifies the investment
+- Small enough to lack a data science team or in-house AI capability
+- Growing fast (Caravela grew 10x in 10 years) — need tools to scale without proportional headcount
+- Budget exists: €50K-200K/year is 0.03-0.2% of GWP — trivial if it improves STP or reserve accuracy
+- Decision-making is fast: 1-2 decision-makers, not a 12-month procurement process
+
+[CLAUDE ANALYSIS]: The previous segmentation used vague EU-wide estimates. Now validated with actual carrier data per country: the "Caravela tier" (€100-200M GWP) has ~30-50 carriers across just 4 Southern EU countries. Add smaller carriers (€50-100M) and you get ~70-110 carriers. Add Northern EU (Germany, Benelux, Nordics) and the total addressable universe of sub-€200M carriers is likely 200-400+ across Europe. This is more than enough for a focused startup.
 
 > [TRANSCRIPT — Co-founder]: "My girlfriend [at BCP] also has a Copilot in-house... I also know how the Copilot for the BCP works. It's very bad."
 
@@ -344,28 +355,96 @@ This is the selling point that should be front-and-center with CFOs.
 
 ---
 
-### 3c. First Attack: EU Motor Mid-Market
+### 3c. First Attack: EU Motor — Caravela-Sized and Below
 
-[RESEARCH: Section 11 — Convention systems by country]:
+**Anchor: Caravela Seguros** — €188M GWP (2024), 149 employees, 57K claims/year (42K motor), 7th in Portuguese non-life.
 
-| Country | Convention | Motor GWP | Insured Vehicles | Total Insurers | Est. Motor Writers | **Mid-Market (€50-500M)** | Annual Claims | STP Gap |
-|---------|-----------|----------|-----------------|---------------|-------------------|--------------------------|--------------|---------|
-| **Portugal** | IDS/CIMPAS | **~€1.8B** (2023) | ~5.8M light (7.3M total fleet) | 63 domestic + 26 EU branches | ~25-30 | **5-8** | ~500-700K (est.) | High — 1.94 day avg, only ~10% STP. Top 3 hold 59.2% |
-| **Spain** | CIDE/ASCIDE/CICOS | **€13.2B** (2024, +8.9%) | **34M** (2024) | **187** (RAEA, down from 194) | ~80-100 | **15-25** | ~2.7-3.4M (est.) | Medium — 81.6% loss ratio, CICOS digitized |
-| **France** | IRSA | **€28.1B** (2024, +7.3%) | **45.5M** (2024) | **246 FFA** (99% of market) | ~100-120 | **20-30** | **7.4M** (confirmed, FFA) | High — largest market, rising costs (+4.3%) |
-| **Italy** | CARD | **~€14.8B** (2023) | **~40M** registered | ~205 (IVASS) | ~50-60 | **10-15** | **2M** (confirmed, ANIA) | High — 4.48% frequency, avg €2,105/claim |
+[WEB SOURCE: Caravela 2024 Annual Report; ASF; ECO Sapo rankings; MAPFRE Economics; France Assureurs; IVASS/ANIA. Full source list in agent research.]
 
-[WEB SOURCE: Portugal — ASF/GlobalData/Insurance Edge; Spain — MAPFRE Economics 2024; France — France Assureurs 2024; Italy — ANIA/IVASS/Statista 2023. Full source list in agent research.]
+#### Country-Level Market Overview
 
-**Total EU motor mid-market (4 countries):**
-- **~50-78 mid-market carriers** (€50M-500M motor GWP) across Portugal, Spain, France, Italy
-- **~125M+ insured vehicles** across these 4 countries
-- **~12.6-13.5M motor claims/year** (France 7.4M + Italy 2M confirmed; Portugal + Spain estimated)
-- Combined motor GWP: **~€57.9B** across 4 countries
-- At €2-5 per claim processed: €25-68M revenue opportunity from STP pipeline alone
-- At €50K-200K/year per carrier: €2.5-15.6M in platform licensing from mid-market alone
+| Country | Convention | Motor GWP | Vehicles | Total Insurers | Motor Writers |
+|---------|-----------|----------|----------|---------------|--------------|
+| **Portugal** | IDS/CIMPAS | **~€1.8B** (2023) | ~5.8M light (7.3M total) | 47 active non-life (63 domestic) | ~25-30 |
+| **Spain** | CIDE/ASCIDE/CICOS | **€13.2B** (2024, +8.9%) | **34M** | 176 operating (187 RAEA) | ~80-100 (31 groups in motor) |
+| **France** | IRSA | **€28.1B** (2024, +7.3%) | **45.5M** | **660 ACPR-supervised** (246 FFA) | ~100-120 |
+| **Italy** | CARD | **~€14.8B** (2023) | **~40M** | ~85 national (IVASS) | **38 write RC Auto** |
 
-[CLAUDE ANALYSIS]: The mid-market carrier count is smaller than initially estimated (~50-78 vs ~165-235). This is actually good news for a startup: a focused, reachable target list. Spain (15-25) and France (20-30) have the richest mid-market pools. Portugal is a proving ground (5-8 carriers), not a market. The real addressable universe expands when you add smaller carriers (<€50M), TPAs, and Northern EU countries.
+#### Carrier Distribution by Size Tier (validated, per country)
+
+| Size Tier (total GWP) | Portugal | Spain | France | Italy | **4-Country Total** |
+|-----------------------|----------|-------|--------|-------|-------------------|
+| **>€1B** (enterprise — builds in-house) | 3 | 5-6 | 5-7 | 3 | **~16-19** |
+| **€200M-€1B** (large — buys best-of-breed) | 4-5 | 8-10 | 10-20 | 8-12 | **~30-47** |
+| **€100-200M** (Caravela tier — **PRIMARY TARGET**) | 6-8 | 8-10 | 30-60 | 10-15 | **~54-93** |
+| **€50-100M** (small — entry-level) | ~8-12 | ~25-35 | ~100+ | ~8-12 | **~141-159+** |
+| **<€50M** (micro — long-tail) | ~25-30 | ~110-130 | ~100-200+ | ~8-12 | **~243-372+** |
+
+[WEB SOURCE: Portugal — ECO/ASF rankings, top 10 = 92% of market. Spain — DGSFP sector report, 176 operating entities. France — ACPR data, 660 organizations (324 mutuelles + 302 insurance code + 34 social security code), ACPR 1st quartile cutoff = €82M. Italy — IVASS, only 38 companies write RC Auto. EIOPA — ~300 of ~2,300 Solvency II entities qualify as SNCU (<€100M GWP, ~13%)]
+
+#### Caravela-Tier Deep Dive: Named Carriers (€100-200M range)
+
+| Country | Carrier | Est. GWP | Notes |
+|---------|---------|----------|-------|
+| **Portugal** | **Caravela** | €188M (2024) | Design partner. 7th non-life. 42K motor claims. |
+| Portugal | CA Seguros | ~€200-210M | 8th, displaced by Caravela |
+| Portugal | Mapfre PT | ~€190-210M | 9th, surge with Bankinter |
+| Portugal | Aegon Santander | ~€170-190M | 10th, health +37.5% |
+| Portugal | Victoria | ~€130-150M | 11th, strong in health |
+| Portugal | UNA | ~€120-140M | 12th, health +53%, motor +26% |
+| **Spain** | Pelayo | ~€375M (mutua) | 844K auto policies, 2.42% motor share |
+| Spain | Admiral/Balumba | ~€100-150M motor | UK-owned direct writer, +13.4% |
+| Spain | Patria Hispana | ~€100-130M | Centennial company, +12.9% |
+| Spain | Mutua Tinerfeña | ~€80-120M | Regional Canary Islands mutual |
+| **France** | Thélem Assurances | €453M total | ~€150-200M motor. 1.15M contracts. **Closest French analog to Caravela.** |
+| France | L'Olivier Assurance | ~€220-260M | Online auto pure-play. Similar to Caravela. |
+| France | Direct Assurance (AXA sub) | ~€300-400M | Slightly larger than Caravela |
+| France | ~30-60 small mutuelles | €82-200M each | ACPR 2nd quartile. Many are autonomous, multi-line with motor books. |
+| **Italy** | HDI Assicurazioni | €716M non-life, ~€160-200M motor | R.C. Auto = 22.8% of non-life. **Closest Italian analog to Caravela.** |
+| Italy | ~10-12 smaller carriers | €50-200M motor | Regional companies, online insurers (Prima, Quixa, Verti, Linear) |
+
+#### TAM Calculation — Caravela-Anchored
+
+**Tier 1: Caravela tier (€100-200M GWP) — Primary target:**
+- ~54-93 carriers across 4 Southern EU countries
+- Average claims/year per carrier (Caravela reference): ~40-60K
+- Average motor claims: ~30-45K
+- ACV at €50K-200K/year: **€2.7M-€18.6M**
+- Per-claim at €2-5/claim: **€3.2M-€20.9M**
+
+**Tier 2: Small carriers (€50-100M GWP) — Entry-level:**
+- ~141-159+ carriers across 4 countries
+- Average claims/year (estimated): ~15-30K
+- ACV at €30K-€100K/year: **€4.2M-€15.9M**
+- Per-claim at €3-5/claim: **€6.3M-€23.9M**
+
+**Tier 3: Large carriers (€200M-€1B GWP) — Expansion:**
+- ~30-47 carriers across 4 countries
+- ACV at €200K-€500K/year: **€6M-€23.5M**
+
+**Tier 4: Micro (<€50M GWP) — Long-tail, self-serve:**
+- ~243-372+ entities (many are French mutuelles)
+- Not all write motor. Realistic motor writers: ~100-150
+- ACV at €10K-€30K/year or per-claim only: **€1M-€4.5M**
+
+**Combined TAM (4 Southern EU countries only):**
+
+| Scenario | Carriers Reached | Revenue |
+|----------|-----------------|---------|
+| **Conservative** (Caravela tier only, low ACV) | ~54 carriers | **~€2.7M** |
+| **Base case** (Caravela + small tiers, mid ACV) | ~195 carriers | **~€15-25M** |
+| **Optimistic** (all tiers incl. large + micro, high ACV) | ~468+ carriers | **~€45-80M** |
+| **Full EU** (add Germany, Benelux, Nordics, CEE) | ~700-1,000+ | **~€70-150M** |
+| **EU + US expansion** (add US mid-market) | ~2,000+ | **~€200-650M** |
+
+[CLAUDE ANALYSIS]: The honest answer: the Southern EU motor market alone is **NOT a venture-scale TAM**. At base case (~€15-25M), it's a healthy SaaS business but not a $1B+ outcome. The venture story requires: (1) expanding to all of EU including Northern markets, (2) expanding to US, (3) expanding from motor to property, and (4) moving up-market over time. EU motor is the **wedge**, not the company. This is consistent with the co-founder's own observation: "cars in Europe... you don't have a company."
+
+**But as a wedge, it's perfect:**
+- 54-93 carriers in the primary tier = reachable with 2-3 sales reps
+- Caravela as design partner proves the product in a live environment
+- Convention system expertise creates defensible moat
+- Every carrier added builds the historical data flywheel
+- Technology transfers directly to property and US markets
 
 > [TRANSCRIPT — Jeremy]: "It's like 700 mid-market players in Europe. That makes less than 500 million of... insurance, like Caravela style."
 
@@ -398,14 +477,18 @@ This is the selling point that should be front-and-center with CFOs.
 
 [RESEARCH: Section 6]: Per-claim pricing ($50-200/claim) preferred by TPAs. Typical ACV $500K-$2M for mid-tier.
 
-**Proposed pricing tiers:**
+**Proposed pricing tiers (anchored to Caravela economics):**
 
-| Tier | Target | Annual Contract | Per-Claim Alternative |
-|------|--------|----------------|----------------------|
-| Starter | Small carriers (<€100M GWP) | €50K-€150K/year | €3-5/claim |
-| Professional | Mid-market (€100M-€500M GWP) | €150K-€500K/year | €2-4/claim |
-| Enterprise | Large mid-market (€500M-€1B GWP) | €500K-€2M/year | Custom |
-| Design Partner | Caravela (beta) | Free for 6 months → €50K-€100K/year | N/A |
+Caravela reference: €188M GWP, ~57K claims/year. At €100K/year = 0.05% of GWP. At €3/claim = €171K/year = 0.09% of GWP. Both are trivial relative to the potential savings (€562K-€750K/year from STP improvement alone — see Part 6c).
+
+| Tier | Target | # Carriers (4 countries) | Annual Contract | Per-Claim | Est. Claims/Year |
+|------|--------|-------------------------|----------------|-----------|-----------------|
+| Micro | <€50M GWP | ~100-150 motor writers | €10K-€30K/year | €5-8/claim | ~5-15K |
+| Starter | €50-100M GWP | ~141-159 | €30K-€100K/year | €3-5/claim | ~15-30K |
+| **Professional** | **€100-200M GWP (Caravela tier)** | **~54-93** | **€50K-€200K/year** | **€2-4/claim** | **~30-60K** |
+| Growth | €200M-€500M GWP | ~20-30 | €200K-€500K/year | €2-3/claim | ~60-150K |
+| Enterprise | €500M-€1B GWP | ~10-17 | €500K-€2M/year | Custom | ~150K+ |
+| Design Partner | Caravela (beta) | 1 | Free 6 months → €50K-€100K/year | N/A | ~57K |
 
 [CLAUDE ANALYSIS]: Per-claim pricing is better for landing new customers (low barrier, pay-as-you-go). Platform pricing is better for revenue predictability. Offer both and let the carrier choose. Most will start per-claim and migrate to platform as they scale.
 
