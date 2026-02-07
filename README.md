@@ -54,7 +54,7 @@ We're building a **granular, detailed map of the insurance claims journey** to i
 - **Where the friction, pain, and cost lives** (that's where automation value is)
 - **How EU and US markets differ** (fundamentally, not superficially)
 - **What can be automated** and what still needs humans
-- **Where Mysa fits** in this landscape
+- **Where Mysa fits** in this landscape — with honest competitive analysis
 
 ### The Approach
 
@@ -68,7 +68,10 @@ We use a **service blueprint** model because claims aren't linear — they invol
 
 | File | Description |
 |------|-------------|
-| `claims_journey_discovery.md` | Main discovery document (~2000+ lines) — the full journey mapping with research, assumptions, and insights |
+| `claims_journey_discovery.md` | Main discovery document (~2000+ lines) — the full motor + home journey mapping with research, assumptions, and insights |
+| `home_property_competitive_deep_dive.md` | Deep competitive analysis (~2100+ lines) — TPA teardowns, startup landscape, market sizing, strategic theses |
+| `competitive_landscape_reality_check.md` | High-level competitive reality check — who's building what, why it hasn't been "solved" |
+| `SUMMARY.md` | Co-founder summary — key discoveries, theses, and market sizing |
 | `claims_service_blueprint.jsx` | React component for interactive visualization |
 | `app/` | Vite React app to run the blueprint locally |
 | `README.md` | This file — overview and continuation instructions |
@@ -88,13 +91,13 @@ npm run dev
 - **Rows** = Actors (policyholder, counterparty, police, broker, insurer front office, claims handler, adjuster, etc.)
 - **Columns** = Phases (Incident → Scene Mgmt → Documentation → ... → Close)
 - **Cells** = What each actor does in each phase
-- **Forks** = Decision points (click 🔍 to see the branching logic)
+- **Forks** = Decision points (click to see the branching logic)
 
 ---
 
 ## What We've Discovered and Documented
 
-### Motor Claims — The Primary Focus
+### Motor Claims Journey (Phases 0-6)
 
 #### Phase 0: Incident (Seconds 0-60)
 - Mapped the reality of what happens in the first minute (chaos, not paperwork)
@@ -102,170 +105,93 @@ npm run dev
 - No documents yet — just dashcam/telematics if they exist
 
 #### Phase 1: Scene Management (Minutes 1-30)
-**Fork 1: Anyone Injured?**
-- YES → Call 112/911 → Police take over → Bodily Injury claim path (totally different animal: higher value, longer lifecycle, lawyers)
-- NO → Material damage only → Fork 2
-
-**Fork 2: Is the Other Party Cooperative?**
-- COOPERATIVE → Exchange info, fill EAS (EU) or exchange insurance cards (US)
-- UNCOOPERATIVE → Call police, no joint statement possible
-- HIT AND RUN → Police, guarantee fund path, may never identify other driver
+**Fork 1: Anyone Injured?** YES → BI claim path | NO → Material damage only
+**Fork 2: Is the Other Party Cooperative?** Cooperative → Exchange info | Uncooperative → Police | Hit and run → Guarantee fund
 
 #### Phase 2: Documentation — The Massive EU/US Divergence
 **Fork 3: EU vs US Market**
-
-**🇪🇺 Europe: European Accident Statement (EAS)**
-- Standardized carbon-copy form across entire EU
-- "Brilliant concept, terrible execution" — two stressed people drawing diagrams
-- ~50% still on paper
-- Single source of truth — both parties sign the same document
-- Pre-agreed checkboxes map to convention fault tables
-
-**🇺🇸 United States: No Equivalent**
-- Police crash report (narrative text, not structured)
-- Each driver's own photos and account
-- Two competing narratives — no agreed document
-- Up to 4 recorded statements for a single fender bender
-
-**Key insight:** EU produces structurally cleaner data at origin. This is a fundamental difference, not a minor one.
+- EU: European Accident Statement (EAS) — standardized form, ~50% still paper, "brilliant concept, terrible execution"
+- US: No equivalent — police reports, competing narratives, 4 recorded statements per fender bender
 
 #### Phase 3: Reconciliation — How Fault Gets Determined
+- EU: Convention systems (IRSA, CIMPAS, CID) — pre-computed fault lookup tables
+- US: Manual investigation every time — no convention system
+- **THE STP REALITY GAP:** 60-70% theoretical STP vs ~10% actual. Bottleneck = data quality.
 
-**🇪🇺 Europe: Convention Systems**
-- CIMPAS (Portugal), IDA/IRSA (France), CID (Italy)
-- Pre-computed fault tables — given accident type X, fault = Y/Z
-- "Lookup tables for fault" — no investigation needed for matching scenarios
-- **THE STP REALITY GAP DISCOVERY:**
-  - Theoretical STP potential: 60-70% of claims could auto-resolve
-  - Actual STP achieved: Only ~10%
-  - **Bottleneck:** Data quality — messy EAS forms, unclear diagrams, paper, missing fields
-  - **The convention lookup is trivial** — a simple database query
-  - **The opportunity:** Whoever fixes data quality upstream unlocks the 50+ point gap
+#### Phase 4: First Contact
+**Fork 4: Distribution Channel** (Broker / Agent / Direct)
+**Fork 5: Broker Submission Method** (Portal / Email / Phone — all have friction)
 
-**🇺🇸 United States: Manual Investigation**
-- No convention system for routine claims
-- Every disputed claim needs human investigation
-- Recorded statements from both drivers (15-30 min each)
-- Adjuster reconstructs what happened from competing accounts
-- Fault percentage assigned (not binary — can be 80/20, 70/30, etc.)
-- Inter-company arbitration if insurers disagree
-
-#### Phase 4: First Contact — Who Does the Policyholder Call?
-**Fork 4: Distribution Channel**
-- **BROKER** (UK/NL/BE dominant) → Calms, guides, submits FNOL
-- **AGENT** (IT/DE/PT/ES dominant, US personal lines)
-  - Captive → Direct system access
-  - Independent → Directs to insurer
-- **DIRECT** (growing everywhere) → Fastest, no intermediary
-
-**Fork 5: How Does Broker Submit to Insurer?**
-- **Portal** → Manual rekeying into insurer's system (friction)
-- **Email** → Double entry — broker types it, insurer re-keys (more friction)
-- **Phone** → Fastest to open, but docs arrive separately
-
-**Key insight:** Broker-to-insurer submission is a data quality bottleneck. All paths have friction.
-
-#### Phase 5: FNOL (First Notice of Loss)
-**Fundamental difference:**
-- 🇪🇺 EU FNOL = "Here's my EAS, verify my policy" (verification workflow)
-- 🇺🇸 US FNOL = "Let me tell you what happened" (data collection workflow)
-
-**EAS Data Schema documented:**
-- ~100 fields total
-- 17 circumstance checkboxes that map to convention fault tables
-- The checkboxes ARE the convention input
+#### Phase 5: FNOL
+- EU = verification workflow ("here's my EAS")
+- US = data collection workflow ("let me tell you what happened")
 
 #### Phase 6: Triage
 **Fork 6: Skip Adjuster or Assign?**
+- EU: Goal is to skip adjuster — ~10% achieve STP
+- US: Every claim gets adjuster — the question is "which one?"
 
-**🇪🇺 EU (goal: skip adjuster)**
-- Clean EAS → Convention match → STP (~10% actual)
-- Unclear EAS → Clarification call → Maybe adjuster
-- Complex/BI → Full investigation
+### Home/Property Claims
 
-**🇺🇸 US (every claim gets adjuster)**
-- No STP path — even simple claims get adjuster time
-- The question is "which adjuster?" not "do we need one?"
-
-**Where claims handlers actually spend time:**
-- Data extraction & reconciliation: ~30%
-- Exception handling: ~25%
-- Damage assessment coordination: ~20%
-- Validation & compliance: ~15%
-- Policy lookup & payment: ~10%
-
-**The first 55% (data extraction + exception handling) is the prime automation target.**
-
----
-
-### Home/Property Claims — Added for Comparison
-
-#### Why Home Claims Are Structurally Different
+#### Why Structurally Different
 | | Motor | Home |
 |---|---|---|
-| Counterparty? | YES — another driver | Usually NO — you vs the peril |
-| Agreed document? | 🇪🇺 EAS | NONE |
-| Fault question? | WHO caused it? | WAS it covered? |
-| Convention system? | 🇪🇺 Yes | NONE |
-| STP possible? | ~10% actual | Very rare |
-| Adjuster involvement | 🇪🇺 Often NO | Almost ALWAYS |
+| Counterparty? | YES | Usually NO |
+| Agreed document? | EAS (EU) | NONE |
+| Core question | WHO caused it? | WAS it covered? |
+| Convention system? | EU: Yes | NONE — anywhere |
+| EU advantage? | YES (EAS, conventions) | NO |
 
-#### Claim Types (US 2019-2023)
-- Wind & hail: 42.5%
-- Water damage: 29.4%
-- Fire & lightning: ~5%
-- Theft: 0.7%
+#### Key Findings
+- Desk vs field adjuster shift: 80/20 → 60/40 → trending to 40/60
+- TPAs employ 25-35% of adjusters — massive buyer segment
+- 3x adjuster productivity opportunity (travel 25-30%, documentation 20-25% = automate)
+- AI replacing adjusters is overhyped — augment, not replace (hidden damage, causation, fraud)
 
-#### What Home Adjusters Do
-**Two parts:**
-1. INVESTIGATION — Establish the facts (what happened, was it covered, is it fraud?)
-2. VALUATION — Estimate the cost (Xactimate is industry standard, used by 75-80%)
+### Competitive Deep Dive (22 Sections)
 
-#### Desk Adjuster vs Field Adjuster
-- **Desk:** Small claims (<$3K), simple causation, virtual inspection
-- **Field:** Large/complex claims, hidden damage possible, on-site inspection
+**TPA Competitive Teardown:**
+- Sedgwick ($5B, smart.ly intake, Sidekick Agent, JURIS legacy CMS — does NOT license tech)
+- Crawford ($1.29B, Turvi/CoverAI coverage review, Contractor Connection 6K+ contractors, WeGoLook)
+- Davies ($1B+, ClaimPilot, agentic AI features, 200K+ claims/year)
 
-**The shift:**
-- Past: Field 80% / Desk 20%
-- Today: Field 60% / Desk 40%
-- Future: Field 40% / Desk 60%
+**The Estimation Monopolies:**
+- US Property: Verisk/Xactimate (75-80% market share) + XactAI (Sept 2025, basic AI bundled free)
+- EU Motor: Solera/Audatex (4.5B+ images, Qapter AI photo-to-estimate)
 
-#### Who Employs Home Adjusters
-- Staff adjusters (insurer employees): ~40-50%
-- TPA adjusters (Crawford, Sedgwick, Engle Martin): ~25-35%
-- Independent adjusters: ~15-25%
-- Public adjusters (work for policyholder): ~5%
+**AI Startup Landscape:**
+| Company | Focus | Funding | Market |
+|---------|-------|---------|--------|
+| Five Sigma/Clive | Adjuster copilot on any CMS | $20M | 70% US, 30% EU |
+| Shift Technology | Fraud → full claims automation | $320M | 25+ countries |
+| Assured | Document intake + triage | Funded | US |
+| Sprout.ai | Claims intake automation | Funded | UK, EU, LATAM |
+| Tractable | Computer vision motor damage | Funded | UK, EU (Aviva, Admiral) |
+| Bdeo | Visual intelligence motor + property | Funded | 20 countries (7/10 Spanish auto) |
+| Avallon | AI agents for calls/emails/docs | $4.6M | US |
+| ClaimSorted | AI-first TPA | €11.4M | UK, EU, US |
 
-**Key insight:** TPAs are a massive buyer segment — improving their unit economics is a direct value prop.
+**Market Sizing:**
+| | US | EU | Combined |
+|---|---|---|---|
+| Market size | $1.06T DWP | ~€400-450B GWP | ~$1.5T |
+| Total claims/year | ~45-50M | ~55-70M | ~100-120M |
+| Addressable buyers | ~1,250 | ~1,020 | ~2,270 |
+| TAM (initial sale) | $138-468M | €70-196M | $200-650M |
+| TAM (with expansion) | $276-936M | €140-392M | $400M-1.3B |
 
-#### The 3x Adjuster Productivity Opportunity
-Where field adjusters spend time:
-- Travel: ~25-30% (biggest lever — eliminate with virtual)
-- Documentation & data entry: ~20-25% (automate)
-- On-site inspection: ~15-20%
-- Report writing: ~10-15% (AI draft generation)
-- Xactimate/estimates: ~10-15%
-- Communication: ~10-15%
+### Three Strategic Theses (Refined)
 
-**The opportunity is NOT "replace the adjuster" — it's "make the adjuster 3x more productive."**
+**Thesis 1 — EU Motor: Convention STP Gap**
+Fix EAS data quality → convention matching → unlock 50+ point STP gap. Nobody builds this. ~250-400 mid-market EU carriers. Risk: Shift Technology.
 
-#### Can AI Replace Adjusters? (Honest Assessment)
-**What AI can do:**
-- Damage detection from photos (visible damage)
-- Measurement from photos/video (3D scanning)
-- Document processing
-- Fraud pattern detection
+**Thesis 2 — US: Adjuster Decision Copilot**
+AI decision layer between FNOL and estimation — coverage, triage, reserve. Works on any CMS. ~800 buyers. Risk: Verisk builds real AI into Xactimate.
 
-**What AI cannot do well:**
-- Hidden damage (water behind walls, mold, structural)
-- Causation determination ("was this sudden or gradual?")
-- Complex coverage interpretation
-- Settlement negotiation
-- Fraud investigation
+**Thesis 3 — Home/Property (Both Markets): Coverage + Causation AI**
+Coverage determination ("sudden vs gradual?") and causation analysis are unaddressed everywhere. EU has NO structural advantage for property. Same problem both sides. Risk: too hard to automate reliably.
 
-**The accuracy problem:** Current AI ~70%, needs >95% for high-risk automation.
-
-**The fraud problem:** AI is making fraud EASIER (fake photos, receipts, documents). Adversarial dynamic matters.
+**The theses are complementary and can be sequenced.** EU motor STP builds capabilities (OCR, document understanding, decision logic) that transfer to property coverage AI.
 
 ---
 
@@ -284,40 +210,14 @@ Where field adjusters spend time:
 
 ---
 
-## Key Strategic Insights (20 Total)
-
-### Motor Claims
-1. Europe produces structurally cleaner data at origin (EAS)
-2. Convention systems are trivial lookups — data quality is the bottleneck
-3. The STP reality gap (10% actual vs 60-70% theoretical) IS the opportunity
-4. US is incredibly labor-intensive even for simple claims
-5. Broker-to-insurer submission is a data quality bottleneck
-6. EU FNOL = verification, US FNOL = data collection
-
-### Home Claims
-7. Home claims are structurally different — no counterparty, no EAS, no convention
-8. Unlike motor, EU has no structural advantage for home
-9. Motor automation = fix data quality. Home automation = make adjusters productive.
-10. TPAs are a massive buyer segment
-11. "Replace adjuster with AI" is overhyped — augment, not replace
-12. Hidden damage and fraud risk limit pure automation
-
----
-
 ## Assumptions Tracked
 
 All assumptions are logged with status:
-- ✅ Validated
-- ⚠️ Needs validation
-- ❌ Disproven
+- Validated
+- Needs validation
+- Disproven
 
-**Currently 46 assumptions tracked (A1-A46)** covering:
-- EAS paper vs digital split
-- Convention system STP rates
-- Distribution channel percentages
-- Adjuster employment breakdown
-- AI accuracy requirements
-- And more...
+**Currently 46 assumptions tracked (A1-A46)** covering EAS paper vs digital split, convention system STP rates, distribution channel percentages, adjuster employment breakdown, AI accuracy requirements, and more.
 
 ---
 
@@ -337,6 +237,7 @@ All assumptions are logged with status:
 - Cross-border claims in EU
 - Total loss vs repair decision
 - Rental car / mobility during repair
+- Customer validation interviews (5-10 per market)
 
 ### Other Lines of Business
 - **Health Insurance** — Noted as fundamentally different (request-approval workflow, not event-response). Deprioritized but may revisit.
@@ -348,26 +249,33 @@ All assumptions are logged with status:
 ### Starting a New Session
 
 1. Share this README with Claude
-2. Reference the discovery doc if needed: `claims_journey_discovery.md`
+2. Reference the relevant docs:
+   - `claims_journey_discovery.md` — for journey mapping and phase-by-phase detail
+   - `home_property_competitive_deep_dive.md` — for competitive analysis, market sizing, and strategic theses
+   - `competitive_landscape_reality_check.md` — for high-level competitive overview
+   - `SUMMARY.md` — for quick context on key discoveries
 3. State where you want to pick up, for example:
    - "Let's continue with Phase 7 (Investigation) for motor claims"
-   - "Let's explore how repair networks work"
-   - "Let's validate assumption A4 about convention STP rates"
-   - "Let's go deeper on [specific topic]"
+   - "Let's validate the EU motor thesis with customer interviews"
+   - "Let's go deeper on Verisk/XactAI as a competitive threat"
+   - "Let's refine the sequencing strategy"
+   - "Let's explore repair networks"
 
 ### Remember the Working Style
 - **Jam first, document second** — Research and debate before writing
 - **Push back and challenge** — Question assumptions, ask for evidence
 - **Go deep** — Don't skim, explore the topic thoroughly
 - **EU vs US always** — Every topic should consider both markets
-- **Update everything** — Keep the MD file, blueprint, and assumptions in sync
+- **Update everything** — Keep the MD files, blueprint, and assumptions in sync
 
 ### Key Open Questions
-1. What exactly happens during Investigation phase? Who does what?
-2. How do repair networks work? Direct repair programs?
-3. How does subrogation/recovery work between insurers?
-4. What are the actual STP rates by insurer/market? (validate our assumptions)
-5. Where does Mysa fit — upstream data quality or downstream adjuster tools? Or both?
+1. Which thesis to pursue first? EU motor STP or US adjuster copilot?
+2. How fast is Verisk moving XactAI from features to platform?
+3. Will Shift Technology add EAS processing to Shift Claims?
+4. Can coverage determination be automated reliably enough (>95%)?
+5. What do mid-market carriers actually spend on claims tech today?
+6. How do repair networks and direct repair programs work?
+7. What happens in motor phases 7-11 (investigation → settlement)?
 
 ---
 
@@ -380,28 +288,56 @@ cd app && npm run dev
 # Sync blueprint to app after editing the JSX
 cp claims_service_blueprint.jsx app/src/App.jsx
 
-# Search for something in the discovery doc
-grep -n "keyword" claims_journey_discovery.md
+# Search across all discovery docs
+grep -rn "keyword" *.md
 ```
 
 ---
 
-## Last Session Summary
+## Session History
 
-**Date:** February 2025
+### Session 1 (February 2025)
+**Motor claims journey mapping**
+- Documented phases 0-6 (Incident → Triage) with EU vs US differences at every phase
+- Discovered the STP reality gap (10% actual vs 60-70% theoretical)
+- Documented EAS data schema and convention systems
+- Created 6 decision forks, 46 assumptions, 12 strategic insights
+- Built interactive service blueprint visualization (React app)
 
-**What we did:**
-- Documented home/property insurance FNOL process
-- Researched what home adjusters actually do
-- Broke down desk vs field adjusters
-- Documented TPA employment (Crawford, Sedgwick, Engle Martin)
-- Explored EU vs US differences for property claims
-- Documented the 3x adjuster productivity opportunity
-- Gave honest assessment of AI replacing adjusters
-- Added 13 new assumptions (A34-A46)
-- Added 8 new strategic insights (#13-20)
-- Created Fork 7 (Motor vs Home) and Fork 8 (Desk vs Field)
+### Session 2 (February 2025)
+**Home/property claims analysis**
+- Documented home/property FNOL process
+- Researched adjuster workflow (desk vs field), TPA employment
+- Explored EU vs US differences for property (no structural EU advantage)
+- Documented 3x adjuster productivity opportunity
+- Honest assessment of AI replacing adjusters
+- Added assumptions A34-A46, insights #13-20, Forks 7-8
 - Created GitHub repo and pushed everything
 
+### Session 3 (February 7, 2026)
+**Competitive deep dive + market sizing + strategic theses**
+- Deep TPA competitive teardown (Sedgwick, Crawford, Davies — tech stacks, gaps, what they DON'T have)
+- Mapped measurement/documentation tools (Hover, CAPE, EagleView, Encircle)
+- Analyzed estimation monopolies (Verisk/Xactimate US, Solera/Audatex EU)
+- Researched AI startup landscape (Assured, Five Sigma, Shift Technology, Tractable, Bdeo, Sprout.ai, Avallon, ClaimSorted, Afori)
+- Deep EU competitive landscape including perito model, convention systems, EU-specific dynamics
+- STP reality gap deep dive with convention system analysis across countries
+- EU SME insurer market analysis (document intake, parsing, agent management)
+- Venture-scale math (STP gap vs property adjuster OS — unit economics, TAM)
+- US adjuster workforce crisis analysis
+- Evaluated 4 strategic paths
+- Analyzed why nobody builds for the hard part of adjusting
+- Unbiased opportunity assessment comparing all approaches
+- **Complete market sizing** — all buyer types (carriers, TPAs, MGAs, brokers, adjusting firms) for both US and EU
+  - US: $1.06T market, ~4,100 carriers, ~45-50M claims/year
+  - EU: ~€400-450B market, ~2,141 undertakings, ~55-70M claims/year
+  - Combined addressable: ~2,270 companies, $200-650M TAM ($400M-1.3B with expansion)
+- **Refined three strategic theses:**
+  - Thesis 1: EU Motor — Convention STP gap (EAS data quality → convention matching)
+  - Thesis 2: US — Adjuster decision copilot (coverage/triage/reserve AI on any CMS)
+  - Thesis 3: Home/Property both markets — Coverage + causation AI (the hardest problem)
+- Honest competitive threat analysis (Verisk/XactAI, Shift Technology, Five Sigma/Clive, CCC/EvolutionIQ, Solera/Audatex, Crawford/Turvi, Bdeo, Tractable)
+- Sequencing strategy for how the three theses fit together
+
 **Where we left off:**
-Motor phases 0-6 complete, Home FNOL complete. Next logical step is Phase 7 (Investigation) for motor claims, or going deeper on any topic that needs more research.
+Motor phases 0-6 mapped. Home/property analyzed. Full competitive landscape documented. Market sized. Three strategic theses refined with honest risk assessment. Next: customer validation, motor phases 7-11, or deeper competitive monitoring.
