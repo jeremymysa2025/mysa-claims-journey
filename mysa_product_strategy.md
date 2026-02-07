@@ -348,21 +348,24 @@ This is the selling point that should be front-and-center with CFOs.
 
 [RESEARCH: Section 11 — Convention systems by country]:
 
-| Country | Convention | Motor Market (GWP) | Insured Vehicles | Companies | Mid-Market Est. | STP Gap |
-|---------|-----------|-------------------|-----------------|-----------|----------------|---------|
-| **Portugal** | IDS/CIMPAS | ~$1.42B (2024) | ~5.8M light vehicles (7.3M total fleet) | Top 3 hold 59.2% (Fidelidade 29.6%, Ageas 15.2%, Tranquilidade 11.5%) | ~15-25 carriers | High — 1.94 day avg but only ~10% STP |
-| **Spain** | CIDE/ASCIDE/CICOS | **€13.2B** (2024, +8.9% YoY) | **34M insured vehicles** (2024) | **187 companies** (down from 194 in 2023) | ~40-60 carriers | Medium — 81.6% loss ratio, CICOS digitized |
-| **France** | IRSA | **€26.2B** premiums (2023) | **44.8M insured vehicles** (2023) | **246 in FFA** (99% of market) | ~60-80 carriers (mutuals heavy) | High — largest market, paper EAS still common |
-| **Italy** | CARD | ~€12-16.6B (2023, methodology varies) | **~40M registered vehicles** | UnipolSai (largest), Generali (€3B), Allianz (€2.67B). ANIA covers 85% | ~50-70 carriers | High — 2M claims paid, €10B total (2023) |
+| Country | Convention | Motor GWP | Insured Vehicles | Total Insurers | Est. Motor Writers | **Mid-Market (€50-500M)** | Annual Claims | STP Gap |
+|---------|-----------|----------|-----------------|---------------|-------------------|--------------------------|--------------|---------|
+| **Portugal** | IDS/CIMPAS | **~€1.8B** (2023) | ~5.8M light (7.3M total fleet) | 63 domestic + 26 EU branches | ~25-30 | **5-8** | ~500-700K (est.) | High — 1.94 day avg, only ~10% STP. Top 3 hold 59.2% |
+| **Spain** | CIDE/ASCIDE/CICOS | **€13.2B** (2024, +8.9%) | **34M** (2024) | **187** (RAEA, down from 194) | ~80-100 | **15-25** | ~2.7-3.4M (est.) | Medium — 81.6% loss ratio, CICOS digitized |
+| **France** | IRSA | **€28.1B** (2024, +7.3%) | **45.5M** (2024) | **246 FFA** (99% of market) | ~100-120 | **20-30** | **7.4M** (confirmed, FFA) | High — largest market, rising costs (+4.3%) |
+| **Italy** | CARD | **~€14.8B** (2023) | **~40M** registered | ~205 (IVASS) | ~50-60 | **10-15** | **2M** (confirmed, ANIA) | High — 4.48% frequency, avg €2,105/claim |
 
-[WEB SOURCE: Portugal — Grand View Research, ECO Sapo ranking 2023; Spain — MAPFRE/Statista 2024; France — France Assureurs (FFA) 2023; Italy — Statista/IVASS/ANIA 2023]
+[WEB SOURCE: Portugal — ASF/GlobalData/Insurance Edge; Spain — MAPFRE Economics 2024; France — France Assureurs 2024; Italy — ANIA/IVASS/Statista 2023. Full source list in agent research.]
 
 **Total EU motor mid-market (4 countries):**
-- ~165-235 mid-market carriers across Portugal, Spain, France, Italy
-- **~124.6M+ insured vehicles** across these 4 countries alone
-- At €2-5 per claim processed: €20-60M revenue opportunity from STP pipeline alone
-- At €50K-200K/year per carrier: €8-47M in platform licensing
-- Spain + France alone = ~€39.4B in motor premiums — massive markets
+- **~50-78 mid-market carriers** (€50M-500M motor GWP) across Portugal, Spain, France, Italy
+- **~125M+ insured vehicles** across these 4 countries
+- **~12.6-13.5M motor claims/year** (France 7.4M + Italy 2M confirmed; Portugal + Spain estimated)
+- Combined motor GWP: **~€57.9B** across 4 countries
+- At €2-5 per claim processed: €25-68M revenue opportunity from STP pipeline alone
+- At €50K-200K/year per carrier: €2.5-15.6M in platform licensing from mid-market alone
+
+[CLAUDE ANALYSIS]: The mid-market carrier count is smaller than initially estimated (~50-78 vs ~165-235). This is actually good news for a startup: a focused, reachable target list. Spain (15-25) and France (20-30) have the richest mid-market pools. Portugal is a proving ground (5-8 carriers), not a market. The real addressable universe expands when you add smaller carriers (<€50M), TPAs, and Northern EU countries.
 
 > [TRANSCRIPT — Jeremy]: "It's like 700 mid-market players in Europe. That makes less than 500 million of... insurance, like Caravela style."
 
@@ -688,12 +691,12 @@ The COMPANY is built on property + US expansion. EU motor is the proof point.
 
 [RESEARCH: Section 11 — STP Reality Gap Deep Dive]:
 
-| Country | Convention | How it works | Coverage | Speed | Key data | Market size |
-|---------|-----------|-------------|----------|-------|----------|------------|
-| **Portugal** | IDS/CIMPAS | Direct compensation protocol. Both insurers settle with their own policyholder. | ~100% market participation | **1.94 days** avg decision time | 91% inter-insurer agreement rate | ~$1.42B GWP, 5.8M light vehicles, top 3 hold 59.2% |
-| **Spain** | CIDE/ASCIDE/CICOS | Tabla de Culpabilidad (fault table) + CICOS digital platform | 70-83% of all motor claims | Varies | 2.5M claims/year processed via CICOS | **€13.2B GWP** (2024), 34M vehicles, 187 companies |
-| **France** | IRSA | 13 standardized cases. Outputs only 0%, 50%, or 100% fault. | ~80% of material motor claims | Deterministic (instant lookup) | Simplest fault model in EU | **€26.2B premiums** (2023), 44.8M vehicles, 246 in FFA |
-| **Italy** | CARD | Mandatory for 2-vehicle claims, <9% permanent disability. Civil code + CAI form. | All qualifying 2-vehicle claims | Days | Most complex form structure | ~€12-16.6B GWP, ~40M vehicles, 2M claims paid (€10B) |
+| Country | Convention | How it works | Coverage | Speed | Key data | Market size (validated) |
+|---------|-----------|-------------|----------|-------|----------|----------------------|
+| **Portugal** | IDS/CIMPAS | Direct compensation protocol. Both insurers settle with their own policyholder. | ~100% market participation | **1.94 days** avg decision time | 91% inter-insurer agreement rate | ~€1.8B GWP, 5.8M vehicles, 63 domestic insurers, top 3 = 59.2% |
+| **Spain** | CIDE/ASCIDE/CICOS | Tabla de Culpabilidad (fault table) + CICOS digital platform | 70-83% of all motor claims | Varies | 2.5M claims/year processed via CICOS | **€13.2B GWP** (2024), 34M vehicles, 187 companies, 15-25 mid-market |
+| **France** | IRSA | 13 standardized cases. Outputs only 0%, 50%, or 100% fault. | ~80% of material motor claims | Deterministic (instant lookup) | Simplest fault model in EU. **7.4M claims/year** (confirmed) | **€28.1B GWP** (2024), 45.5M vehicles, 246 FFA, 20-30 mid-market |
+| **Italy** | CARD | Mandatory for 2-vehicle claims, <9% permanent disability. Civil code + CAI form. | All qualifying 2-vehicle claims | Days | Most complex form. **2M claims paid** (confirmed), avg €2,105 | **~€14.8B GWP** (2023), ~40M vehicles, ~205 insurers, 10-15 mid-market |
 
 **Convention lookup is trivial** — it's a database query. The bottleneck is getting clean, structured data FROM the EAS form INTO the convention system. That's where Mysa's OCR fits.
 
@@ -735,14 +738,14 @@ Target STP rate: 40-50%
 
 **Phase 2: Spain** (Months 4-6)
 - Convention: CIDE/ASCIDE/CICOS
-- Why second: Largest convention volume (2.5M/year), existing CICOS digital platform to integrate with. 187 companies operating (2024), €13.2B motor GWP, 34M insured vehicles.
+- Why second: Largest convention volume (2.5M/year), existing CICOS digital platform to integrate with. 187 companies operating (2024), €13.2B motor GWP, 34M insured vehicles. **15-25 mid-market carriers** in the €50-500M range (Linea Directa, Pelayo, Reale, Caser, Santalucia, etc.)
 - Competition risk: Bdeo has 7/10 top Spanish auto insurers (but for visual AI, not decisions)
-- Target: 10-20 Spanish mid-market carriers
+- Target: 10-15 Spanish mid-market carriers
 
 **Phase 3: France and/or Italy** (Months 7-9)
-- France (IRSA): Largest EU motor market (€26.2B premiums, 44.8M vehicles, 246 companies in FFA), simplest fault model (13 cases). Market leader Covéa (MAAF/MMA/GMF) ahead of AXA.
-- Italy (CARD): Complex but mandatory — high pain = high willingness to pay. ~40M vehicles, 2M claims paid for €10B annually. UnipolSai largest, then Generali (€3B), Allianz (€2.67B).
-- Target: 15-30 carriers across both markets
+- France (IRSA): Largest EU motor market (**€28.1B GWP** 2024, 45.5M vehicles, 246 in FFA, **7.4M claims/year confirmed**), simplest fault model (13 cases). **20-30 mid-market carriers** (Matmut, Direct Assurance, L'Olivier, etc.). Market leader Covéa (MAAF/MMA/GMF) ahead of AXA. Mutual-heavy structure = sometimes resistant to external tech but rising claims costs (+4.3%) create urgency.
+- Italy (CARD): Complex but mandatory — high pain = high willingness to pay. ~40M vehicles, **2M claims paid** for €10B annually (avg €2,105/claim, +4.2%). UnipolSai dominant, then Generali (€3B), Allianz (€2.67B). **10-15 mid-market carriers** (Reale Mutua, Vittoria, Groupama Italy, Sara, HDI).
+- Target: 10-20 carriers across both markets
 
 **Phase 4: Northern EU** (Months 10-12+)
 - Germany, Netherlands, Belgium — different convention systems
