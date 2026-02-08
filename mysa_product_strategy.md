@@ -328,30 +328,33 @@ This is the selling point that should be front-and-center with CFOs.
 
 ### 3b. Total Market Sizing
 
-[RESEARCH: home_property_competitive_deep_dive.md, Section 18]:
+[RESEARCH: home_property_competitive_deep_dive.md, Section 18 + AGENT RESEARCH: full EU 16-country + US carrier distribution validated]
 
 **US Market:**
-| Segment | Count | Revenue/Premium |
-|---------|-------|----------------|
-| P&C Carriers | ~4,100 entities | $1.06T DWP |
-| TPAs | ~300-500 significant | $115B market |
-| MGAs | ~850-1,000+ | $114B managed premium (16% YoY growth) |
-| Independent adjusting firms | ~53,000 businesses | $11.7B market |
-| **Total claims/year** | **~45-50M** | **$632B losses + LAE** |
+| Segment | Count | Revenue/Premium | Concentration |
+|---------|-------|----------------|--------------|
+| P&C Carriers | ~4,116 entities | $1.06T DWP | Top 10 = 51.4%, Top 100 = ~90% |
+| Caravela-comparable ($100-500M) | ~200-350 carriers | — | Buy-not-build segment |
+| TPAs (P&C, material size) | ~500-800 | $115B market | Growing as carriers outsource |
+| MGAs with claims authority | ~330-550 | $114B managed premium (16% CAGR) | Emerging claims buyer |
+| Independent adjusting firms | ~53,000 businesses | $11.7B market | Workforce augmentation |
+| **Total claims/year** | **~45-50M** | **$632B losses + LAE** | |
 
-**EU Market:**
-| Segment | Count | Revenue/Premium |
-|---------|-------|----------------|
-| Insurers | ~2,141 undertakings | ~€400-450B GWP |
-| Brokers | ~€261B intermediated GWP | ~€59B revenue |
-| TPAs | Growing (Davies, Sedgwick, Crawford) | $91B market |
-| MGAs | 650+ | €18B GWP (23% CAGR) |
-| **Total claims/year** | **~55-70M** | **~€300-350B claims paid** |
+**EU Market (16 countries validated):**
+| Segment | Count | Revenue/Premium | Key Data |
+|---------|-------|----------------|----------|
+| Total insurers | ~2,141+ undertakings | ~€400-450B GWP (all lines) | 16 countries mapped |
+| Motor GWP | — | **~€128-136B** | Southern €57.9B + Northern €70-78B |
+| Caravela tier (€100-200M) | **~96-165 carriers** | — | Primary target across 16 countries |
+| Small tier (€50-100M) | ~204-260+ | — | Entry-level pricing |
+| MGAs | 650+ | €18B GWP (23% CAGR) | Growing fast in EU |
+| **Total claims/year** | **~55-70M** | **~€300-350B claims paid** | |
 
 **Combined addressable:**
-- ~2,270 potential buyer companies
+- ~1,530-2,400 potential buyer companies (EU carriers + US carriers + TPAs + MGAs)
 - ~100-120M claims/year across both markets
-- $200-650M TAM (initial sale), $400M-1.3B with land-and-expand
+- €200-650M TAM (initial sale), €400M-1.3B with land-and-expand
+- **Market is 90-95% open** in EU mid-market, 75-85% open in US mid-market (only 4% of insurers have scaled claims AI)
 
 ---
 
@@ -461,11 +464,24 @@ This is the selling point that should be front-and-center with CFOs.
 ### 3d. Expansion Markets
 
 **US mid-market property** (Phase 4, months 10-12):
-- ~500-600 mid-market carriers + 50-100 TPAs + 200+ MGAs with claims authority
+[AGENT RESEARCH — NAIC, AM Best, Conning, IBIS World validated]:
+- ~200-350 Caravela-comparable carriers ($100-500M DWP) — buy-not-build segment
+- ~500-800 P&C-focused TPAs of material size — process claims for carriers, need efficiency tools
+- ~330-550 MGAs with claims authority — fastest-growing buyer segment (16% CAGR)
+- US homeowners ($173B) is less concentrated than auto ($359B, top 5 = 63.6%) — more mid-market opportunity
+- US auto mid-market is tough: GEICO/Progressive/State Farm dominate. Target property first in US.
 - [RESEARCH: Section 6]: "Mid-tier TPAs buy rather than build. They have budget pressure (adjuster shortage, leakage, turnover)."
 
+**Northern/Central EU motor** (Phase 2 expansion, months 4-9):
+[AGENT RESEARCH — BaFin, DNB, FSMA, FMA, FINMA, FI, FSA validated]:
+- ~42-72 Caravela-tier carriers across 12 countries (Germany = 15-25, largest segment)
+- ~63-101 small-tier carriers (€50-100M)
+- Germany (~€30B motor) is the single largest EU motor market — but more concentrated than Southern EU
+- Belgium (RDR convention), Netherlands (DSA — new 2024), Sweden (Trafikskadenämnden) have convention-like systems — partial wedge opportunity
+- Austria, Switzerland, Ireland, Denmark, Norway, Czech Republic have no formal convention — less wedge, more general decision engine sell
+
 **EU property** (Phase 3-4):
-- ~250-400 mid-market carriers
+- ~250-400 mid-market carriers across EU
 - No convention system advantage — same problem as US
 - Sell to carriers directly (EU has minimal TPA market for property)
 
@@ -1032,7 +1048,147 @@ Show: After processing 100+ water damage claims, Mysa displays:
 
 ## Part 9: Fundraising Narrative
 
-### 9a. The Pitch
+### 9a. The Market — Full EU Country-by-Country + US Comparison
+
+[AGENT RESEARCH — validated via EIOPA, BaFin, ACPR, IVASS, ASF, DGSFP, DNB, FSMA, FMA, FINMA, Central Bank of Ireland, FI Sweden, FSA Denmark, FIN-FSA, Finanstilsynet Norway, KNF Poland, CNB Czech Republic, NAIC, AM Best, Conning]
+
+#### EU Motor Insurance — 16 Countries
+
+**Southern EU (convention systems — first attack):**
+
+| Country | Motor GWP | Convention System | Total Insurers | Caravela Tier (€100-200M) | Small (€50-100M) | Convention Detail |
+|---------|----------|-------------------|---------------|--------------------------|-------------------|-------------------|
+| **Portugal** | **€1.8B** | IDS/CIMPAS | ~47 active | 6-8 | 8-12 | 1.94 day avg, 91% agreement |
+| **Spain** | **€13.2B** | CIDE/ASCIDE/CICOS | ~176 | 8-10 | 25-35 | 2.5M claims/year processed |
+| **France** | **€28.1B** | IRSA | ~660 | 30-60 | 100+ | 13 cases, deterministic |
+| **Italy** | **€14.8B** | CARD | ~85 | 10-15 | 8-12 | Mandatory for 2-vehicle |
+| **Southern EU Total** | **€57.9B** | **All have convention** | | **54-93** | **141-159+** | |
+
+**Northern/Central EU (expansion markets — mixed convention):**
+
+| Country | Motor GWP | Convention System | Total Insurers | Caravela Tier (€100-200M) | Small (€50-100M) |
+|---------|----------|-------------------|---------------|--------------------------|-------------------|
+| **Germany** | **~€30B** | Teilungsabkommen (bilateral only) | ~522 BaFin + 534 state | 15-25 | 20-35 |
+| **Netherlands** | **~€5.9-6.2B** | DSA (new, launched 2024) | ~60-70 | 3-5 | 5-8 |
+| **Belgium** | **~€4.3-4.5B** | RDR (Convention Règlement Direct) | ~82-90 | 5-8 | 8-12 |
+| **Austria** | **~€4.3B** | None formal | ~30-35 | 2-4 | 3-5 |
+| **Switzerland** | **~€7.2-8.2B** | None formal | ~117 | 3-5 | 5-8 |
+| **Ireland** | **~€1.3B** | None | ~40-50 | 2-4 | 3-5 |
+| **Sweden** | **~€2.6-2.9B** | Trafikskadenämnden | ~50-60 | 3-4 | 4-6 |
+| **Denmark** | **~€2.0-2.4B** | None formal | ~40-50 | 2-3 | 3-5 |
+| **Finland** | **~€1.2-1.4B** | Traffic Insurance Centre | ~40-49 | 2-3 | 2-3 |
+| **Norway** | **~€2.7-2.8B** | None formal | ~30-40 | 2-3 | 3-4 |
+| **Poland** | **~€6.5B** | UFG coordination | ~29 | 3-5 | 4-6 |
+| **Czech Republic** | **~€2.1-2.3B** | None formal | ~24-30 | 2-3 | 3-4 |
+| **Northern/Central EU Total** | **~€70-78B** | **Mixed** | | **~42-72** | **~63-101** |
+
+**Full EU Totals:**
+
+| Tier | Southern EU | Northern/Central EU | **All EU** |
+|------|------------|--------------------|-----------|
+| Enterprise (>€1B — builds in-house) | 16-19 | ~20-30 | **~36-49** |
+| Large (€200M-€1B — buys best-of-breed) | 30-47 | ~30-50 | **~60-97** |
+| **Caravela tier (€100-200M — PRIMARY)** | **54-93** | **42-72** | **~96-165** |
+| Small (€50-100M — entry-level) | 141-159+ | 63-101 | **~204-260+** |
+| Micro (<€50M — long-tail) | 243-372+ | 200-400+ | **~443-772+** |
+| **Total motor GWP** | **€57.9B** | **~€70-78B** | **~€128-136B** |
+
+[CLAUDE ANALYSIS]: Key insight: the Northern EU market is LARGER in premium terms than Southern EU (€70-78B vs €57.9B) but has FEWER mid-market carriers in the Caravela tier. Germany alone is €30B but concentrated in large players. Southern EU has more fragmented markets = more mid-market targets. Convention systems in Southern EU provide the wedge, but Germany/Benelux/Nordics are the expansion that makes this a real company.
+
+#### US Market — For Comparison
+
+[AGENT RESEARCH — validated via NAIC 2024 Market Share, AM Best, Conning, IBIS World]
+
+| Segment | Count | Premium/Revenue | Concentration |
+|---------|-------|----------------|--------------|
+| Total P&C carriers | ~4,116 entities | $1.06T DWP | Top 10 = 51.4%, Top 100 = ~90% |
+| **Auto insurance** | — | **$359B** | **Top 5 = 63.6%** (extremely concentrated) |
+| **Homeowners** | — | **$173B** | Top 25 = 78% (less concentrated) |
+| Commercial multi-peril | — | $87B | More fragmented |
+| Workers' comp | — | $65B | Fragmented |
+
+**US Carrier Distribution by Size:**
+
+| Tier (DWP) | # Carriers | Profile |
+|-----------|-----------|---------|
+| >$5B (top 25-30 groups) | ~25-30 | Build in-house (State Farm, GEICO, Progressive, Allstate) |
+| $1B-$5B | ~50-80 | Mix of build/buy — Cincinnati Financial, Hanover, Erie |
+| **$100M-$500M (Caravela-comparable)** | **~200-350** | **Buy-not-build — can't afford data science teams** |
+| $50M-$100M | ~150-250 | Lean operations, budget-conscious |
+| <$50M | ~3,000+ | Micro carriers, regional, many inactive/run-off |
+
+**US Adjacent Buyers:**
+
+| Buyer Type | Count (material size) | Why They Buy |
+|-----------|----------------------|-------------|
+| TPAs (P&C-focused) | ~500-800 | Process claims for carriers, need efficiency tools |
+| MGAs with claims authority | ~330-550 | Growing 16% CAGR, increasingly handle claims |
+| Independent adjusting firms | ~53,000 businesses ($11.7B market) | Workforce is their product — augmentation = survival |
+
+**Total US addressable buyers: ~1,030-1,700** (carriers + TPAs + MGAs with claims authority)
+
+[CLAUDE ANALYSIS]: The US market is 3-4x larger than EU by carrier count and 8x by premium. But US auto is dangerously concentrated (top 5 = 63.6%) — the mid-market opportunity is in homeowners and commercial, not auto. For Mysa, US entry should target homeowners/property mid-market carriers + TPAs, not US auto.
+
+#### Competitor Adoption — How Open Is the Market?
+
+[AGENT RESEARCH — validated via company press releases, Crunchbase, analyst reports, customer case studies]
+
+| Competitor | Est. Customers | Geographic Mix | Customer Profile | What They Sell |
+|-----------|---------------|---------------|-----------------|---------------|
+| **Five Sigma/Clive** | ~20-30 | 70% US, 30% EU | Starr, Qover, INSHUR, Pie Insurance | CMS + AI copilot |
+| **Shift Technology** | ~135 | 25+ countries | AXA Switzerland, Tokio Marine, Generali — **large carriers** | Fraud → workflow automation |
+| **Tractable** | ~20-35 | UK, EU, US | GEICO, Covéa, Aviva, PZU — **enterprise only** | Computer vision for damage |
+| **Bdeo** | ~50+ | Spain-dominant | 8/10 top Spanish auto insurers | Visual intelligence photos/video |
+| **Hi Marley** | ~40+ | US only | American Family, MetLife, Erie | Communication (text/messaging) only |
+| **omni:us** | ~3-5 | DACH region | Allianz Austria, UNIQA, Württembergische | Document processing + auto-settlement |
+| **ClaimSorted** | ~20+ | UK, EU, US | Mid-market | AI-first TPA (not pure software) |
+| **Assured** | Unknown (est. 10-20) | US only | Large carriers | FNOL + messaging AI agent "Emma" |
+| **FurtherAI** | ~3-5 | US only | Early stage | AI workforce for intake |
+| **Avallon** | ~3-5 | US only | Early stage | AI agents for calls/emails |
+| **Total "taken" globally** | **~400-600** | | | |
+
+**Market openness by segment:**
+
+| Segment | Total Entities | Using Claims AI | % Open | Mysa Opportunity |
+|---------|---------------|----------------|--------|-----------------|
+| All carriers globally (EU + US) | ~6,300+ | ~400-600 (~7%) | **~93% open** | Massive whitespace |
+| EU mid-market (€50-200M) | ~300-425 | <30 (Shift customers are large, Bdeo = visual only) | **~90-95% open** | **Primary target — virtually untouched** |
+| US mid-market ($100-500M) | ~200-350 | ~30-50 (Five Sigma + Hi Marley customers) | **~75-85% open** | Strong — but competitors more active |
+| TPAs globally | ~500-800+ | ~50-80 (Shift, ClaimSorted) | **~85-90% open** | Good expansion target |
+| MGAs with claims authority | ~330-550 | <20 | **~95% open** | Emerging segment, growing fast |
+
+**Critical insight: Only 4% of insurers have SCALED AI in claims** [WEB SOURCE: McKinsey 2025 insurance survey]. Most "adoption" is pilots, POCs, or single-feature tools (Bdeo = photos only, Hi Marley = texting only). Nobody has deployed an AI decision engine at scale.
+
+> [TRANSCRIPT — Co-founder]: "everyone is trying something... everyone is trying to build a platform... And everyone is avoiding the judgment, the decision stage."
+
+[CLAUDE ANALYSIS]: The market is overwhelmingly open. The EU mid-market is 90-95% untouched by AI claims tools. Even the US mid-market is 75-85% open despite more competitor activity. The "competition" narrative is misleading — most funded competitors serve large carriers (Shift, Tractable) or focus on intake/communication (Assured, Hi Marley, Avallon). The decision layer is genuinely unoccupied.
+
+---
+
+### 9b. Revised TAM — All Data Combined
+
+**Building the TAM bottom-up with validated carrier counts:**
+
+| Scenario | EU Carriers | US Buyers | Total Buyers | ACV Range | **Revenue Range** |
+|----------|------------|-----------|-------------|-----------|-------------------|
+| **Conservative** — Southern EU Caravela tier only | 54-93 | — | 54-93 | €50-200K | **€2.7-€18.6M** |
+| **Base** — All EU €50-200M carriers | 300-425 | — | 300-425 | €30-200K | **€25-55M** |
+| **EU + large tier** — Add €200M-1B | 360-520 | — | 360-520 | €30-500K | **€50-100M** |
+| **EU + US mid-market** — Add US $100-500M carriers | 360-520 | 200-350 | 560-870 | €30-500K | **€100-250M** |
+| **Full addressable** — All EU + US (carriers + TPAs + MGAs) | 500-700 | 1,030-1,700 | 1,530-2,400 | €10K-2M | **€200-650M** |
+| **With land-and-expand** — Upsell to property, commercial lines | — | — | Same | Higher ACV | **€400M-1.3B** |
+
+[CLAUDE ANALYSIS]: The honest TAM story for fundraising:
+- **Wedge TAM** (EU motor, Caravela tier) = €2.7-€18.6M — proves the product works, not venture-scale alone
+- **Year 2-3 TAM** (all EU mid-market + large) = €50-100M — real SaaS business
+- **Year 3-5 TAM** (EU + US mid-market) = €100-250M — venture-scale
+- **Vision TAM** (full addressable + expansion) = €200-650M+ — IPO-scale
+
+The narrative: "We're not raising on the wedge TAM. We're raising on the €100-250M EU+US mid-market TAM that the wedge unlocks. The technology we build for EU motor convention systems transfers directly to property coverage decisions — same AI architecture, bigger market."
+
+---
+
+### 9c. The Pitch
 
 **Slide 1: The Problem**
 100-120M insurance claims per year across the US and EU. The workforce that processes them is disappearing — 30% retiring in 5 years, 12th fastest-declining profession. And the decisions they make hit the company's P&L immediately through reserves.
@@ -1055,33 +1211,35 @@ SOP-driven workflows. 8 specialized AI agents. Human-in-the-loop always. Works o
 Show the product flow: Intake → Structure → Triage → Investigate → Decide → Document → Learn
 
 **Slide 6: Market**
-- $200-650M TAM, growing at 28.4% CAGR
-- ~2,270 addressable buyers (mid-to-small carriers, TPAs, MGAs)
-- 100-120M claims/year
-- $50K-$2M ACV per customer
+- €200-650M TAM (€400M-1.3B with expansion) — 28.4% CAGR
+- 16 EU countries + US = ~1,530-2,400 addressable buyers
+- EU mid-market is **90-95% untouched** by AI claims tools
+- Only **4% of insurers** have scaled claims AI
+- 100-120M claims/year across both markets
+- €50K-€2M ACV per customer
 
 **Slide 7: Traction**
-- Design partner: Caravela (Portuguese insurer)
+- Design partner: Caravela (Portuguese insurer, €188M GWP, 57K claims/year)
 - Existing OCR engine: Caravela, Gemini-based, ~80% accuracy
 - EU convention system expertise: CIMPAS/IDS built
-- Co-founder insurance domain knowledge
+- Co-founder insurance domain knowledge — 10+ years in claims
 
 **Slide 8: Moat**
 Three layers:
-1. Convention system intelligence — country-by-country, takes years
+1. Convention system intelligence — country-by-country (4 systems built, 8+ planned), takes years to replicate
 2. Decision ground truth data — captures WHY adjusters decide, not just outcomes
 3. SOP-to-workflow generation — each carrier's rules encoded, creates switching costs
 
 **Slide 9: Competition**
-Everyone builds AROUND the decision, not the decision itself. [Show comparison matrix from Part 4e]
+Everyone builds AROUND the decision, not the decision itself. Market is 90%+ open. [Show comparison matrix from Part 4e + competitor adoption table]
 
 **Slide 10: Business Model**
 - Per-claim SaaS: €2-10 per claim processed
 - Platform license: €50K-€2M/year based on carrier size
-- Land: EU motor (STP improvement). Expand: property + US
+- Land: EU motor (STP improvement, 54-93 carriers). Expand: all EU + property + US (~1,500+ buyers)
 
 **Slide 11: Roadmap**
-Phase 1-5 over 18 months (from Part 7)
+Phase 1-5 over 18 months (from Part 7). EU motor → multi-country → property → US → platform.
 
 **Slide 12: Ask**
 [TBD — depends on fundraising target]
@@ -1091,26 +1249,33 @@ Phase 1-5 over 18 months (from Part 7)
 
 ---
 
-### 9b. Key Investor Objections + Honest Answers
+### 9d. Key Investor Objections + Honest Answers
 
 | Objection | Answer | Evidence |
 |-----------|--------|----------|
-| "Isn't this what Five Sigma does?" | They're a CMS + copilot. We're a decision engine. They have generic playbooks, we have carrier-specific SOP workflows. They don't do convention systems, causation analysis, or P&L-aware reserves. | [AGENT RESEARCH]: Five Sigma = $10.1M revenue, 6 generic agents, no SOP workflows, no EU conventions |
-| "Won't Verisk just build this?" | They're an estimation company. XactAI is admin automation (photo labels, transcription), not expert judgment. Different product, different buyer. But they're the long-term risk — that's why we start in EU. | [AGENT RESEARCH]: XactAI = admin features only, no decision support, 2-3 year timeline at best |
-| "Won't Shift eat this in EU?" | Shift automates workflow around decisions. We automate the decision itself. Fraud-first vs decision-first. Their 60% is task automation, not decision automation. | [AGENT RESEARCH]: Shift = no convention matching, no SOP workflows, fraud architecture |
-| "Why EU first when US is bigger?" | Convention systems are a unique wedge nobody else has. STP gap is measurable (10% → 40-50%). Design partner in Portugal. Land in EU, technology transfers to US property. | [RESEARCH: Section 11]: Convention system expertise = years to build |
+| "Isn't this what Five Sigma does?" | They're a CMS + copilot with ~20-30 customers. We're a decision engine. They have generic playbooks, we have carrier-specific SOP workflows. They don't do convention systems, causation analysis, or P&L-aware reserves. | [AGENT RESEARCH]: Five Sigma = $10.1M revenue, 6 generic agents, no SOP workflows, no EU conventions |
+| "Won't Verisk just build this?" | They're an estimation company. XactAI is admin automation (photo labels, transcription), not expert judgment. Different product, different buyer. But they're the long-term risk — that's why we start in EU where they have no presence. | [AGENT RESEARCH]: XactAI = admin features only, no decision support, 2-3 year timeline at best |
+| "Won't Shift eat this in EU?" | Shift automates workflow around decisions (135 customers, mostly large carriers). We automate the decision itself for mid-market. Fraud-first vs decision-first. Their 60% is task automation, not decision automation. EU mid-market is 90-95% open. | [AGENT RESEARCH]: Shift = no convention matching, no SOP workflows, fraud architecture, serves enterprise |
+| "Why EU first when US is bigger?" | Convention systems are a unique wedge nobody else has. STP gap is measurable (10% → 40-50%). Design partner in Portugal. ~96-165 Caravela-tier carriers across 16 EU countries — virtually untouched. Technology transfers to US property. | [AGENT RESEARCH]: EU mid-market = 90-95% open, convention systems take years to build |
 | "Can AI make coverage decisions?" | Human-in-the-loop always. AI recommends, adjuster decides. 3x productivity, not replacement. Legally required (GDPR, AI Act). Every decision = training data. | [RESEARCH: Section 9]: GDPR Art 22, EU AI Act high-risk classification |
-| "EU market is too small" | EU is the wedge, not the company. US + EU property is the company. $400M-1.3B combined TAM. | [RESEARCH: Section 18]: Combined market sizing |
-| "18-30 month sales cycles?" | Mid-to-small market buys faster (3-6 months). Design partner, not cold outreach. Per-claim pricing lowers barrier. | [RESEARCH: Section 6]: TPAs prefer per-claim pricing |
+| "EU market is too small" | EU alone = €50-100M TAM (360-520 mid-to-large carriers). EU + US = €100-250M TAM (560-870+ buyers). Full addressable with TPAs + MGAs = €200-650M. EU motor is the wedge, not the company. | [AGENT RESEARCH]: 16 countries validated, carrier counts per country |
+| "Market is too competitive" | Only 4% of insurers have scaled claims AI. ~400-600 carriers globally use ANY claims AI tool. 90-95% of EU mid-market is untouched. Competitors focus on enterprise or single features (Bdeo = photos, Hi Marley = texting). Nobody has the decision layer. | [AGENT RESEARCH]: Competitor customer counts validated |
+| "18-30 month sales cycles?" | Mid-to-small market buys faster (3-6 months). Design partner (Caravela), not cold outreach. Per-claim pricing lowers barrier. EU mid-market has 1-2 decision makers, not enterprise procurement. | [RESEARCH: Section 6]: TPAs prefer per-claim pricing |
 
 ---
 
-### 9c. The Narrative Arc
+### 9e. The Narrative Arc
 
 > [TRANSCRIPT — Co-founder]: "We need to build models. We need to train data. And now I agree with you, and I think I found a way to train those models. Without hiring people."
 
 **The story:**
 We start with a simple, provable product — EAS digitization for EU motor. This builds our OCR + document AI + decision logic capabilities. We expand to property coverage AI — the same technology applied to a bigger problem. We capture decision ground truth data from every adjuster interaction. Over time, our models get smarter, and the gap between Mysa (carrier-specific, SOP-driven, decision-focused) and generic copilots (broad, template-based, task-focused) widens.
+
+**The TAM progression — how we tell the story:**
+1. **Wedge** (Year 1): Southern EU motor, Caravela tier → 54-93 carriers, prove product-market fit
+2. **EU expansion** (Year 2): All 16 EU countries, all mid-market tiers → 300-520 carriers, €50-100M TAM
+3. **US entry** (Year 2-3): US property mid-market + TPAs → add 400-700 buyers, €100-250M TAM
+4. **Platform** (Year 3-5): Multi-line, historical data flywheel, land-and-expand → €200-650M+ TAM
 
 The endgame: **the AI that knows how YOUR company makes claims decisions.** Not generic insurance AI — YOUR insurance AI.
 
@@ -1125,7 +1290,7 @@ Key action items from the call:
 2. Get Caravela LOI — free beta, 6 months, weekly syncs
 3. Pitch to Sapphire next week for introductions
 4. Share research documents between co-founders
-5. Size EU market at country level (Portugal, Spain, France, Italy)
+5. Size EU market at country level — **DONE: 16 countries validated** (PT, ES, FR, IT, DE, NL, BE, AT, CH, IE, SE, DK, FI, NO, PL, CZ)
 6. Define demo scenarios and build MVP
 
 ---
@@ -1148,3 +1313,25 @@ Key action items from the call:
 - [Fortune Business Insights — Claims Management Market](https://www.fortunebusinessinsights.com/claims-management-market-110629)
 - [EIOPA Insurance Statistics](https://www.eiopa.europa.eu/tools-and-data/insurance-statistics_en)
 - [NAIC 2024 Market Share Data](https://content.naic.org/article/naic-releases-2024-market-share-data)
+
+### EU Country-Level Regulatory Sources (16-Country Market Sizing)
+- Portugal: ASF (Autoridade de Supervisão de Seguros), ECO Sapo rankings
+- Spain: DGSFP (Dirección General de Seguros), RAEA registry
+- France: ACPR (Autorité de Contrôle Prudentiel), France Assureurs, FFA
+- Italy: IVASS, ANIA (Associazione Nazionale fra le Imprese Assicuratrici)
+- Germany: BaFin (Bundesanstalt für Finanzdienstleistungsaufsicht), GDV
+- Netherlands: DNB (De Nederlandsche Bank), Verbond van Verzekeraars
+- Belgium: FSMA (Financial Services and Markets Authority), Assuralia
+- Austria: FMA (Finanzmarktaufsicht), VVO
+- Switzerland: FINMA, SVV (Schweizerischer Versicherungsverband)
+- Ireland: Central Bank of Ireland, Insurance Ireland
+- Sweden: Finansinspektionen (FI), Svensk Försäkring
+- Denmark: Finanstilsynet (FSA), Forsikring & Pension
+- Finland: FIN-FSA (Finanssivalvonta), Finance Finland
+- Norway: Finanstilsynet, Finans Norge
+- Poland: KNF (Komisja Nadzoru Finansowego), PIU
+- Czech Republic: CNB (Czech National Bank), CAP
+
+### US Market Sources
+- NAIC 2024 Market Share Reports, AM Best Financial Suite, Conning P&C reports, IBIS World
+- McKinsey 2025 Insurance AI Survey (4% scaled AI adoption)
