@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mysa Claims Journey — Reading Guide & Recap</title>
+<style>
+  :root { --green: #00A86B; --dark: #0a0a0a; --card: #141414; --border: #2a2a2a; --muted: #888; --text: #e0e0e0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--dark); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; }
+  .container { max-width: 960px; margin: 0 auto; padding: 40px 24px 80px; }
+  h1 { font-size: 2rem; font-weight: 700; color: #fff; margin-bottom: 8px; }
+  .subtitle { color: var(--muted); font-size: 1rem; margin-bottom: 40px; }
+  .subtitle a { color: var(--green); text-decoration: none; }
+  h2 { font-size: 1.3rem; font-weight: 600; color: #fff; margin: 40px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+  h3 { font-size: 1rem; font-weight: 600; color: #fff; margin: 20px 0 8px; }
+
+  /* Reading order cards */
+  .reading-order { display: flex; flex-direction: column; gap: 12px; }
+  .file-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; transition: border-color 0.2s; cursor: pointer; text-decoration: none; display: block; }
+  .file-card:hover { border-color: var(--green); }
+  .file-card .number { display: inline-block; background: var(--green); color: #000; font-weight: 700; font-size: 0.75rem; width: 24px; height: 24px; border-radius: 50%; text-align: center; line-height: 24px; margin-right: 10px; flex-shrink: 0; }
+  .file-card .header { display: flex; align-items: center; margin-bottom: 6px; }
+  .file-card .filename { font-weight: 600; color: #fff; font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.9rem; }
+  .file-card .desc { color: var(--muted); font-size: 0.85rem; margin-left: 34px; }
+  .file-card .meta { display: flex; gap: 16px; margin-top: 10px; margin-left: 34px; }
+  .file-card .tag { font-size: 0.75rem; padding: 2px 10px; border-radius: 999px; background: #1a2a1a; color: var(--green); border: 1px solid #1f3d1f; }
+  .file-card .tag.blue { background: #1a1a2a; color: #6b8aff; border-color: #1f1f3d; }
+  .file-card .tag.orange { background: #2a1a0a; color: #ff9f43; border-color: #3d2a1f; }
+  .file-card .tag.purple { background: #2a1a2a; color: #b388ff; border-color: #3d1f3d; }
+
+  /* Key discoveries */
+  .discovery { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px; }
+  .discovery .label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--green); font-weight: 600; margin-bottom: 6px; }
+  .discovery .title { font-weight: 600; color: #fff; font-size: 1rem; margin-bottom: 8px; }
+  .discovery .body { color: var(--muted); font-size: 0.85rem; }
+  .discovery .body strong { color: var(--text); }
+
+  /* Decisions */
+  .decision-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 640px) { .decision-grid { grid-template-columns: 1fr; } }
+  .decision { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; }
+  .decision .check { color: var(--green); margin-right: 6px; }
+  .decision .dt { font-weight: 600; color: #fff; font-size: 0.9rem; margin-bottom: 4px; }
+  .decision .dd { color: var(--muted); font-size: 0.8rem; }
+
+  /* Open questions */
+  .question { background: var(--card); border: 1px solid #3d2a1f; border-radius: 12px; padding: 16px 20px; margin-bottom: 8px; }
+  .question .q { font-weight: 600; color: #ff9f43; font-size: 0.9rem; }
+  .question .context { color: var(--muted); font-size: 0.8rem; margin-top: 4px; }
+
+  /* Blueprint link */
+  .blueprint-banner { background: linear-gradient(135deg, #003d28, #00150e); border: 1px solid var(--green); border-radius: 16px; padding: 28px 32px; margin: 32px 0; text-align: center; }
+  .blueprint-banner a { color: var(--green); font-size: 1.3rem; font-weight: 700; text-decoration: none; }
+  .blueprint-banner p { color: var(--muted); font-size: 0.85rem; margin-top: 8px; }
+
+  /* Stats */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 24px 0; }
+  @media (max-width: 640px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+  .stat { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; text-align: center; }
+  .stat .val { font-size: 1.5rem; font-weight: 700; color: var(--green); }
+  .stat .lbl { font-size: 0.75rem; color: var(--muted); margin-top: 4px; }
+
+  /* Table */
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+  th, td { text-align: left; padding: 8px 12px; font-size: 0.85rem; border-bottom: 1px solid var(--border); }
+  th { color: var(--muted); font-weight: 500; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  td { color: var(--text); }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>Mysa Claims Journey — Recap & Reading Guide</h1>
+<p class="subtitle">Repo: <a href="https://github.com/tiago-brigido/mysa-claims-journey" target="_blank">tiago-brigido/mysa-claims-journey</a> &nbsp;·&nbsp; Commit a82a39d &nbsp;·&nbsp; Feb 2025</p>
+
+<div class="stats">
+  <div class="stat"><div class="val">11,968</div><div class="lbl">Lines of Discovery</div></div>
+  <div class="stat"><div class="val">12</div><div class="lbl">Phases Mapped (0-11)</div></div>
+  <div class="stat"><div class="val">14+</div><div class="lbl">Competitors Researched</div></div>
+  <div class="stat"><div class="val">66</div><div class="lbl">Assumptions Tracked</div></div>
+</div>
+
+<div class="blueprint-banner">
+  <a href="http://localhost:5173">Open Interactive Blueprint →</a>
+  <p>Full 12-phase visual with competitor grid, decision forks, and deep-dive system</p>
+</div>
+
+<!-- READING ORDER -->
+<h2>Reading Order</h2>
+<p style="color:var(--muted);font-size:0.85rem;margin-bottom:16px;">Start with the summary, then go as deep as you need.</p>
+
+<div class="reading-order">
+
+  <a class="file-card" href="https://github.com/tiago-brigido/mysa-claims-journey/blob/main/SUMMARY.md" target="_blank">
+    <div class="header"><span class="number">1</span><span class="filename">SUMMARY.md</span></div>
+    <div class="desc">Co-founder summary. 4 key discoveries, strategic implications, what's mapped vs not. <strong>Start here — 5 min read.</strong></div>
+    <div class="meta"><span class="tag">124 lines</span><span class="tag blue">Start here</span></div>
+  </a>
+
+  <a class="file-card" href="https://github.com/tiago-brigido/mysa-claims-journey/blob/main/README.md" target="_blank">
+    <div class="header"><span class="number">2</span><span class="filename">README.md</span></div>
+    <div class="desc">Full project overview. What we did, all 12 phases summarized, 8 decision forks, 20 strategic insights, 46 assumptions, and continuation instructions.</div>
+    <div class="meta"><span class="tag">408 lines</span><span class="tag blue">Context</span></div>
+  </a>
+
+  <a class="file-card" href="https://github.com/tiago-brigido/mysa-claims-journey/blob/main/claims_journey_discovery.md" target="_blank">
+    <div class="header"><span class="number">3</span><span class="filename">claims_journey_discovery.md</span></div>
+    <div class="desc">The main document. 12 phases of motor claims, home/property comparison, competitor analysis (14+), 10-block build sequence, adjuster tech stack, blurbs, demo scripts, revised MVP. <strong>This is the source of truth.</strong></div>
+    <div class="meta"><span class="tag">11,968 lines</span><span class="tag orange">Deep dive</span><span class="tag purple">Core document</span></div>
+  </a>
+
+  <a class="file-card" href="https://github.com/tiago-brigido/mysa-claims-journey/blob/main/claims_adjuster_tech_stack_research.md" target="_blank">
+    <div class="header"><span class="number">4</span><span class="filename">claims_adjuster_tech_stack_research.md</span></div>
+    <div class="desc">The 8-12 apps adjusters use daily. The "swivel chair" problem. Why CMS integration is existential for product adoption.</div>
+    <div class="meta"><span class="tag">Deep research</span><span class="tag orange">Product-critical</span></div>
+  </a>
+
+  <a class="file-card" href="https://github.com/tiago-brigido/mysa-claims-journey/blob/main/Five_Sigma_vs_Shift_Technology_Deep_Research.md" target="_blank">
+    <div class="header"><span class="number">5</span><span class="filename">Five_Sigma_vs_Shift_Technology_Deep_Research.md</span></div>
+    <div class="desc">Deep competitor comparison: Five Sigma (full CMS) vs Shift Technology (fraud/AI layer). Two positioning extremes.</div>
+    <div class="meta"><span class="tag">Competitor intel</span></div>
+  </a>
+
+  <a class="file-card" href="https://github.com/tiago-brigido/mysa-claims-journey/blob/main/Tractable_Snapsheet_Deep_Research.md" target="_blank">
+    <div class="header"><span class="number">6</span><span class="filename">Tractable_Snapsheet_Deep_Research.md</span></div>
+    <div class="desc">AI damage assessment competitors. Tractable (computer vision for auto damage) vs Snapsheet (virtual appraisal platform).</div>
+    <div class="meta"><span class="tag">Competitor intel</span></div>
+  </a>
+
+  <a class="file-card" href="https://github.com/tiago-brigido/mysa-claims-journey/blob/main/Sprout_ai_vs_Omnius_Deep_Research.md" target="_blank">
+    <div class="header"><span class="number">7</span><span class="filename">Sprout_ai_vs_Omnius_Deep_Research.md</span></div>
+    <div class="desc">Document intelligence competitors. Sprout.ai (claims automation) vs omni:us (document AI). Build vs partner decision for Block 3.</div>
+    <div class="meta"><span class="tag">Competitor intel</span><span class="tag orange">Build vs buy</span></div>
+  </a>
+
+  <a class="file-card" href="https://github.com/tiago-brigido/mysa-claims-journey/blob/main/EU_Convention_Systems_Deep_Research.md" target="_blank">
+    <div class="header"><span class="number">8</span><span class="filename">EU_Convention_Systems_Deep_Research.md</span></div>
+    <div class="desc">CIMPAS (Portugal), IRSA (France), CID (Italy). How convention fault tables work. The STP reality gap explained.</div>
+    <div class="meta"><span class="tag">Domain research</span></div>
+  </a>
+
+  <a class="file-card" href="https://github.com/tiago-brigido/mysa-claims-journey/blob/main/Phase_10_Settlement_Research.md" target="_blank">
+    <div class="header"><span class="number">9</span><span class="filename">Phase_10_Settlement_Research.md</span></div>
+    <div class="desc">Settlement mechanics — payment flows, negotiation, subrogation, total loss decisions.</div>
+    <div class="meta"><span class="tag">Domain research</span></div>
+  </a>
+
+</div>
+
+<!-- KEY DISCOVERIES -->
+<h2>4 Key Discoveries</h2>
+
+<div class="discovery">
+  <div class="label">Discovery #1</div>
+  <div class="title">The STP Reality Gap (Motor)</div>
+  <div class="body">EU convention systems <em>could</em> auto-resolve 60-70% of motor claims. <strong>Only ~10% actually achieve STP.</strong> The convention lookup is trivial — a database query. The bottleneck is data quality: ~50% of EAS forms are still paper, filled out by stressed people with shaking hands. <strong>Whoever fixes data quality upstream unlocks the 50+ point gap.</strong></div>
+</div>
+
+<div class="discovery">
+  <div class="label">Discovery #2</div>
+  <div class="title">EU vs US Are Fundamentally Different</div>
+  <div class="body">EU: single agreed document (EAS) signed by both parties → convention fault lookup. US: competing narratives, no joint document → human investigation every time. <strong>EU FNOL = verification. US FNOL = data collection.</strong> Different automation opportunities in each.</div>
+</div>
+
+<div class="discovery">
+  <div class="label">Discovery #3</div>
+  <div class="title">Home Claims Are Structurally Different</div>
+  <div class="body">Motor has a counterparty and an agreed document (EAS). Home usually has neither. Motor question: <em>"who caused it?"</em> Home question: <em>"was it covered?"</em> Unlike motor, <strong>EU has no structural advantage for home claims.</strong> The opportunity is "make adjusters 3x more productive," not "unlock STP."</div>
+</div>
+
+<div class="discovery">
+  <div class="label">Discovery #4</div>
+  <div class="title">AI Replacing Adjusters Is Overhyped (Home)</div>
+  <div class="body">AI can detect visible damage and process documents. It <strong>cannot</strong> see hidden damage (water behind walls, mold), determine causation ("sudden burst" vs "gradual leak"), or handle complex coverage interpretation. Current accuracy ~70%, needs >95%. Also: AI is making fraud EASIER. <strong>Realistic target: augment adjusters (3x productivity), not replace them.</strong></div>
+</div>
+
+<!-- DECISIONS MADE -->
+<h2>Key Decisions Made</h2>
+
+<div class="decision-grid">
+  <div class="decision"><div class="dt"><span class="check">✓</span>US-centric first</div><div class="dd">Call-based workflow fits US market. EU parallel with GDPR compliance (copilot fallback if consent denied).</div></div>
+  <div class="decision"><div class="dt"><span class="check">✓</span>Motor + Property</div><div class="dd">Same architecture, different SOPs. Doubles SOP work but widens addressable market.</div></div>
+  <div class="decision"><div class="dt"><span class="check">✓</span>Per-claim pricing</div><div class="dd">EUR 15-30 / USD equivalent per claim processed.</div></div>
+  <div class="decision"><div class="dt"><span class="check">✓</span>CMS integration in MVP</div><div class="dd">Without it, adjuster re-enters data manually — kills adoption. Moved from "later" to "must have."</div></div>
+  <div class="decision"><div class="dt"><span class="check">✓</span>Revised MVP scope</div><div class="dd">Blocks 1+2+5+6: Call Assistant + SOP Engine + Decision Capture + basic CMS push. 4-5 months.</div></div>
+  <div class="decision"><div class="dt"><span class="check">✓</span>Block 3 (Doc Intelligence)</div><div class="dd">Evaluate build vs partner with Sprout.ai/Roots Automation before committing.</div></div>
+</div>
+
+<!-- OPEN QUESTIONS -->
+<h2>Open Questions for Co-Founder</h2>
+
+<div class="question">
+  <div class="q">1. Which CMS does the existing insurance customer use?</div>
+  <div class="context">Determines Block 6 (CMS integration) target. Guidewire? Duck Creek? Custom?</div>
+</div>
+<div class="question">
+  <div class="q">2. Build vs partner for document AI (Block 3)?</div>
+  <div class="context">Sprout.ai and Roots Automation are options. Building adds 3-4 months; partnering means dependency.</div>
+</div>
+<div class="question">
+  <div class="q">3. Motor-only MVP, or motor + property from day one?</div>
+  <div class="context">Adding property doubles SOP authoring work but broadens the market immediately.</div>
+</div>
+<div class="question">
+  <div class="q">4. Which transcription provider?</div>
+  <div class="context">Deepgram vs AssemblyAI vs Whisper. Affects latency, accuracy, and cost of the call assistant.</div>
+</div>
+
+<!-- MVP BUILD BLOCKS -->
+<h2>10-Block Build Sequence (MVP = 1+2+5+6)</h2>
+
+<table>
+<tr><th>#</th><th>Block</th><th>What</th><th>In MVP?</th></tr>
+<tr><td>1</td><td>Call Assistant</td><td>Real-time voice AI guiding adjuster through calls</td><td style="color:var(--green)">Yes</td></tr>
+<tr><td>2</td><td>SOP Engine</td><td>Dynamic procedures adapting to claim type & jurisdiction</td><td style="color:var(--green)">Yes</td></tr>
+<tr><td>3</td><td>Document Intelligence</td><td>OCR + extraction of claim documents</td><td style="color:var(--muted)">Build vs partner</td></tr>
+<tr><td>4</td><td>Fraud Signals</td><td>Pattern detection, network analysis</td><td style="color:var(--muted)">Later</td></tr>
+<tr><td>5</td><td>Decision Capture</td><td>Record adjuster decisions as structured ground truth</td><td style="color:var(--green)">Yes</td></tr>
+<tr><td>6</td><td>CMS Push</td><td>Push data back to insurer's claims system</td><td style="color:var(--green)">Yes (basic)</td></tr>
+<tr><td>7</td><td>Analytics Dashboard</td><td>Adjuster performance, claim patterns</td><td style="color:var(--muted)">Later</td></tr>
+<tr><td>8</td><td>Triage AI</td><td>Auto-route claims by complexity</td><td style="color:var(--muted)">Later</td></tr>
+<tr><td>9</td><td>Settlement Assist</td><td>Reserve recommendations, negotiation support</td><td style="color:var(--muted)">Later</td></tr>
+<tr><td>10</td><td>Full Automation</td><td>STP for clean claims</td><td style="color:var(--muted)">Later</td></tr>
+</table>
+
+<!-- PRODUCT VISION -->
+<h2>Product Vision</h2>
+<div class="discovery">
+  <div class="label">One-liner</div>
+  <div class="title">"Adjuster operating system that captures decision ground truth"</div>
+  <div class="body">Not replacing adjusters — making them 3x more productive while capturing every decision as structured data. This data becomes the moat: train models on real adjuster decisions, not synthetic data.</div>
+</div>
+
+<!-- COMPETITOR LANDSCAPE -->
+<h2>Competitor Landscape (14+ Researched)</h2>
+<table>
+<tr><th>Category</th><th>Players</th></tr>
+<tr><td>Full CMS</td><td>Five Sigma, Guidewire, Duck Creek</td></tr>
+<tr><td>AI Damage Assessment</td><td>Tractable, Snapsheet, Audatex</td></tr>
+<tr><td>Document AI</td><td>Sprout.ai, omni:us, Roots Automation</td></tr>
+<tr><td>Claims Automation</td><td>Shift Technology, CCC, Mitchell</td></tr>
+<tr><td>Niche / Emerging</td><td>Colossus, Davies, ClaimSorted, Avallon, Pace</td></tr>
+</table>
+
+<p style="color:var(--muted);font-size:0.85rem;margin-top:24px;text-align:center;">
+  Blueprint running at <a href="http://localhost:5173" style="color:var(--green)">localhost:5173</a> &nbsp;·&nbsp;
+  Kill server: <code style="background:#222;padding:2px 8px;border-radius:4px;">kill 28582</code>
+</p>
+
+</div>
+</body>
+</html>
