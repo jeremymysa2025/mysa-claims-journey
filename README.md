@@ -71,6 +71,7 @@ We use a **service blueprint** model because claims aren't linear — they invol
 | `claims_journey_discovery.md` | Main discovery document (~2000+ lines) — the full motor + home journey mapping with research, assumptions, and insights |
 | `home_property_competitive_deep_dive.md` | Deep competitive analysis (~2400+ lines) — TPA teardowns, startup landscape, market sizing, strategic theses, transcript analysis |
 | `mysa_product_strategy.md` | **Comprehensive product strategy (~1500+ lines)** — product definition, market sizing, competitor deep dives, architecture, EU motor first attack, 18-month roadmap, demo specs, fundraising narrative. Sources everything from transcript, research, and agent analysis. |
+| `market_landscape_overview.md` | **Market landscape recap** — full generic TAM + target segment sizing for motor and home/property across EU (16 countries) and US. Player profiles, claims volumes, competitive reality. Standalone reference. |
 | `competitive_landscape_reality_check.md` | High-level competitive reality check — who's building what, why it hasn't been "solved" |
 | `SUMMARY.md` | Co-founder summary — key discoveries, theses, and market sizing |
 | `claims_service_blueprint.jsx` | React component for interactive visualization |

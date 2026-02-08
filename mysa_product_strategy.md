@@ -11,6 +11,9 @@
 - `[CLAUDE ANALYSIS]` = synthesis, inference, or strategic suggestion — clearly labeled
 - `[WEB SOURCE]` = data from web search with URL
 
+**Standalone reference documents:**
+- [`market_landscape_overview.md`](market_landscape_overview.md) — Full market landscape recap: generic TAM, claims volumes, player profiles, target segment sizing (motor + home/property, EU + US)
+
 ---
 
 ## Part 1: What Mysa Is
