@@ -7,33 +7,227 @@
 ## 1. Positioning
 
 ### 1.1 What Mysa does (plain English)
-When an insurance company receives a claim, people spend hours reading documents, checking policies, emailing customers for missing info, and writing reports. Mysa reads all the documents for them, tells them what's missing, sends the follow-ups, and writes the reports. We also turn their internal procedures (SOPs) into step-by-step workflows so nobody has to memorize how things work.
+When an insurance company gets a claim, people spend hours opening PDFs, reading emails, checking if documents are missing, calling the customer back, and then typing everything into their system. Then they do it again for the next claim. Mysa does the reading, the checking, and the typing. We also chase the customer when something is missing and write the reports at the end. If the company has procedures (SOPs), we turn those into checklists so nobody forgets a step.
 
-### 1.2 One-liner
-**Mysa automates the document work in insurance claims — extraction, follow-up, and report generation — so people spend time deciding, not gathering.**
+### 1.2 One-liners (pick one)
+
+**Option A — action-focused:**
+Mysa reads every document in an insurance claim, finds what's missing, and gets it — so people can skip straight to the decision.
+
+**Option B — before/after:**
+Claims teams spend 70% of their time reading documents and chasing missing info. Mysa does that part.
+
+**Option C — product-focused:**
+Mysa is a claims workflow tool that parses documents, chases missing info, and writes reports — for every person touching a claim.
+
+**Option D — category-creating:**
+Mysa is the back-office your claims team doesn't have. We read the docs, do the follow-ups, and prep every claim for decision.
+
+**Option E — YC-style (what + for whom):**
+We automate document processing for insurance claims. Motor in Europe today, US next.
+
+**Option F — short and blunt:**
+We do the paperwork in insurance claims. Faster and cheaper than people.
 
 ### 1.3 For investors
-> Insurance claims involve 5-10 people, 20+ documents, and weeks of back-and-forth before anyone makes a decision. 70% of that time is document processing, not thinking. Mysa automates the document work: we extract data from every document in a claim, flag what's missing, send automated follow-ups, and generate the reports adjusters need. We turn each insurer's SOPs into AI-guided workflows.
->
-> We're live with a mid-size MGA in Europe for motor claims. We're building for the US. We start with document processing — which gets us into every stage of the claim — and use that data to eventually own the decision-preparation step, which nobody does today.
 
-### 1.4 For insurance company buyers (Chief Claims Officer, Head of Operations)
-> Your team opens 5-7 systems per claim, spends an hour gathering documents, and another hour writing reports. Mysa connects to your email and your existing tools. We parse every document that comes in, check it against what your workflow requires, and flag gaps immediately. If something's missing, we draft the follow-up. When it's time to write a report, we generate it from the data we already have.
+**Version A — 30-second pitch:**
+> An insurance claim touches 5-10 people and 20+ documents before anyone decides anything. Most of the time is spent gathering — opening PDFs, checking policies, emailing customers for missing stuff, writing reports. Not deciding.
 >
-> You keep your systems. You keep your people. They just stop doing the manual part.
+> Mysa automates the gathering. We read every document in a claim, compare it to what's needed, chase whatever is missing, and write the output reports. We do this by turning each insurer's internal procedures into workflows our software follows.
+>
+> We're live with a mid-size insurer in Europe doing motor claims. Next: property in Europe, then US.
+
+**Version B — with the moat angle:**
+> Every insurance company has different procedures for handling claims. Different documents required, different steps, different people involved. Nobody has standardized this because it's too specific per company.
+>
+> Mysa sits with each insurer for 2 months, learns their procedures, and turns them into automated workflows. Once we're in, we're hard to replace — the workflows are built on their specific processes.
+>
+> Day one, we automate document extraction and follow-up. Over time, we accumulate enough data on how decisions get made to start preparing decisions, not just documents. Nobody owns that data today.
+
+**Version C — TAM and traction:**
+> 80-95 million motor and property claims per year across EU and US. Each one involves hours of manual document processing. The tools that exist (Guidewire, Duck Creek) are systems of record — they store data, they don't process it.
+>
+> Mysa processes it. We extract, we follow up on gaps, we generate reports. We sell per-claim (EUR 2-8) or as a platform license (EUR 10K-2M/year). At a EUR 100M GWP insurer handling 30K claims/year, a EUR 100K license pays for itself in 3 months through time savings alone.
+>
+> Live with one MGA in Portugal. Forward deployment scheduled with the 8th largest insurer worldwide. Pipeline in Southern EU and US.
+
+### 1.4 For insurance company buyers
+
+**For the Chief Claims Officer:**
+> Your people open the same types of PDFs every day, check the same fields, send the same follow-up emails, and write the same reports. The only part that actually needs a human is the decision at the end.
+>
+> Mysa handles everything before the decision. We connect to your email. We read every document. We check it against your procedures. We flag what's missing and draft the follow-up. When your team opens a claim, it's ready.
+>
+> We don't touch your systems. We sit on top of what you already have.
+
+**For the Head of Operations / IT:**
+> We integrate with your email (Outlook, Gmail). We can read from your claims system if it has an API (Guidewire, Duck Creek, or anything with JSON access). We don't require migration. We don't replace anything.
+>
+> Deployment takes ~2 months. We study your historical claims and SOPs, configure workflows specific to your processes, and go live. Your team uses a web app — inbox-style, not a dashboard.
+
+**For a TPA / Assistance company CEO:**
+> You process claims on behalf of insurers. Each insurer has different requirements, different documents, different procedures. Your team has to remember all of it — or look it up every time.
+>
+> Mysa knows the requirements per insurer. When a claim comes in, we parse the documents, check against the right insurer's requirements, and flag the gaps. Your team stops being a human router and starts being a reviewer.
 
 ### 1.5 For brokers
-> You get an email from a client with a claim. You need to figure out what insurer to send it to, what documents that insurer requires, and chase the client for whatever's missing. Mysa does that automatically. We know what Fidelidade needs vs what AXA needs. We parse the email, check the gaps, and draft the follow-up. Your team reviews and clicks send.
+
+**Version A — small broker (< 5,000 claims/year):**
+> You get emails with claims. You figure out which insurer to send them to. You check if the documents are complete. You email the client back for what's missing. You wait. You follow up again. Then you submit.
+>
+> Mysa does steps 2 through 6. You review the result and click send. We also give you a branded portal so your clients can submit claims with all the right documents from the start — no back-and-forth.
+
+**Version B — larger broker with multiple insurers:**
+> You work with 10+ insurers, each with different document requirements. Mysa knows what each one needs. When a claim comes in, we auto-match it to the right insurer, check the documents against their requirements, and handle the follow-up. You manage everything from one screen instead of 10 portals.
 
 ### 1.6 For adjusters / claim handlers
-> When you open a claim, everything is already there: documents parsed, fields extracted, SOP steps laid out. You don't search through emails or PDFs. You ask a question, you get the answer from the data we already have. When you need to write a report, we draft it.
 
-### 1.7 Competitive framing
-- **vs. Pace.ai** — They do claim intake (FNOL extraction). They stop there. We go further: SOP workflows, document generation, follow-up automation across the whole claim.
-- **vs. Further AI** — They do underwriting. We do claims. Same approach (document processing + workflows), different part of the insurance chain.
-- **vs. Five Sigma / Shift** — They sell to large carriers with existing platforms. We sell to mid-market (EUR 100-200M GWP) that can't afford custom AI teams.
-- **vs. Guidewire / Duck Creek** — They are the system of record (CRM). We sit on top. We don't replace them, we read from them and write back.
-- **vs. CCC / Mitchell** — They own auto damage estimation with 50-year data moats. We don't compete there. We handle everything around the estimation: the documents, the comms, the workflows.
+**Version A — the busy adjuster:**
+> You get assigned a claim. Instead of spending 45 minutes reading emails, opening PDFs, and figuring out what happened — you open it and it's all there. Documents parsed. Fields filled. Timeline built. Your SOP steps listed. You start at the decision, not at the reading.
+
+**Version B — the field investigator:**
+> You arrive on site and you already have the full claim summary: what happened, what documents exist, what's been said, what's still missing. After your inspection, you type your findings and we generate the report. You don't write it from scratch.
+
+**Version C — the supervisor:**
+> You see every claim your team is handling, where each one is stuck, and why. If a claim is blocked because a document is missing, you see it. If an SOP step was skipped, you see it. You don't need to open each claim to know what's going on.
+
+### 1.7 For the website hero (options)
+
+**Option A:** "Stop chasing documents. Start closing claims."
+**Option B:** "Every claim, parsed and ready — before you open it."
+**Option C:** "Your claims team spends 70% of their time gathering. We do that part."
+**Option D:** "We read the documents. You make the decisions."
+**Option E:** "Claims automation that works with your systems, not instead of them."
+**Option F:** "From email to decision-ready. Automatically."
+
+### 1.8 Competitive framing
+
+**vs. Pace.ai**
+They extract data from the first notice of loss. That's one step. We do extraction + gap analysis + follow-up + document generation + SOP workflows across the full claim. They built a funnel. We built the operating system around it.
+
+**vs. Further AI**
+Same playbook, different side of insurance. They do underwriting (quotes, submissions, policy binding). We do claims (FNOL, triage, investigation, settlement). No overlap today. If they move into claims, we're already there with workflow depth they'd need to rebuild.
+
+**vs. Five Sigma**
+They built a claims management system (CMS) — a Guidewire alternative for smaller carriers. We're not a CMS. We sit on top of whatever CMS you have. We don't store your claims, we process the documents around them. Different sale, different buyer, compatible products.
+
+**vs. Shift Technology**
+Fraud detection and claims automation for Tier 1 carriers (AXA, Zurich). They need 100K+ claims/year to train their models. We sell to mid-market carriers with 10K-60K claims/year who can't afford Shift's pricing or implementation. Different segment entirely.
+
+**vs. Guidewire / Duck Creek**
+They are the database. We are the document processor. They store the claim record. We read the emails, parse the PDFs, and write back the structured data. We need them (or something like them) to exist. We're not competing — we're adding a capability they don't have.
+
+**vs. CCC / Mitchell / Verisk**
+They own auto damage estimation. 50 years of parts pricing data. We will never compete with that. We handle everything that isn't the estimate itself: the document intake, the gap analysis, the follow-up, the report writing, the SOP enforcement. They do the number. We do the paperwork around the number.
+
+**vs. Wami**
+They do claim intake with a focus on FNOL creation. Their demo shows a chatbot-style interface. We go deeper: we don't just create the FNOL, we manage the entire document lifecycle of the claim — from first email to settlement letter. We also do SOP-to-workflow, which they don't touch.
+
+**vs. building in-house**
+An insurer with 600+ engineers (like Crisur/Ageas) could build this. But they won't, because claims automation is not their core business and internal projects take 2-3 years. We deploy in 2 months. We also bring cross-insurer patterns — we've seen how multiple companies handle the same claim types, so our workflows start better than anything built in isolation.
+
+### 1.9 Category
+
+We are not calling ourselves:
+- ~~"AI-powered claims platform"~~ (everyone says this)
+- ~~"Claims copilot"~~ (too vague, sounds like a chatbot)
+- ~~"Claims decision engine"~~ (we don't make decisions)
+- ~~"Insurtech"~~ (says nothing about what we do)
+
+We could call ourselves:
+- **"Claims document automation"** — boring but accurate
+- **"Claims workflow software"** — what ops buyers search for
+- **"Claims operations platform"** — what we used on Feb 9, still works
+- **"Document processing for insurance claims"** — most literal
+
+For now, use: **"Claims workflow and document automation"**
+Revisit when we have a stronger opinion after 3-5 customers.
+
+### 1.10 Sales blurb (send to insurers / MGAs)
+
+**Version A — email intro (short, direct):**
+
+> Hi [Name],
+>
+> We're Mysa. We automate the document work in insurance claims — extraction, gap detection, follow-up, and report generation.
+>
+> Your team reads documents, checks what's missing, emails the customer, waits, then writes a report. We do all of that automatically. Your people review the output and make the decision.
+>
+> We're already live with a European MGA on motor claims. We configure everything around your specific procedures — no migration, no system replacement.
+>
+> Would 30 minutes make sense to show you how it works on a real claim?
+
+**Version B — email intro (with numbers):**
+
+> Hi [Name],
+>
+> A motor claim takes your team 65-120 minutes of document processing before anyone makes a decision. Reading emails, opening PDFs, checking policy coverage, emailing the customer for missing documents, writing the FNOL, drafting reports.
+>
+> Mysa cuts that to 10-15 minutes. We parse every document automatically, flag what's missing, send the follow-up, and generate the reports. Your team opens the claim and it's ready for a decision.
+>
+> We're live in Europe for motor. We deploy in ~2 months — we study your historical claims and SOPs and configure workflows specific to how you work.
+>
+> Worth a quick call?
+
+**Version C — for a warm intro / referral:**
+
+> [Name] — [mutual contact] suggested I reach out.
+>
+> We built Mysa to solve a specific problem: claims teams spend most of their time on documents, not decisions. We automate the document part — reading, extracting, chasing missing info, generating reports.
+>
+> We're live with a mid-size MGA in Portugal on motor claims and have a forward deployment underway with [the 8th largest insurer worldwide]. We're expanding in Southern Europe and preparing for the US.
+>
+> Happy to show you a real demo — not slides, the actual product running on a real claim. 30 min?
+
+**Version D — LinkedIn message (ultra short):**
+
+> We automate document processing for insurance claims — extraction, follow-ups, reports. Live with European MGA on motor. Worth 15 min to show you?
+
+### 1.11 Impact numbers (what we can claim today)
+
+**What we can say with confidence (based on Caravela + Joaquim feedback):**
+
+| Metric | Before Mysa | With Mysa | Source |
+|--------|------------|-----------|--------|
+| Time per claim (document processing) | 65-120 min | 10-15 min | FOS research + Caravela observation |
+| Back-and-forth emails per claim | 3-5 rounds over days | 1 auto-generated, sent same day | Caravela + broker workflows |
+| Documents manually opened per claim | 5-15 PDFs across systems | 0 — all parsed automatically | Caravela workflow |
+| FNOL creation time | 20-30 min (manual entry) | 2-3 min (auto-filled, human reviews) | Caravela live |
+| OCR extraction accuracy | N/A (manual) | 81.5% normalized match (Gemini 3 flash) | Caravela benchmark Feb 8 |
+| Follow-up email drafting | 10-15 min per email | Auto-drafted, 1-click review | Built |
+| SOP compliance | "Nobody reads the SOPs" — Joaquim | Step-by-step checklist, enforced per claim | Joaquim quote, Feb 10 |
+
+**What we can project (reasonable estimates for sales conversations):**
+
+| Metric | Estimate | How we get there |
+|--------|----------|-----------------|
+| Claims handled per person per day | 2-3x increase | Remove 70% of document processing time |
+| Cost per claim reduction | 40-60% | Fewer hours per claim, fewer follow-up cycles |
+| FNOL completeness at submission | 90%+ (vs ~60% today) | Gap analysis catches missing docs before submission |
+| Average claim cycle time reduction | 30-50% | Faster document gathering = faster to decision |
+| Annual savings for a 30K claims/year insurer | EUR 500K-750K | Based on FOS unit economics (EUR 15-25 saved per claim) |
+
+**Quotes we can use (from real conversations):**
+
+> "The things that are truly useful are where you need reports, technical assessments, multiple documents." — Joaquim, Crisur (8th largest insurer worldwide), Feb 10
+
+> "I have no doubts that AI can be very important in our processes." — Joaquim, Feb 10
+
+> "If you systematize the information and give the claims handler that information, that's fantastic." — Joaquim, Feb 10
+
+> "Nobody reads the SOPs. Nobody knows the workflow. And when there is no SOP, that's fine — we reverse-engineer it from their historical claims." — Jeremy, Feb 11
+
+**Impact framing for different buyers:**
+
+For a **mid-market MGA (30K claims/year, EUR 100-200M GWP):**
+> Your claims team processes 30,000 motor claims per year. Each one takes 65-120 minutes of document work. That's 32,500-60,000 person-hours per year on reading, copying, emailing, and writing — not deciding. At EUR 25/hour loaded cost, that's EUR 812K-1.5M/year spent on document processing alone. We cut that by 40-60%. Your EUR 100K/year license pays for itself in the first quarter.
+
+For a **broker (4,000 claims/year, 10+ insurers):**
+> Your team handles 4,000 claims across 10+ insurers. Each insurer has different document requirements. Your people memorize them or look them up every time. Mysa knows what each insurer needs. We cut your intake processing time by 60%+ and reduce back-and-forth with customers by 70%. That's 1-2 full-time employees worth of document work — automated.
+
+For a **TPA / assistance company (100K+ claims/year):**
+> You process 100K+ claims on behalf of insurers. Each claim starts with an email or call that your team manually reads and enters into a system. Mysa reads it for them. We give you an API: send the document, get structured data back. Your call center agents stop typing and start reviewing. At EUR 2-5 per claim, the math works at scale.
 
 ---
 
